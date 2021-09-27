@@ -1,0 +1,14 @@
+Edge TPU Compiler version 16.0.385455049
+Input: /home/hemanthreddyj/Desktop/issues/pycoral_50/model_quantized.tflite
+Output: /home/hemanthreddyj/Desktop/issues/pycoral_50/model_quantized_edgetpu.tflite
+
+Operator                       Count      Status
+
+QUANTIZE                       2          Mapped to Edge TPU
+SOFTMAX                        1          Mapped to Edge TPU
+MEAN                           1          Mapped to Edge TPU
+ADD                            10         Mapped to Edge TPU
+PAD                            5          Mapped to Edge TPU
+FULLY_CONNECTED                2          Mapped to Edge TPU
+DEPTHWISE_CONV_2D              17         Mapped to Edge TPU
+CONV_2D                        35         Mapped to Edge TPU

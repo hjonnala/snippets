@@ -1,0 +1,4 @@
+0 0_none
+1 1_cat
+2 2_mouse
+3 3_other
