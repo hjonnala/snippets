@@ -7,7 +7,7 @@ import time
 # Load TFLite model and allocate tensors.
 base_dir = os.path.dirname(os.path.abspath(__file__))
 models_dir = os.path.join(base_dir, 'models', 'mobilenet')
-models = [model for model in os.listdir(models_dir) if model.endswith('edgetpu.tflite')]
+models = [model for model in os.listdir(models_dir) if model.endswith('.tflite')]
 
 POSENET_SHARED_LIB = os.path.join(
     'posenet_lib', os.uname().machine, 'macos_posenet_decoder.so')
@@ -16,9 +16,9 @@ for model_name in models:
     model_path = os.path.join(models_dir, model_name)
     if '_edgetpu' in model_name:
         interpreter = tflite.Interpreter(
-            model_path=model_path, experimental_delegates=[tflite.load_delegate('libedgetpu.1.dylib', {}), tflite.load_delegate(POSENET_SHARED_LIB)])
+            model_path=model_path, experimental_delegates=[tflite.load_delegate('libedgetpu.1.dylib', {}), tflite.load_delegate(POSENET_SHARED_LIB), tflite.load_delegate(POSENET_SHARED_LIB)])
     else:
-        interpreter = tflite.Interpreter(model_path=model_path)
+        interpreter = tflite.Interpreter(model_path=model_path, experimental_delegates=[tflite.load_delegate(POSENET_SHARED_LIB)])
 
     interpreter.allocate_tensors()
 
