@@ -38,6 +38,4 @@ for model_name in models:
     # The function `get_tensor()` returns a copy of the tensor data.
     # Use `tensor()` in order to get a pointer to the tensor.
     output_data = interpreter.get_tensor(output_details[0]['index'])
-    for output in output_details:
-        print(output['quantization'])
     print(model_path, len(output_data))
