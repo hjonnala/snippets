@@ -1,5 +1,5 @@
 ## M.2 Dual Edge Tpu
-#### adaptersbr /
+#### adapters
 m.2 NVME to PCIe adapter board : https://github.com/magic-blue-smoke/Dual-Edge-TPU-Adapter/issues/3#issuecomment-889455901<br />
 ASUS pcIE card https://iot.asus.com/products/AI-accelerator/AI-Accelerator-PCIe-Card/.
 #### Works with only one TPU:<br/>
