@@ -8,3 +8,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 [{'type': 'pci', 'path': '/dev/apex_0'}]
 
 ```
+
+```
+mog@random:~$ python3 -c 'from pycoral.utils.edgetpu import get_runtime_version; print(get_runtime_version())'
+BuildLabel(COMPILER=6.3.0 20170516,DATE=redacted,TIME=redacted), RuntimeVersion(14)
+```
+
+
