@@ -1,0 +1,343 @@
+I tflite/edgetpu_manager_direct.cc:453] No matching device is already opened for shared ownership.
+I driver/usb/local_usb_device.cc:944] EnumerateDevices: vendor:0x1a6e, product:0x89a
+I driver/usb/local_usb_device.cc:979] EnumerateDevices: checking bus[1] port[15]
+I driver/usb/local_usb_device.cc:979] EnumerateDevices: checking bus[1] port[6]
+I driver/usb/local_usb_device.cc:979] EnumerateDevices: checking bus[1] port[8]
+I driver/usb/local_usb_device.cc:979] EnumerateDevices: checking bus[1] port[1]
+I driver/usb/local_usb_device.cc:979] EnumerateDevices: checking bus[1] port[2]
+I driver/usb/local_usb_device.cc:979] EnumerateDevices: checking bus[1] port[7]
+I driver/usb/local_usb_device.cc:944] EnumerateDevices: vendor:0x18d1, product:0x9302
+I driver/usb/local_usb_device.cc:979] EnumerateDevices: checking bus[1] port[15]
+I driver/usb/local_usb_device.cc:979] EnumerateDevices: checking bus[1] port[6]
+I driver/usb/local_usb_device.cc:979] EnumerateDevices: checking bus[1] port[8]
+I driver/usb/local_usb_device.cc:979] EnumerateDevices: checking bus[1] port[1]
+I driver/usb/local_usb_device.cc:979] EnumerateDevices: checking bus[1] port[2]
+I driver/usb/local_usb_device.cc:998] EnumerateDevices: found [/sys/bus/usb/devices/1-2]
+I driver/usb/local_usb_device.cc:979] EnumerateDevices: checking bus[1] port[7]
+I driver/beagle/beagle_usb_driver_provider.cc:225] Enumerate: adding path [/sys/bus/usb/devices/1-2]
+I driver/driver_factory_windows.cc:29] DriverFactoryWin::EnumerateByClass()...
+I driver/driver_factory_windows.cc:75] DriverFactoryWin::EnumerateByClass returns empty list.
+I tflite/edgetpu_manager_direct.cc:471] No device of type Apex (PCIe) is available.
+I tflite/edgetpu_context_direct.cc:104] USB always DFU: False (default)
+I tflite/edgetpu_context_direct.cc:145] USB bulk-in queue capacity: 8
+I tflite/edgetpu_context_direct.cc:65] Performance expectation: Max (default)
+I driver/usb/usb_driver.cc:1386] Open device and check if DFU is needed
+I driver/usb/local_usb_device.cc:1013] OpenDevice: [/sys/bus/usb/devices/1-2]
+I driver/usb/local_usb_device.cc:1050] OpenDevice: checking bus[1] port[15]
+I driver/usb/local_usb_device.cc:1050] OpenDevice: checking bus[1] port[6]
+I driver/usb/local_usb_device.cc:1050] OpenDevice: checking bus[1] port[8]
+I driver/usb/local_usb_device.cc:1050] OpenDevice: checking bus[1] port[1]
+I driver/usb/local_usb_device.cc:1050] OpenDevice: checking bus[1] port[2]
+I driver/usb/local_usb_device.cc:1081] OpenDevice: device opened 0000020B1D63EAC0
+I driver/usb/local_usb_device.cc:182] LocalUsbDevice
+I driver/usb/usb_standard_commands.cc:36] UsbStandardCommands
+I driver/usb/usb_dfu_commands.cc:37] UsbDfuCommands
+I driver/usb/usb_standard_commands.cc:43] GetDeviceDescriptor
+I driver/usb/local_usb_device.cc:397] GetDescriptor
+I driver/usb/usb_standard_commands.cc:78] Vender ID: 0x18d1
+I driver/usb/usb_standard_commands.cc:79] Product ID: 0x9302
+I driver/usb/usb_driver.cc:1413] Device is already in application mode, skipping DFU
+I driver/usb/usb_driver.cc:1425] Resetting device
+I driver/usb/local_usb_device.cc:241] Close: closing device 0000020B1D63EAC0
+I driver/usb/local_usb_device.cc:214] DoCancelAllTransfers: cancelling 0 async transfers
+I driver/usb/local_usb_device.cc:222] DoCancelAllTransfers: waiting for all async transfers to complete
+I driver/usb/local_usb_device.cc:232] DoCancelAllTransfers: all async transfers have completed
+I driver/usb/local_usb_device.cc:274] Close: releasing 0 transfer buffers
+I driver/usb/local_usb_device.cc:287] Close: performing graceful reset
+I driver/usb/local_usb_device.cc:320] Close: final clean up completed
+I driver/usb/usb_driver.cc:1366] Opening device expecting application mode
+I driver/usb/local_usb_device.cc:1013] OpenDevice: [/sys/bus/usb/devices/1-2]
+I driver/usb/local_usb_device.cc:1050] OpenDevice: checking bus[1] port[15]
+I driver/usb/local_usb_device.cc:1050] OpenDevice: checking bus[1] port[6]
+I driver/usb/local_usb_device.cc:1050] OpenDevice: checking bus[1] port[8]
+I driver/usb/local_usb_device.cc:1050] OpenDevice: checking bus[1] port[1]
+I driver/usb/local_usb_device.cc:1050] OpenDevice: checking bus[1] port[7]
+I driver/usb/local_usb_device.cc:1050] OpenDevice: checking bus[1] port[2]
+I driver/usb/local_usb_device.cc:1081] OpenDevice: device opened 0000020B1D63D070
+I driver/usb/local_usb_device.cc:182] LocalUsbDevice
+I driver/usb/usb_standard_commands.cc:36] UsbStandardCommands
+I driver/usb/usb_ml_commands.cc:47] UsbMlCommands
+I driver/usb/usb_dfu_commands.cc:40] ~UsbDfuCommands
+I driver/usb/usb_standard_commands.cc:39] ~UsbStandardCommands
+I driver/usb/local_usb_device.cc:194] ~LocalUsbDevice
+I driver/usb/local_usb_device.cc:241] Close: closing device 0000000000000000
+I driver/usb/local_usb_device.cc:350] ClaimInterface
+I driver/usb/usb_ml_commands.cc:81] ReadRegister32 offset 0x1a30c
+I driver/usb/local_usb_device.cc:512] SendControlCommandWithDataIn
+I driver/usb/local_usb_device.cc:519] SYNC CTRL WITH DATA IN begin
+I driver/usb/local_usb_device.cc:536] SYNC CTRL WITH DATA IN end
+I driver/usb/usb_ml_commands.cc:111] ReadRegister32 [0x1A30C] == 0xF0959
+I driver/usb/usb_ml_commands.cc:154] WriteRegister32 [0x1A30C] := 0xF0059
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:81] ReadRegister32 offset 0x1a314
+I driver/usb/local_usb_device.cc:512] SendControlCommandWithDataIn
+I driver/usb/local_usb_device.cc:519] SYNC CTRL WITH DATA IN begin
+I driver/usb/local_usb_device.cc:536] SYNC CTRL WITH DATA IN end
+I driver/usb/usb_ml_commands.cc:111] ReadRegister32 [0x1A314] == 0x110000
+I driver/usb/usb_ml_commands.cc:81] ReadRegister32 offset 0x1a318
+I driver/usb/local_usb_device.cc:512] SendControlCommandWithDataIn
+I driver/usb/local_usb_device.cc:519] SYNC CTRL WITH DATA IN begin
+I driver/usb/local_usb_device.cc:536] SYNC CTRL WITH DATA IN end
+I driver/usb/usb_ml_commands.cc:111] ReadRegister32 [0x1A318] == 0x60050000
+I driver/usb/usb_ml_commands.cc:154] WriteRegister32 [0x1A318] := 0x60C50000
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:81] ReadRegister32 offset 0x1a318
+I driver/usb/local_usb_device.cc:512] SendControlCommandWithDataIn
+I driver/usb/local_usb_device.cc:519] SYNC CTRL WITH DATA IN begin
+I driver/usb/local_usb_device.cc:536] SYNC CTRL WITH DATA IN end
+I driver/usb/usb_ml_commands.cc:111] ReadRegister32 [0x1A318] == 0x60C50258
+I driver/usb/usb_ml_commands.cc:154] WriteRegister32 [0x1907C] := 0xF
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:154] WriteRegister32 [0x1907C] := 0x0
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:81] ReadRegister32 offset 0x1a318
+I driver/usb/local_usb_device.cc:512] SendControlCommandWithDataIn
+I driver/usb/local_usb_device.cc:519] SYNC CTRL WITH DATA IN begin
+I driver/usb/local_usb_device.cc:536] SYNC CTRL WITH DATA IN end
+I driver/usb/usb_ml_commands.cc:111] ReadRegister32 [0x1A318] == 0x60C50258
+I driver/usb/usb_ml_commands.cc:154] WriteRegister32 [0x1A318] := 0x850258
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:81] ReadRegister32 offset 0x1a318
+I driver/usb/local_usb_device.cc:512] SendControlCommandWithDataIn
+I driver/usb/local_usb_device.cc:519] SYNC CTRL WITH DATA IN begin
+I driver/usb/local_usb_device.cc:536] SYNC CTRL WITH DATA IN end
+I driver/usb/usb_ml_commands.cc:111] ReadRegister32 [0x1A318] == 0x850000
+I driver/usb/usb_ml_commands.cc:118] ReadRegister64 offset 0x44018
+I driver/usb/local_usb_device.cc:512] SendControlCommandWithDataIn
+I driver/usb/local_usb_device.cc:519] SYNC CTRL WITH DATA IN begin
+I driver/usb/local_usb_device.cc:536] SYNC CTRL WITH DATA IN end
+I driver/usb/usb_ml_commands.cc:148] ReadRegister64 [0x44018] == 0x0
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x4A000] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x48788] := 0x7F
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:118] ReadRegister64 offset 0x48788
+I driver/usb/local_usb_device.cc:512] SendControlCommandWithDataIn
+I driver/usb/local_usb_device.cc:519] SYNC CTRL WITH DATA IN begin
+I driver/usb/local_usb_device.cc:536] SYNC CTRL WITH DATA IN end
+I driver/usb/usb_ml_commands.cc:148] ReadRegister64 [0x48788] == 0x7F
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x40020] := 0x1E02
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:81] ReadRegister32 offset 0x1a314
+I driver/usb/local_usb_device.cc:512] SendControlCommandWithDataIn
+I driver/usb/local_usb_device.cc:519] SYNC CTRL WITH DATA IN begin
+I driver/usb/local_usb_device.cc:536] SYNC CTRL WITH DATA IN end
+I driver/usb/usb_ml_commands.cc:111] ReadRegister32 [0x1A314] == 0x110000
+I driver/usb/usb_ml_commands.cc:154] WriteRegister32 [0x1A314] := 0x150000
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:81] ReadRegister32 offset 0x1a000
+I driver/usb/local_usb_device.cc:512] SendControlCommandWithDataIn
+I driver/usb/local_usb_device.cc:519] SYNC CTRL WITH DATA IN begin
+I driver/usb/local_usb_device.cc:536] SYNC CTRL WITH DATA IN end
+I driver/usb/usb_ml_commands.cc:111] ReadRegister32 [0x1A000] == 0x119089A
+I driver/usb/usb_driver.cc:322] e-fuse programming revision: 1
+I driver/usb/usb_driver.cc:329] InitializeChip Enabling only sc host interrupt descriptors
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x4C148] := 0xF0
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_driver.cc:342] InitializeChip Enabling single EP mode
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x4C160] := 0x0
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_driver.cc:356] InitializeChip Setting 256B chunk for USB 2 High Speed
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x4C058] := 0x20
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x44018] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x44158] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x44198] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x441D8] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x44218] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x48788] := 0x7F
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:118] ReadRegister64 offset 0x48788
+I driver/usb/local_usb_device.cc:512] SendControlCommandWithDataIn
+I driver/usb/local_usb_device.cc:519] SYNC CTRL WITH DATA IN begin
+I driver/usb/local_usb_device.cc:536] SYNC CTRL WITH DATA IN end
+I driver/usb/usb_ml_commands.cc:148] ReadRegister64 [0x48788] == 0x7F
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x400C0] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x40150] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x40110] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x40250] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x40298] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x402E0] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x40328] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x40190] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x401D0] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x40210] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x4C060] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x4C070] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x4C080] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x4C090] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:179] WriteRegister64 [0x4C0A0] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:81] ReadRegister32 offset 0x1a0d4
+I driver/usb/local_usb_device.cc:512] SendControlCommandWithDataIn
+I driver/usb/local_usb_device.cc:519] SYNC CTRL WITH DATA IN begin
+I driver/usb/local_usb_device.cc:536] SYNC CTRL WITH DATA IN end
+I driver/usb/usb_ml_commands.cc:111] ReadRegister32 [0x1A0D4] == 0x1
+I driver/usb/usb_ml_commands.cc:154] WriteRegister32 [0x1A0D4] := 0x80000001
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:81] ReadRegister32 offset 0x1a704
+I driver/usb/local_usb_device.cc:512] SendControlCommandWithDataIn
+I driver/usb/local_usb_device.cc:519] SYNC CTRL WITH DATA IN begin
+I driver/usb/local_usb_device.cc:536] SYNC CTRL WITH DATA IN end
+I driver/usb/usb_ml_commands.cc:111] ReadRegister32 [0x1A704] == 0x70007F
+I driver/usb/usb_ml_commands.cc:154] WriteRegister32 [0x1A704] := 0x7F
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:81] ReadRegister32 offset 0x1a33c
+I driver/usb/local_usb_device.cc:512] SendControlCommandWithDataIn
+I driver/usb/local_usb_device.cc:519] SYNC CTRL WITH DATA IN begin
+I driver/usb/local_usb_device.cc:536] SYNC CTRL WITH DATA IN end
+I driver/usb/usb_ml_commands.cc:111] ReadRegister32 [0x1A33C] == 0xC003F
+I driver/usb/usb_ml_commands.cc:154] WriteRegister32 [0x1A33C] := 0x3F
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:154] WriteRegister32 [0x1A500] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:154] WriteRegister32 [0x1A600] := 0x1
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:154] WriteRegister32 [0x1A558] := 0x3
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:154] WriteRegister32 [0x1A658] := 0x3
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_ml_commands.cc:81] ReadRegister32 offset 0x1a0d8
+I driver/usb/local_usb_device.cc:512] SendControlCommandWithDataIn
+I driver/usb/local_usb_device.cc:519] SYNC CTRL WITH DATA IN begin
+I driver/usb/local_usb_device.cc:536] SYNC CTRL WITH DATA IN end
+I driver/usb/usb_ml_commands.cc:111] ReadRegister32 [0x1A0D8] == 0x0
+I driver/usb/usb_ml_commands.cc:154] WriteRegister32 [0x1A0D8] := 0x80000000
+I driver/usb/local_usb_device.cc:473] SendControlCommandWithDataOut
+I driver/usb/local_usb_device.cc:480] SYNC CTRL WITH DATA OUT begin
+I driver/usb/local_usb_device.cc:497] SYNC CTRL WITH DATA OUT end
+I driver/usb/usb_driver.cc:1579] Reducing bulk-in request size to 256 bytes for USB2
+I tflite/edgetpu_context_direct.cc:172] Opening device at /sys/bus/usb/devices/1-2
+I driver/usb/usb_driver.cc:1157] WorkerThreadFunc starting worker thread
+I driver/usb/usb_driver.cc:1176] WorkerThreadFunc dispatching 0 callback events in worker thread
+I driver/usb/usb_driver.cc:1212] WorkerThreadFunc Re-installing event reader
+I driver/usb/local_usb_device.cc:748] AsyncBulkInTransfer
+I driver/usb/local_usb_device.cc:761] ASYNC IN 2 begin
+I driver/usb/usb_driver.cc:1234] WorkerThreadFunc Re-installing interrupt reader
+I driver/usb/local_usb_device.cc:783] AsyncInterruptInTransfer
+I driver/usb/local_usb_device.cc:796] ASYNC IN 3 begin
+I driver/usb/usb_driver.cc:1262] WorkerThreadFunc Installing bulk-in reader. buffer index [0]
+I driver/usb/local_usb_device.cc:748] AsyncBulkInTransfer
+I driver/usb/local_usb_device.cc:761] ASYNC IN 1 begin
+I driver/usb/usb_driver.cc:1262] WorkerThreadFunc Installing bulk-in reader. buffer index [1]
+I driver/usb/local_usb_device.cc:748] AsyncBulkInTransfer
+I driver/usb/local_usb_device.cc:761] ASYNC IN 1 begin
+I driver/usb/usb_driver.cc:1262] WorkerThreadFunc Installing bulk-in reader. buffer index [2]
+I driver/usb/local_usb_device.cc:748] AsyncBulkInTransfer
+I driver/usb/local_usb_device.cc:761] ASYNC IN 1 begin
+I driver/usb/usb_driver.cc:1262] WorkerThreadFunc Installing bulk-in reader. buffer index [3]
+I driver/usb/local_usb_device.cc:748] AsyncBulkInTransfer
+I driver/usb/local_usb_device.cc:761] ASYNC IN 1 begin
+I driver/usb/usb_driver.cc:1262] WorkerThreadFunc Installing bulk-in reader. buffer index [4]
+I driver/usb/local_usb_device.cc:748] AsyncBulkInTransfer
+I driver/usb/local_usb_device.cc:761] ASYNC IN 1 begin
+I driver/usb/usb_driver.cc:1262] WorkerThreadFunc Installing bulk-in reader. buffer index [5]
+I driver/usb/local_usb_device.cc:748] AsyncBulkInTransfer
+I driver/usb/local_usb_device.cc:761] ASYNC IN 1 begin
+I driver/usb/usb_driver.cc:1262] WorkerThreadFunc Installing bulk-in reader. buffer index [6]
+I driver/usb/local_usb_device.cc:748] AsyncBulkInTransfer
+I driver/usb/local_usb_device.cc:761] ASYNC IN 1 begin
+I driver/usb/usb_driver.cc:1262] WorkerThreadFunc Installing bulk-in reader. buffer index [7]
+I driver/usb/local_usb_device.cc:748] AsyncBulkInTransfer
+I driver/usb/local_usb_device.cc:761] ASYNC IN 1 begin
+I driver/usb/usb_driver.cc:1319] WorkerThreadFunc waiting on state change
+I driver/usb/usb_driver.cc:91] Unlocks both mutex
