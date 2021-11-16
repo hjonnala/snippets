@@ -31,3 +31,18 @@ Type "help", "copyright", "credits" or "license" for more information.
 '2.0.0'
 >>> 
 ```
+```
+bash enable_lk_fastboot.sh
+**********************************************************************
+Unable to connect to debug board, check connection or manually toggle GPIO.
+**********************************************************************
+/tmp/tmp.A2frymb1B7 ~/Downloads/excelsior-eagle-20201210233645
+INFO: pySerial version: (3.5)
+INFO: Use config file: /tmp/tmp.A2frymb1B7/dl_addr.ini
+INFO: Waiting to connect platform...
+INFO: Got /dev/ttyACM0
+INFO: Connect brom
+INFO: Loading file: lk.bin
+INFO: Send lk.bin
+INFO: Jump da
+```
