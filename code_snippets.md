@@ -45,4 +45,6 @@ INFO: Connect brom
 INFO: Loading file: lk.bin
 INFO: Send lk.bin
 INFO: Jump da
+~/Downloads/excelsior-eagle-20201210233645
+
 ```
