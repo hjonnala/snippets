@@ -57,7 +57,7 @@ class EnviroBoard():
             # Values for the Coral Dev Board (running Mendel Linux).
             # If running legacy kernel (4.9.51), use port 32766.
             port = 32766 if 'Linux-4.9.51-imx' in plat else 0
-            self._display = ssd1306(serial_interface=spi(gpio=pGPIO(), port=port, device=0, gpio_DC=138, gpio_RST=140),
+            self._display = ssd1306(serial_interface=spi(gpio=pGPIO(), port=port, device=0, gpio_DC=388, gpio_RST=394),
                                     gpio=pGPIO(), height=32, rotate=2)
         else:
             # Default to RPi.GPIO in luma and defaults GPIO.
