@@ -1,0 +1,1041 @@
+[  OK  ] Stopped target Sound Card.
+         Stopping Authorization Manager...
+         Stopping Session 1 of user mendel.
+[  OK  ] Stopped target Host and Network Name Lookups.
+         Stopping Save/Restore Sound Card State...
+[  OK  ] Stopped target Timers.
+[  OK  ] Stopped Daily Cleanup of Temporary Directories.
+[  OK  ] Closed Load/Save RF Kill Switch Status /dev/rfkill Watc         Stopping Serial Getty on ttyS0...
+         Stopping Getty on tty1...
+         Stopping Regular bac[   81.849319] spdif_rx_get() rate=0x0
+kground program processing daemon...
+         Stopping OpenBSD Secure Shell server...
+[  OK  ] Stopped System Logging Service.
+[  OK  ] Stopped Avahi mDNS/DNS-SD Stack.
+[  OK  ] Stopped Regular background program processing daemon.
+[  OK  ] Stopped Authorization Manager.
+[  OK  [  OK  ] Stopped Serial Getty on ttyS0.
+[  OK  ] Stopped OpenBSD Secure Shell server.
+[  OK  ] Stopped Weston Wayland Compositor (on tty7).
+[  OK  ] Stopped Getty on ttyGS0.
+[  OK  ] Stopped Session 1 of user mendel.
+[  OK  ] Stopped Save/Restore Sound Card State.
+         Stopping Manage Sound Card State (restore and store)...
+         Stopping Login Service...
+         Stopping User Manager for UID 1000...
+[  OK  ] Removed slice system-serial\x2dgetty.slice.
+[  OK  ] Removed slice system-getty.slice.
+[  OK  ] Stopped dnsmasq - A lightw…t DHCP and caching DNS server.
+[  OK  ] Stopped User Manager for UID 1000   82.070031] spdif_rx_get() rate=0x0
+0m.
+         Stopping User Runtime Directory /run/user/1000...
+[  OK  ] Stopped Manage Sound Card State (restore and store).
+[  OK  ] Unmounted /run/user/1000.
+[  OK  ] Stopped Login Service.
+[  OK  ] Stopped User Runtime Directory /run/user/1000.
+[  OK  ] Removed slice User Slice of UID 1000.
+         Stopping Permit User Sessions...
+[  OK  ] Stopped Permit User Sessions.
+[  OK  ] Stopped target Remote File Systems.
+[  OK  ] Stopped target Network.
+         Stopping WPA supplicant...
+         Stopping Network Manager...
+         Stopping Raise network interfaces...
+         Stopping USB Gadget...
+[  OK  ] Stopped WPA supplicant.
+[  OK  ] Stopped Raise network interfaces.
+[  OK  ] Stopped Network Manager.
+         Stopping D-Bus System Message Bus...
+[  OK  ] Stopped D-Bus System Message Bus.
+[   82.513966] console [ttyGS-1] disabled
+[  OK  ] Stopped USB Gadget.
+[  OK  ] Stopped target Basic System.
+[  OK  ] Stopped target Slices.
+[  OK  ] Removed slice User and Session Slice.
+[  OK  ] Stopped target Sockets.
+[  OK  ] Closed Syslog Socket.
+[  OK  ] Closed D-Bus System Message Bus Socket.
+[  OK  ] Closed Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Stopped target Paths.
+[  OK  ] Stopped Restart mdt-keymas… when authorized_keys changes.
+[  OK  ] Stopped target System Initialization.
+         Stopping Update UTMP about System Boot/Shutdown...
+[  OK  ] Stopped target Local Encrypted Volumes.
+[  OK  ] Stopped Forward Password R…uests to Wall Directory Watch.
+         Stopping Load/Save Random Seed...
+[  OK  ] Stopped Apply Kernel Variables.
+[  OK  ] Stopped Load Kernel Modules.
+         Stopping Network Time Synchronization...
+[  OK  ] Stopped Dispatch Password …ts to Console Directory Watch.
+[  OK  ] Stopped Load/Save Random Seed.
+[  OK  ] Stopped Network Time Synchronization.
+[  OK  ] Stopped Update UTMP about System Boot/Shutdown.
+[  OK  ] Stopped Create Volatile Files and Directories.
+[  OK  ] Stopped Flush Journal to Persistent Storage.
+[  OK  ] Stopped target Local File Systems.
+         Unmounting /home...
+         Unmounting /var/log...
+         Unmounting /boot...
+[  OK  ] Unmounted /var/log.
+[  OK  ] Unmounted /home.
+[  OK  ] Unmounted /boot.
+[  OK  ] Stopped File System Check …b-1d90-492f-ab86-6952303b214e.
+[  OK  ] Stopped File System Check …9-3004-4e30-87dc-ed33fbf4dbfd.
+[  OK  ] Stopped Make File System o…9-3004-4e30-87dc-ed33fbf4dbfd.
+[  OK  ] Removed slice system-systemd\x2dmkfs.slice.
+[  OK  ] Removed slice system-systemd\x2dfsck.slice.
+[  OK  ] Reached target Unmount All Filesystems.
+[  OK  ] Stopped target [   82.753721] systemd-shutdow: 39 output lines suppressed due to ratelimiting
+Swap.
+[  OK  ] Stopped target Local File Systems (Pre).
+[  OK  ] Stopped Create Static Device Nodes in /dev.
+[  OK  ] Stopped Create System Users.
+[  OK  ] Stopped Remount Root and Kernel File Systems.
+[  OK  ] Stopped File System Check on Root Device.
+[  OK  ] Reached target Shutdown.
+[  OK  ] Reached target Final Step.
+[   82.804792] systemd-shutdown[1]: Syncing filesystems and block devices.
+[  OK  ] Started Power-Off.
+[  OK  ] Reached target Power-Off.
+[   82.831506] systemd-shutdown[1]: Sending SIGTERM to remaining processes...
+[   82.839054] [VCU][0][1] wait event return -512 @vcu_ipi_get
+[   82.839061] [VCU][0][0] wait event return -512 @vcu_ipi_get
+[   82.839088] [VCU][1][0] wait event return -512 @vcu_ipi_get
+[mdpd] receive S[   82.839097] [VCU][0] wait event return -512 @vcu_log_get
+IGTERM
+[   82.855950] [VCU][0][0] wait event return -512 @vcu_ipi_get
+[   82.860812] systemd-journald[155]: Received SIGTERM from PID 1 (systemd-shutdow).
+[   82.876235] [VCU][1][0] wait event return -512 @vcu_ipi_get
+[   82.889088] systemd-shutdown[1]: Sending SIGKILL to remaining processes...
+[   82.909396] systemd-shutdown[1]: Unmounting file systems.
+[   82.917516] [825]: Remounting '/' read-only in with options '(null)'.
+[   82.944636] EXT4-fs (mmcblk0p4): re-mounted. Opts: (null)
+[   82.965865] systemd-shutdown[1]: All filesystems unmounted.
+[   82.971463] systemd-shutdown[1]: Deactivating swaps.
+[   82.976703] systemd-shutdown[1]: All swaps deactivated.
+[   82.981959] systemd-shutdown[1]: Detaching loop devices.
+[   82.991839] systemd-shutdown[1]: All loop devices detached.
+[   82.997427] systemd-shutdown[1]: Detaching DM devices.
+[   83.015139] PVR_K: shutdown notified, code=3
+[   83.039870] [MUSBFSH] mt_usb11_set_vbus 462: Disable VBUS
+[   83.050118] reboot: Power down
+
+F0: 102B 0000
+F3: 0000 0000
+V0: 0000 0000 [0001]
+00: 0000 0000
+BP: 0400 0041 [0000]
+G0: 1190 0000
+EC: 0000 1000 [0001]
+T0: 0000 0212 [000F]
+Jump to BL
+
+NOTICE:  BL2: v2.3():c1984dc174fa
+NOTICE:  BL2: Built : 08:07:51, Oct  2 2020
+NOTICE:  CHIPSET: MT8167
+[PWRAP] pmic ID: 2092.
+[EMI] MDL number = 0 
+[EMI] LPDDR3
+Vcore HV NV LV, Vdram HV NV LV
+0x5f 0x48 0x3f, 0xb 0x0 0x3
+[EMI] Use default emigen emi settings 
+[EMI] Config emi settings:
+EMI_CONA=0x2a052,   EMI_CONH=0x3
+EMI_RAMK0=0x40000000, EMI_RAMK1=0x40000000
+EMI_CONA=0x2a052
+EMI_CONF=0x4210000
+EMI_CONH=0x3
+
+[DramcSwImpedanceCal] FINAL: DRVP=8, DRVN=7
+
+LPDDR3 Pinmux 2
+SSC OFF
+DRAM Clock: 1584MHz
+
+[Write Leveling]
+WriteLevelingMoveDQSInsteadOfCLK
+===============================================================================
+Dram Type= 3, Freqency= 1600, rank 1
+odt_onoff= 0, Byte mode= 0, Read_DBI= 0, Write DBI= 0 
+===============================================================================
+WL Clk delay = 0, CA CLK delay = 0
+No need to update CA/CS delay because the CLK delay is small than CA training.
+Final Clk output delay = 0
+R1 FINAL: WriteLeveling DQS:(2, 2) OEN:(2, 0) DQS0 delay =  27
+R1 FINAL: WriteLeveling DQS:(2, 2) OEN:(2, 0) DQS1 delay =  27
+R1 FINAL: WriteLeveling DQS:(2, 2) OEN:(2, 0) DQS2 delay =  27
+R1 FINAL: WriteLeveling DQS:(2, 2) OEN:(2, 0) DQS3 delay =  27
+[DramcWriteLeveling] ====Done====
+[DramRankNumberDetection] 2, 0x0
+LPDDR3 Pinmux 2
+SSC OFF
+DRAM Clock: 1584MHz
+
+[CATrainingLP3]
+FINAL: CA0  (1~32) 16
+FINAL: CA1  (0~30) 15
+FINAL: CA2  (1~31) 16
+FINAL: CA3  (0~31) 15
+FINAL: CA5  (1~31) 16
+FINAL: CA6  (1~31) 16
+FINAL: CA7  (1~31) 16
+FINAL: CA8  (2~32) 17
+FINAL: CA4  (1~32) 16
+FINAL: CA9  (1~32) 16
+=========================================
+u4GoldenPattern 0xrank0:
+Macro0 Clk Dealy is 0, CA delay is 15
+rank1:
+Macro0 Clk Dealy is 0, CA delay is 15
+[CATrainingLP3] ====Done====
+
+
+[Write Leveling]
+WriteLevelingMoveDQSInsteadOfCLK
+===============================================================================
+Dram Type= 3, Freqency= 1600, rank 0
+odt_onoff= 0, Byte mode= 0, Read_DBI= 0, Write DBI= 0 
+===============================================================================
+WL Clk delay = 0, CA CLK delay = 0
+No need to update CA/CS delay because the CLK delay is small than CA training.
+Final Clk output delay = 0
+R0 FINAL: WriteLeveling DQS:(2, 2) OEN:(2, 0) DQS0 delay =  28
+R0 FINAL: WriteLeveling DQS:(2, 2) OEN:(2, 0) DQS1 delay =  27
+R0 FINAL: WriteLeveling DQS:(2, 2) OEN:(2, 0) DQS2 delay =  26
+R0 FINAL: WriteLeveling DQS:(2, 2) OEN:(2, 0) DQS3 delay =  26
+[DramcWriteLeveling] ====Done====
+
+[Gating]
+===============================================================================
+Dram Type= 3, Freqency= 1600, rank 0
+odt_onoff= 0, Byte mode= 0, Read_DBI= 0, Write DBI= 0 
+===============================================================================
+[Byte 0]First pass (1, 6, 12)
+[Byte 1]First pass (1, 6, 12)
+[Byte 2]First pass (1, 6, 12)
+[Byte 3]First pass (1, 6, 12)
+[Byte 1]Bigger pass win(2, 0, 3)  Pass tap=55
+[Byte 3]Bigger pass win(2, 0, 3)  Pass tap=55
+[Byte 0]Bigger pass win(2, 0, 4)  Pass tap=56
+[Byte 2]Bigger pass win(2, 0, 4)  Pass tap=56
+===============================================================================
+    dqs input gating widnow, final delay value
+    Frequency=1600  rank=0
+===============================================================================
+R0 FINAL: GW best DQS0 P0 delay(2T, 0.5T, PI) = (1, 7, 8) [tap = 56]
+R0 FINAL: GW best DQS1 P0 delay(2T, 0.5T, PI) = (1, 7, 7) [tap = 55]
+R0 FINAL: GW best DQS2 P0 delay(2T, 0.5T, PI) = (1, 7, 8) [tap = 56]
+R0 FINAL: GW best DQS3 P0 delay(2T, 0.5T, PI) = (1, 7, 7) [tap = 55]
+R0 FINAL: GW best DQS0 P1 delay(2T, 0.5T, PI) = (2, 1, 8)
+R0 FINAL: GW best DQS1 P1 delay(2T, 0.5T, PI) = (2, 1, 7)
+R0 FINAL: GW best DQS2 P1 delay(2T, 0.5T, PI) = (2, 1, 8)
+R0 FINAL: GW best DQS3 P1 delay(2T, 0.5T, PI) = (2, 1, 7)
+[DramcRxdqsGatingCal] ====Done====
+
+[DATLAT]
+DATLAT Default value = 0x10
+5, 0x6, 0x7, 0x8, 0x9, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0xpattern=5 first_step=15 total pass=6 best_step=17
+R0 FINAL: DATLAT = 17 [15 ~ 20]
+[DramcRxdatlatCal] ====Done====
+
+[RX]
+===============================================================================
+Dram Type= 3, Freqency= 1600, rank 0
+odt_onoff= 0, Byte mode= 0, Read_DBI= 0, Write DBI= 0 
+===============================================================================
+RX Window Sum 765
+R0 FINAL: RX Bit 0, 15 (4 ~ 27) 24
+R0 FINAL: RX Bit 1, 13 (1 ~ 26) 26
+R0 FINAL: RX Bit 2, 13 (0 ~ 26) 27
+R0 FINAL: RX Bit 3, 14 (4 ~ 25) 22
+R0 FINAL: RX Bit 4, 18 (8 ~ 29) 22
+R0 FINAL: RX Bit 5, 17 (4 ~ 30) 27
+R0 FINAL: RX Bit 6, 17 (6 ~ 29) 24
+R0 FINAL: RX Bit 7, 18 (5 ~ 31) 27
+R0 FINAL: RX Bit 8, 17 (5 ~ 29) 25
+R0 FINAL: RX Bit 9, 18 (6 ~ 30) 25
+R0 FINAL: RX Bit 10, 15 (2 ~ 29) 28
+R0 FINAL: RX Bit 11, 18 (7 ~ 29) 23
+R0 FINAL: RX Bit 12, 19 (8 ~ 30) 23
+R0 FINAL: RX Bit 13, 18 (6 ~ 30) 25
+R0 FINAL: RX Bit 14, 18 (8 ~ 29) 22
+R0 FINAL: RX Bit 15, 17 (4 ~ 31) 28
+R0 FINAL: RX Bit 16, 18 (4 ~ 32) 29
+R0 FINAL: RX Bit 17, 19 (6 ~ 32) 27
+R0 FINAL: RX Bit 18, 16 (3 ~ 30) 28
+R0 FINAL: RX Bit 19, 17 (4 ~ 31) 28
+R0 FINAL: RX Bit 20, 13 (1 ~ 26) 26
+R0 FINAL: RX Bit 21, 15 (4 ~ 27) 24
+R0 FINAL: RX Bit 22, 14 (3 ~ 26) 24
+R0 FINAL: RX Bit 23, 14 (2 ~ 27) 26
+R0 FINAL: RX Bit 24, 18 (7 ~ 30) 24
+R0 FINAL: RX Bit 25, 19 (8 ~ 30) 23
+R0 FINAL: RX Bit 26, 18 (5 ~ 32) 28
+R0 FINAL: RX Bit 27, 20 (8 ~ 33) 26
+R0 FINAL: RX Bit 28, 19 (9 ~ 30) 22
+R0 FINAL: RX Bit 29, 19 (8 ~ 30) 23
+R0 FINAL: RX Bit 30, 18 (9 ~ 28) 20
+R0 FINAL: RX Bit 31, 17 (7 ~ 27) 21
+===============================================================================
+Dram Type= 3, Freqency= 1600, rank 0
+odt_onoff= 0, Byte mode= 0, Read_DBI= 0, Write DBI= 0 
+===============================================================================
+DQS Delay :
+DQS0 = 0, DQS1 = 0, DQS2 = 0, DQS3 = 0
+DQM Delay :
+DQM0 = 15, DQM1 = 17, DQM2 = 15, DQM3 = 18
+DQ Delay :
+DQ0 =15, DQ1 =13, DQ2 =13, DQ3 =14 
+DQ4 =18, DQ5 =17, DQ6 =17, DQ7 =18 
+DQ8 =17, DQ9 =18, DQ10 =15, DQ11 =18 
+DQ12 =19, DQ13 =18, DQ14 =18, DQ15 =17 
+DQ16 =18, DQ17 =19, DQ18 =16, DQ19 =17 
+DQ20 =13, DQ21 =15, DQ22 =14, DQ23 =14 
+DQ24 =18, DQ25 =19, DQ26 =18, DQ27 =20 
+DQ28 =19, DQ29 =19, DQ30 =18, DQ31 =17 
+________________________________________________________________________
+[DramcRxWindowPerbitCal] ====Done====
+
+[TX]
+[DramcTxWindowPerbitCal] Frequency=1600, Rank=0, calType=2
+[DramcTxWindowPerbitCal] Begin, TX DQ(2, 2),  DQ OEN(2, 0)
+TX Window Sum 738
+===============================================================================
+Dram Type= 3, Freqency= 1600, rank 0
+odt_onoff= 0, Byte mode= 0, Read_DBI= 0, Write DBI= 0 
+===============================================================================
+R0 FINAL: TX Bit0 (34~56) 23 45,   Bit8 (35~57) 23 46,  Bit16 (32~53) 22 42,   Bit24 (35~56) 22 45
+R0 FINAL: TX Bit1 (29~53) 25 41,   Bit9 (34~57) 24 45,  Bit17 (31~53) 23 42,   Bit25 (34~56) 23 45
+R0 FINAL: TX Bit2 (32~55) 24 43,   Bit10 (33~56) 24 44,  Bit18 (31~53) 23 42,   Bit26 (33~56) 24 44
+R0 FINAL: TX Bit3 (33~53) 21 43,   Bit11 (35~57) 23 46,  Bit19 (32~53) 22 42,   Bit27 (35~56) 22 45
+R0 FINAL: TX Bit4 (35~56) 22 45,   Bit12 (35~58) 24 46,  Bit20 (28~51) 24 39,   Bit28 (34~55) 22 44
+R0 FINAL: TX Bit5 (35~56) 22 45,   Bit13 (34~58) 25 46,  Bit21 (30~52) 23 41,   Bit29 (33~56) 24 44
+R0 FINAL: TX Bit6 (34~56) 23 45,   Bit14 (34~56) 23 45,  Bit22 (29~50) 22 39,   Bit30 (32~54) 23 43
+R0 FINAL: TX Bit7 (34~56) 23 45,   Bit15 (36~58) 23 47,  Bit23 (30~52) 23 41,   Bit31 (32~55) 24 43
+
+==================================================================
+Byte0, PI DQ Delay 43 Delay2 44
+Final DQ PI Delay(LargeUI, SmallUI, PI) =(2 ,2, 44)
+OEN DQ PI Delay(LargeUI, SmallUI, PI) =(2 ,0, 44)
+
+Byte1, PI DQ Delay 45 Delay2 46
+Final DQ PI Delay(LargeUI, SmallUI, PI) =(2 ,2, 46)
+OEN DQ PI Delay(LargeUI, SmallUI, PI) =(2 ,0, 46)
+
+Byte2, PI DQ Delay 40 Delay2 41
+Final DQ PI Delay(LargeUI, SmallUI, PI) =(2 ,2, 41)
+OEN DQ PI Delay(LargeUI, SmallUI, PI) =(2 ,0, 41)
+
+Byte3, PI DQ Delay 44 Delay2 44
+Final DQ PI Delay(LargeUI, SmallUI, PI) =(2 ,2, 44)
+OEN DQ PI Delay(LargeUI, SmallUI, PI) =(2 ,0, 44)
+
+[DramcTxWindowPerbitCal] ====Done====
+
+[Gating]
+===============================================================================
+Dram Type= 3, Freqency= 1600, rank 1
+odt_onoff= 0, Byte mode= 0, Read_DBI= 0, Write DBI= 0 
+===============================================================================
+[Byte 0]First pass (1, 6, 8)
+[Byte 1]First pass (1, 6, 8)
+[Byte 2]First pass (1, 6, 8)
+[Byte 3]First pass (1, 6, 8)
+[Byte 0]Bigger pass win(2, 0, 0)  Pass tap=56
+[Byte 1]Bigger pass win(2, 0, 0)  Pass tap=56
+[Byte 3]Bigger pass win(2, 0, 0)  Pass tap=56
+[Byte 2]Bigger pass win(2, 0, 1)  Pass tap=57
+===============================================================================
+    dqs input gating widnow, final delay value
+    Frequency=1600  rank=1
+===============================================================================
+R1 FINAL: GW best DQS0 P0 delay(2T, 0.5T, PI) = (1, 7, 4) [tap = 56]
+R1 FINAL: GW best DQS1 P0 delay(2T, 0.5T, PI) = (1, 7, 4) [tap = 56]
+R1 FINAL: GW best DQS2 P0 delay(2T, 0.5T, PI) = (1, 7, 4) [tap = 57]
+R1 FINAL: GW best DQS3 P0 delay(2T, 0.5T, PI) = (1, 7, 4) [tap = 56]
+R1 FINAL: GW best DQS0 P1 delay(2T, 0.5T, PI) = (2, 1, 4)
+R1 FINAL: GW best DQS1 P1 delay(2T, 0.5T, PI) = (2, 1, 4)
+R1 FINAL: GW best DQS2 P1 delay(2T, 0.5T, PI) = (2, 1, 4)
+R1 FINAL: GW best DQS3 P1 delay(2T, 0.5T, PI) = (2, 1, 4)
+[DramcRxdqsGatingCal] ====Done====
+
+[DATLAT]
+DATLAT Default value = 0x11
+5, 0x6, 0x7, 0x8, 0x9, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0xpattern=5 first_step=15 total pass=6 best_step=17
+R1 FINAL: DATLAT = 17 [15 ~ 20]
+[DramcRxdatlatCal] ====Done====
+[DramcRxdqsGatingPostProcess] p->frequency 1600
+[DramcRxdqsGatingPostProcess] s1ChangeDQSINCTL 0, reg_TX_dly_DQSgated_min 3, u1TXDLY_Cal_min 3
+[DramcDualRankRxdatlatCal] RANK0: 17, RANK1: 17, Final_Datlat 17
+[Get MRR] Vendor 5.
+[Get MRR] MR8 1f1f.
+[Get MRR] Rank 0, u1DieNumber 1, Desity 0x40000000.
+[Get MRR] MR8 1f1f.
+[Get MRR] Rank 1, u1DieNumber 1, Desity 0x40000000.
+[vDramcUpdateEmiSetting] EMI_CONA 0x2a052, EMI_CONH 0x3
+[vDramcACTimingOptimize] Density 7, u1TRFC 73, u1TRFCpb 25, u1TRFC_05T 0, u1TXREFCNT 86
+
+Settings after calibration ...
+=== [DramcRunTimeConfig] ===
+HW_GATING: ON
+DUMMY_READ_FOR_TRACKING: ON
+DFS_HW_SYNC_GATING_TRACKING: OFF
+ZQCS_ENABLE: ON
+LOWPOWER_GOLDEN_SETTINGS(DCM): ON
+SPM_CONTROL_AFTERK: ON
+TEMP_SENSOR_ENABLE: OFF
+ENABLE_PER_BANK_REFRESH: OFF
+HW_SAVE_FOR_SR: OFF
+=========================
+[MEM] complex R/W mem test pass
+NOTICE:  BL2: Booting BL31
+
+
+U-Boot 2019.10 (Dec 09 2020 - 23:51:30 +0000), Build: jenkins-excelsior.excelsior-bootloader-2
+
+CPU:   MediaTek MT8516
+DRAM:  512 MiB
+WDT:   Started with servicing (60s timeout)
+MMC:   mmc@11120000: 0
+Loading Environment from MMC... OK
+In:    serial@11005000
+Out:   serial@11005000
+Err:   serial@11005000
+8GB mmc detected
+Hit any key to stop autoboot:  0 
+gpio: pin 42 (gpio 42) value is 1
+switch to partitions #0, OK
+mmc0(part 0) is current device
+1420 bytes read in 1 ms (1.4 MiB/s)
+## Executing script at 4c000000
+Loading image...
+6747990 bytes read in 86 ms (74.8 MiB/s)
+Loading device tree...
+42834 bytes read in 2 ms (20.4 MiB/s)
+123 bytes read in 1 ms (120.1 KiB/s)
+Loaded overlay.txt: coral-enviro-board
+Overlay failed, reverting to original device tree
+42834 bytes read in 2 ms (20.4 MiB/s)
+## Loading kernel from FIT Image at 4a000000 ...
+   Using 'conf@1' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  Linux kernel
+     Type:         Kernel Image
+     Compression:  gzip compressed
+     Data Start:   0x4a0000e4
+     Data Size:    6746273 Bytes = 6.4 MiB
+     Architecture: AArch64
+     OS:           Linux
+     Load Address: 0x40080000
+     Entry Point:  0x40080000
+     Hash algo:    sha256
+     Hash value:   0470380bb98e5f4131f5dec4c7721e059de557065168fa7ba4ad6ad0caa94b65
+   Verifying Hash Integrity ... sha256+ OK
+## Flattened Device Tree blob at 42000000
+   Booting using the fdt blob at 0x42000000
+   Uncompressing Kernel Image
+   Loading Device Tree to 000000005fb7f000, end 000000005fb8c751 ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd041]
+[    0.000000] Linux version 4.19.125-mtk (pbuilder@linux-mtk-44a92093-5a4b-410b-8ad5-805072874b42-7qs4k-8xlpx) (gcc version 8.3.0 (Debian 8.3.0-2)) #1 SMP PREEMPT Thu Dec 10 02:36:13 UTC 2020
+[    0.000000] Machine model: Google Coral MT8167
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x00000000bc000000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: Trusted OS migration not required
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] random: get_random_bytes called from start_kernel+0x98/0x44c with crng_init=0
+[    0.000000] percpu: Embedded 22 pages/cpu s53144 r8192 d28776 u90112
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] Speculative Store Bypass Disable mitigation not required
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 516064
+[    0.000000] Kernel command line: root=PARTUUID=02f36a4f-4562-46b2-bbec-bfc1682f9e92 rootwait
+[    0.000000] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.000000] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.000000] Memory: 1978928K/2097024K available (9788K kernel code, 1086K rwdata, 3104K rodata, 832K init, 978K bss, 52560K reserved, 65536K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu:     RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GIC: GICv2 detected, but range too small and irqchip.gicv2_force_probe not set
+[    0.000000] arch_timer: cp15 timer(s) running at 13.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x2ff89eacb, max_idle_ns: 440795202429 ns
+[    0.000004] sched_clock: 56 bits at 13MHz, resolution 76ns, wraps every 4398046511101ns
+[    0.000106] clocksource: timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 147020034397 ns
+[    0.000116] sched_clock: 32 bits at 13MHz, resolution 76ns, wraps every 165191050201ns
+[    0.000552] Console: colour dummy device 80x25
+[    0.000913] console [tty0] enabled
+[    0.000942] Calibrating delay loop (skipped), value calculated using timer frequency.. 26.00 BogoMIPS (lpj=52000)
+[    0.000968] pid_max: default: 32768 minimum: 301
+[    0.001064] Security Framework initialized
+[    0.001081] SELinux:  Initializing.
+[    0.001179] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.001205] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.023964] ASID allocator initialised with 32768 entries
+[    0.031958] rcu: Hierarchical SRCU implementation.
+[    0.040292] EFI services will not be available.
+[    0.048013] smp: Bringing up secondary CPUs ...
+[    0.080200] Detected VIPT I-cache on CPU1
+[    0.080249] CPU1: Booted secondary processor 0x0000000001 [0x410fd041]
+[    0.112277] Detected VIPT I-cache on CPU2
+[    0.112320] CPU2: Booted secondary processor 0x0000000002 [0x410fd041]
+[    0.144360] Detected VIPT I-cache on CPU3
+[    0.144401] CPU3: Booted secondary processor 0x0000000003 [0x410fd041]
+[    0.144508] smp: Brought up 1 node, 4 CPUs
+[    0.144589] SMP: Total of 4 processors activated.
+[    0.144605] CPU features: detected: 32-bit EL0 Support
+[    0.144658] CPU: All CPU(s) started at EL2
+[    0.144686] alternatives: patching kernel code
+[    0.145580] devtmpfs: initialized
+[    0.152958] Registered cp15_barrier emulation handler
+[    0.152993] Registered setend emulation handler
+[    0.153374] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.153410] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.154942] pinctrl core: initialized pinctrl subsystem
+[    0.155526] DMI not present or invalid.
+[    0.155760] NET: Registered protocol family 16
+[    0.156108] audit: initializing netlink subsys (disabled)
+[    0.156292] audit: type=2000 audit(0.152:1): state=initialized audit_enabled=0 res=1
+[    0.157031] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.161552] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.186386] cryptd: max_cpu_qlen set to 1000
+[    0.189578] PVR_K:(Error):     1: mtk_mfg_async_init: Enable power domain failed
+[    0.189782] PVR_K:(Error):     1: mtk_mfg_2d_init: Enable power domain failed
+[    0.190026] SCSI subsystem initialized
+[    0.190161] usbcore: registered new interface driver usbfs
+[    0.190213] usbcore: registered new interface driver hub
+[    0.190343] usbcore: registered new device driver usb
+[    0.191009] i2c-gpio 1100b000.i2c: using lines 447 (SDA) and 448 (SCL)
+[    0.191167] videodev: Linux video capture interface: v2.00
+[    0.192443] Advanced Linux Sound Architecture Driver Initialized.
+[    0.193005] Bluetooth: Core ver 2.22
+[    0.193067] NET: Registered protocol family 31
+[    0.193082] Bluetooth: HCI device and connection manager initialized
+[    0.193104] Bluetooth: HCI socket layer initialized
+[    0.193121] Bluetooth: L2CAP socket layer initialized
+[    0.193166] Bluetooth: SCO socket layer initialized
+[    0.193670] clocksource: Switched to clocksource arch_sys_counter
+[    0.251223] VFS: Disk quotas dquot_6.6.0
+[    0.251304] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.259607] NET: Registered protocol family 2
+[    0.260168] tcp_listen_portaddr_hash hash table entries: 1024 (order: 2, 16384 bytes)
+[    0.260215] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.260355] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+[    0.260563] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.260700] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.260756] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.260960] NET: Registered protocol family 1
+[    0.262371] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    0.265620] Initialise system trusted keyrings
+[    0.265884] workingset: timestamp_bits=62 max_order=19 bucket_order=0
+[    0.270509] fuse init (API version 7.27)
+[    0.275079] Key type asymmetric registered
+[    0.275107] Asymmetric key parser 'x509' registered
+[    0.275137] io scheduler noop registered
+[    0.275151] io scheduler deadline registered
+[    0.275298] io scheduler cfq registered (default)
+[    0.275316] io scheduler mq-deadline registered
+[    0.275330] io scheduler kyber registered
+[    0.284032] Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+[    0.285463] mt-pmic-pwrap 1000f000.pwrap: unexpected interrupt int=0x1
+[    0.305872] 11005000.serial: ttyS0 at MMIO 0x11005000 (irq = 183, base_baud = 1625000) is a ST16650V2
+[    0.931364] console [ttyS0] enabled
+[    0.956070] 11006000.serial: ttyS1 at MMIO 0x11006000 (irq = 184, base_baud = 1625000) is a ST16650V2
+[    0.966167] mtk_rng 1020c000.rng: registered RNG driver
+[    0.966540] random: fast init done
+[    0.972791] iommu: Adding device 14007000.disp_ovl0 to group 0
+[    0.975191] random: crng init done
+[    0.981312] iommu: Adding device 1400a000.rdma1 to group 0
+[    0.989756] iommu: Adding device 14009000.disp_rdma0 to group 0
+[    0.997373] mediatek-drm 14000000.mmsys2: Adding component match for /soc/dpi1@14019000
+[    1.005508] mediatek-drm 14000000.mmsys2: Adding component match for /soc/rdma1@1400a000
+[    1.013624] mediatek-drm 14000000.mmsys2: Adding component match for /soc/disp_ovl0@14007000
+[    1.022037] mediatek-drm 14000000.mmsys2: Adding component match for /soc/disp_rdma0@14009000
+[    1.030533] mediatek-drm 14000000.mmsys2: Adding component match for /soc/disp_color@1400c000
+[    1.040357] mediatek-hdmi-phy 10018300.hdmi-phy: Using default TX DRV impedance: 4.2k/36
+[    1.050128] [drm] hdmi-audio-codec driver bound to HDMI
+[    1.055673] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    1.068961] brd: module loaded
+[    1.080287] loop: module loaded
+[    1.083872] zram: Added device: zram0
+[    1.087782] [xo] dts default cap code: 0x0
+[    1.091962] [xo] default cap_code: 0x24
+[    1.095797] [xo] get xo efuse: a4000000
+[    1.120022] [xo] set cap_code: 0x24
+[    1.123509] [xo] current cap_code: 0x24
+[    1.127340] [xo] status: 0xf
+[    1.130236] [xo] current cap code: 0x24
+[    1.135100] mt6392-regulator mt6392-regulator: Chip ID = 0x2092
+[    1.147576] ldo_vgp2: Bringing 2800000uV into 3300000-3300000uV
+[    1.159784] tun: Universal TUN/TAP device driver, 1.6
+[    1.165326] PPP generic driver version 2.4.2
+[    1.169763] PPP BSD Compression module registered
+[    1.174452] PPP Deflate Compression module registered
+[    1.179498] PPP MPPE Compression module registered
+[    1.184267] NET: Registered protocol family 24
+[    1.189027] usbcore: registered new interface driver usb-storage
+[    1.195043] usbcore: registered new interface driver ums-alauda
+[    1.200962] usbcore: registered new interface driver ums-cypress
+[    1.206961] usbcore: registered new interface driver ums-datafab
+[    1.212960] usbcore: registered new interface driver ums-freecom
+[    1.218960] usbcore: registered new interface driver ums-isd200
+[    1.224872] usbcore: registered new interface driver ums-jumpshot
+[    1.230962] usbcore: registered new interface driver ums-karma
+[    1.236789] usbcore: registered new interface driver ums-onetouch
+[    1.242874] usbcore: registered new interface driver ums-sddr09
+[    1.248786] usbcore: registered new interface driver ums-sddr55
+[    1.254698] usbcore: registered new interface driver ums-usbat
+[    1.260575] usbcore: registered new interface driver option
+[    1.266144] usbserial: USB Serial support registered for GSM modem (1-port)
+[    1.273492] usb_phy_generic usb_phy_generic.1.auto: usb_phy_generic.1.auto supply vcc not found, using dummy regulator
+[    1.284219] usb_phy_generic usb_phy_generic.1.auto: Linked as a consumer to regulator.0
+[    1.292296] musb-mtk 11100000.usb: Linked as a consumer to regulator.1
+[    1.299405] musb-hdrc musb-hdrc.2.auto: MUSB HDRC host driver
+[    1.305158] musb-hdrc musb-hdrc.2.auto: new USB bus registered, assigned bus number 1
+[    1.313610] hub 1-0:1.0: USB hub found
+[    1.317381] hub 1-0:1.0: 1 port detected
+[    1.323180] input: mtk-pmic-keys as /devices/platform/soc/1000f000.pwrap/1000f000.pwrap:pmic/mtk-pmic-keys/input/input0
+[    1.334930] rtc rtc0: invalid alarm value: 2031-1-31 15:63:47
+[    1.340833] mt6397-rtc mt6397-rtc: registered as rtc0
+[    1.345932] i2c /dev entries driver
+[    1.351687] iommu: Adding device 16000000.vcu to group 0
+[    1.357325] iommu: Adding device soc:vcu@1 to group 0
+[    1.362956] iommu: Adding device 16000000.codec to group 0
+[    1.369914] iommu: Adding device 14001000.rdma to group 0
+[    1.376142] iommu: Adding device d5af20.wdma to group 0
+[    1.381515] iommu: Adding device d5b308.wrot to group 0
+[    1.387293] mtk-mdp 14001000.rdma: driver registered as /dev/video2
+[    1.388015] iommu: Adding device 10011800.mipicsi to group 0
+[    1.399976] mtk-mipicsi 10011800.mipicsi: Waiting for larb device larb@15001000
+[    1.407800] ov5645_mipi 2-003c: Linked as a consumer to regulator.27
+[    1.414616] ov5645_mipi 2-003c: Linked as a consumer to regulator.26
+[    1.421411] ov5645_mipi 2-003c: Linked as a consumer to regulator.11
+[    1.497903] ov5645_read_reg:write reg error:reg=300a
+[    1.502847] camera ov5645_mipi is not found
+[    1.507137] ov5645_mipi 2-003c: Dropping the link to regulator.11
+[    1.513288] ov5645_mipi 2-003c: Dropping the link to regulator.26
+[    1.519436] ov5645_mipi 2-003c: Dropping the link to regulator.27
+[    1.526154] mtk-thermal 1100d000.thermal: Calibration data: buf[0]:0x29c0e25d, buf[1]:0x82e336d9, buf[2]:0x702ae600
+[    1.536590] mtk-thermal 1100d000.thermal: Calibration data: adc_ge:523, vts1:224, vts2:226, vts3:224, degc_cali:46, o_slope:10
+[    1.548630] mtk-wdt 10007000.toprgu: Watchdog enabled (timeout=31 sec, nowayout=0)
+[    1.556589] device-mapper: uevent: version 1.0.3
+[    1.561472] device-mapper: ioctl: 4.39.0-ioctl (2018-04-03) initialised: dm-devel@redhat.com
+[    1.570070] Bluetooth: Generic Bluetooth SDIO driver ver 0.1
+[    1.576243] cpu cpu0: Linked as a consumer to regulator.6
+[    1.581703] cpu cpu0: dummy supplies not allowed for exclusive requests
+[    1.590801] mtk-msdc 11120000.mmc: Linked as a consumer to regulator.19
+[    1.597506] mtk-msdc 11120000.mmc: Linked as a consumer to regulator.25
+[    1.632325] mtk-msdc 11130000.mmc: Linked as a consumer to regulator.19
+[    1.639467] mtk-msdc 11130000.mmc: Linked as a consumer to regulator.25
+[    1.671163] mtk-msdc 11170000.mmc: Linked as a consumer to regulator.18
+[    1.678078] mtk-msdc 11170000.mmc: Linked as a consumer to regulator.17
+[    1.711618] hidraw: raw HID events driver (C) Jiri Kosina
+[    1.719482] usbcore: registered new interface driver usbhid
+[    1.725224] usbhid: USB HID core driver
+[    1.725359] mtk-msdc 11130000.mmc: phase: [map:f87fffff] [maxlen:23] [final:7]
+[    1.730911] mtk-msdc 11120000.mmc: phase: [map:ffff803f] [maxlen:17] [final:23]
+[    1.738917] mmc1: new ultra high speed SDR104 SDIO card at address 0001
+[    1.743773] mmc0: new HS200 MMC card at address 0001
+[    1.743799] mtk-iommu 10203000.m4u: bound 14016000.larb (ops 0xffffff8008af6a38)
+[    1.743809] mtk-iommu 10203000.m4u: bound 15001000.larb (ops 0xffffff8008af6a38)
+[    1.743818] mtk-iommu 10203000.m4u: bound 16010000.larb (ops 0xffffff8008af6a38)
+[    1.744150] optee: probing for conduit method from DT.
+[    1.744170] optee: revision 3.8
+[    1.744552] optee: initialized driver
+[    1.744966] usbcore: registered new interface driver snd-usb-audio
+[    1.747995] mtk-afe-pcm 11140000.audio-controller: MTK AFE driver initialized.
+[    1.748568] mt8167-excelsior sound: mt8167_excelsior_gpio_probe Set pinctrl state default 0
+[    1.749001] mtk-afe-pcm 11140000.audio-controller: ASoC: Failed to create component debugfs directory
+[    1.749222] mt8167-codec mt8167-codec: mt8167_codec_get_regmap_from_dt found mt8167-codec node
+[    1.749232] mt8167-codec mt8167-codec: mt8167_codec_get_regmap_from_dt found mediatek,afe-regmap
+[    1.749256] mt8167-codec mt8167-codec: mt8167_codec_get_regmap_from_dt found platform device of mediatek,afe-regmap
+[    1.749266] mt8167-codec mt8167-codec: mt8167_codec_get_regmap_from_dt found regmap of mediatek,afe-regmap
+[    1.749349] mt8167-codec mt8167-codec: mt8167_codec_get_regmap_from_dt found mt8167-codec node
+[    1.749357] mt8167-codec mt8167-codec: mt8167_codec_get_regmap_from_dt found mediatek,pwrap-regmap
+[    1.749369] mt8167-codec mt8167-codec: mt8167_codec_get_regmap_from_dt found platform device of mediatek,pwrap-regmap
+[    1.749376] mt8167-codec mt8167-codec: mt8167_codec_get_regmap_from_dt found regmap of mediatek,pwrap-regmap
+[    1.895411] mt8167-excelsior sound: snd-soc-dummy-dai <-> DL1 mapping ok
+[    1.897113] mmcblk0: mmc0:0001 MB2908 7.28 GiB 
+[    1.908417] mmcblk0boot0: mmc0:0001 MB2908 partition 1 4.00 MiB
+[    1.916078] mmcblk0boot1: mmc0:0001 MB2908 partition 2 4.00 MiB
+[    1.922197] mmcblk0rpmb: mmc0:0001 MB2908 partition 3 4.00 MiB, chardev (247:0)
+[    1.922252] mt8167-excelsior sound: snd-soc-dummy-dai <-> VUL mapping ok
+[    1.936532] mt8167-excelsior sound: snd-soc-dummy-dai <-> AWB mapping ok
+[    1.943877] Alternate GPT is invalid, using primary GPT.
+[    1.944046] mt8167-excelsior sound: snd-soc-dummy-dai <-> DL2 mapping ok
+[    1.949231]  mmcblk0: p1 p2 p3 p4
+[    1.955989] mt8167-excelsior sound: mt8167-codec <-> INT ADDA mapping ok
+[    1.966112] mt8167-excelsior sound: ASoC: no DMI vendor name!
+[    1.974587] input: excelsior-card Headset Jack as /devices/platform/sound/sound/card0/input1
+[    1.983602] drop_monitor: Initializing network drop monitor service
+[    1.989929] Mirror/redirect action on
+[    1.993577] u32 classifier
+[    1.996275]     Performance counters on
+[    2.000114]     input device check on
+[    2.003760]     Actions configured
+[    2.007796] xt_time: kernel timezone is -0000
+[    2.012296] ipip: IPv4 and MPLS over IPv4 tunneling driver
+[    2.018405] Initializing XFRM netlink socket
+[    2.023129] NET: Registered protocol family 10
+[    2.028596] Segment Routing with IPv6
+[    2.032405] mip6: Mobile IPv6
+[    2.035554] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    2.042509] NET: Registered protocol family 17
+[    2.046992] NET: Registered protocol family 15
+[    2.051486] Bridge firewalling registered
+[    2.055622] Bluetooth: RFCOMM TTY layer initialized
+[    2.060626] Bluetooth: RFCOMM socket layer initialized
+[    2.065793] Bluetooth: RFCOMM ver 1.11
+[    2.069532] 8021q: 802.1Q VLAN Support v1.8
+[    2.074407] Loading compiled-in X.509 certificates
+[    2.103116] mediatek-dpi 14019000.dpi1: Found bridge node: /soc/hdmi@1401b000
+[    2.110513] mediatek-drm 14000000.mmsys2: bound 14019000.dpi1 (ops 0xffffff8008aaeff0)
+[    2.118410] mediatek-drm 14000000.mmsys2: bound 1400a000.rdma1 (ops 0xffffff8008aaa728)
+[    2.126378] mediatek-drm 14000000.mmsys2: bound 14007000.disp_ovl0 (ops 0xffffff8008aaa1b8)
+[    2.134690] mediatek-drm 14000000.mmsys2: bound 14009000.disp_rdma0 (ops 0xffffff8008aaa728)
+[    2.143088] mediatek-drm 14000000.mmsys2: bound 1400c000.disp_color (ops 0xffffff8008aa9e10)
+[    2.151483] mediatek-drm 14000000.mmsys2: Not creating crtc 0 because component 9 is disabled or missing
+[    2.160966] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    2.167545] [drm] No driver support for vblank timestamp query.
+[    2.173931] [drm] Initialized mediatek 1.0.0 20150513 for 14000000.mmsys2 on minor 0
+[    2.181693] [drm] Cannot find any crtc or sizes
+[    2.186978] mtk-mipicsi 10011800.mipicsi: not set mediatek,mipicsi_max_vc, use default value 1
+[    2.195571] mtk-mipicsi 10011800.mipicsi: not set mediatek,serdes_link_reg, can't read subdev link number
+[    2.205090] mtk-mipicsi 10011800.mipicsi: there are 1 camsv node
+[    2.211797] mtk-mipicsi 10011800.mipicsi: seninf_mux_camsv@15004000 parse done
+[    2.219304] mtk-mipicsi 10011800.mipicsi: mipicsi@15008000 parse done
+[    2.225736] mtk-mipicsi 10011800.mipicsi: mipicsi node parse done
+[    2.231872] mtk-mipicsi 10011800.mipicsi: probe done
+[    2.236919] [drm] Cannot find any crtc or sizes
+[    2.238932] PVR_K:  1: irq_res = 0xca
+[    2.245113] PVR_K:  1: reg_res = 0x13000000, 0x80000
+[    2.250426] PVR_K:  1: Read BVNC 22.40.54.30 from HW device registers
+[    2.257003] PVR_K:  1: RGX Device registered with BVNC 22.40.54.30
+[    2.264011] [drm] Initialized pvr 1.11.5516664 20170530 for 13000000.clark on minor 1
+[    2.272371] mt6397-rtc mt6397-rtc: setting system clock to 2022-01-24 19:32:06 UTC (1643052726)
+[    2.281273] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    2.290670] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    2.297332] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    2.302052] [MUSBFSH] musbfsh_init 1859: MUSBFSH is enabled
+[    2.305922] cfg80211: failed to load regulatory.db
+[    2.312532] musbfsh-hdrc musbfsh-hdrc.0: Linked as a consumer to regulator.4
+[    2.323275] [MUSBFSH] musbfsh_init_controller 1372: vbus registered
+[    2.331263] [MUSBFSH] musbfsh_core_init 894: musbfsh-hdrc: ConfigData=0x1f (UTMI-16, dyn FIFOs, HB-ISO Rx, HB-ISO Tx, SoftConn)
+[    2.345915] musbfsh-hdrc musbfsh-hdrc.0: MUSBFSH HDRC host driver
+[    2.352051] musbfsh-hdrc musbfsh-hdrc.0: new USB bus registered, assigned bus number 2
+[    2.360669] hub 2-0:1.0: USB hub found
+[    2.364449] hub 2-0:1.0: 1 port detected
+[    2.368517] [MUSBFSH] musbfsh_start 581: <== devctl 0x98
+[    2.373807] [MUSBFSH] mt_usb11_set_vbus 455: Enable VBUS
+[    2.430657] musbfsh-hdrc musbfsh-hdrc.0: USB controller at 00000000cebab212 using DMA, IRQ 193
+[    2.439359] [MUSBFSH] musbfsh_init_enable_pin 1310: ERROR: Cannot find musbfsh_pinctrl!
+[    2.447412] ALSA device list:
+[    2.450370]   #0: excelsior-card
+[    2.463329] EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: (null)
+[    2.471608] VFS: Mounted root (ext4 filesystem) readonly on device 179:4.
+[    2.478850] devtmpfs: mounted
+[    2.482300] Freeing unused kernel memory: 832K
+[    2.486890] Run /sbin/init as init process
+[    2.533769] [MUSBFSH] musbfsh_hub_control 565: port status 00000100,devctl=0x19
+[    2.541186] [MUSBFSH] musbfsh_bus_suspend 2806: musbfsh_bus_suspend++,power=0x61
+[    2.616752] [MUSBFSH] musbfsh_stage0_irq 532: CONNECT ! devctl 0x5d
+[    2.623166] [MUSBFSH] musbfsh_bus_resume 2852: musbfsh_bus_resume++,power=0x61
+[    2.630560] [MUSBFSH] musbfsh_hub_control 565: port status 00010101,devctl=0x5d
+SELinux:  Could not open policy file <= /etc/selinux/targeted/policy/policy.31:  No such file or directory
+[    2.737760] systemd[1]: Failed to find module 'autofs4'
+[    2.745773] [MUSBFSH] musbfsh_hub_control 565: port status 00000101,devctl=0x5d
+[    2.753208] [MUSBFSH] musbfsh_port_reset 261: reset=1 power=0x61
+[    2.766668] systemd[1]: systemd 241 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+[    2.788633] systemd[1]: Detected architecture arm64.
+
+Welcome to Mendel GNU/Linux 5 (Eagle)!
+
+[    2.814713] systemd[1]: Set hostname to <bored-yarn>.
+[    2.825739] [MUSBFSH] musbfsh_port_reset 261: reset=0 power=0x78
+[    2.831741] [MUSBFSH] musbfsh_hub_control 565: port status 00120503,devctl=0x5d
+[    2.897767] usb 2-1: new high-speed USB device number 2 using musbfsh-hdrc
+[    2.905050] [MUSBFSH] musbfsh_port_reset 261: reset=1 power=0x70
+[    2.969735] [MUSBFSH] musbfsh_port_reset 261: reset=0 power=0x78
+[    2.975739] [MUSBFSH] musbfsh_hub_control 565: port status 00120503,devctl=0x5d
+[    3.031030] systemd[1]: File /lib/systemd/system/systemd-journald.service:12 configures an IP firewall (IPAddressDeny=any), but the local system does not support BPF/cgroup based firewalling.
+[    3.041814] [MUSBFSH] musbfsh_h_disable 2655: musbfsh_h_disable++: ep: 0x0
+[    3.048048] systemd[1]: Proceeding WITHOUT firewalling in effect! (This warning is only shown for the first loaded unit using IP firewalling.)
+[    3.055231] MTK_ICUSB [DBG], <musbfsh_h_disable(), 2660> qh == NULL
+[    3.074294] [MUSBFSH] musbfsh_h_disable 2655: musbfsh_h_disable++: ep: 0x0
+[    3.081641] MTK_ICUSB [DBG], <musbfsh_h_disable(), 2660> qh == NULL
+[    3.107330] [MUSBFSH] musbfsh_hub_control 565: port status 00020503,devctl=0x5d
+[    3.193786] systemd[1]: /lib/systemd/system/vitalsd.service:3: Failed to add dependency on usb-gadget, ignoring: Unknown error -22
+[    3.205713] systemd[1]: /lib/systemd/system/vitalsd.service:5: Unknown lvalue 'Exec' in section 'Service', ignoring
+[    3.216414] systemd[1]: vitalsd.service: Service has no ExecStart=, ExecStop=, or SuccessAction=. Refusing.
+[    3.325020] systemd[1]: /lib/systemd/system/usb-gadget-getty-ttyGS0.service:21: Unknown lvalue 'TTYDisallocate' in section 'Service', ignoring
+[    3.380915] systemd[1]: vitalsd.service: Cannot add dependency job, ignoring: Unit vitalsd.service has a bad unit file setting.
+[  OK  ] Listening on udev Kernel Socket.
+[  OK  ] Listening on Syslog Socket.
+[  OK  ] Created slice User and Session Slice.
+[  OK  ] Listening on Journal Socket (/dev/log).
+[  OK  ] Created slice system-systemd\x2dfsck.slice.
+[  OK  ] Reached target Remote File Systems.
+[  OK  ] Listening on fsck to fsckd communication Socket.
+[  OK  ] Reached target Swap.
+[  OK  ] Created slice system-systemd\x2dmkfs.slice.
+[  OK  ] Created slice system-getty.slice.
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+[  OK  ] Started Forward Password R…uests to Wall Directory Watch.
+[  OK  ] Listening on Journal Audit Socket.
+[  OK  ] Started Dispatch Password …ts to Console Directory Watch.
+[  OK  ] Reached target Local Encrypted Volumes.
+[  OK  ] Listening on Journal Socket.
+         Mounting Kernel Debug File System...
+         Mounting POSIX Message Queue File System...
+         Starting Load Kernel Modules...
+[  OK  ] Listening on initctl Compatibility Named Pipe.
+         Starting File System Check on Root Device...
+[  OK  ] Listening on udev Control Socket.
+         Starting Journal Service...
+[  OK  ] Reached target Slices.
+         Starting udev Coldplug all Devices...
+[  OK  ] Mounted Kernel Debug File System.
+[  OK  ] Mounted POSIX Message Queue File System.
+[  OK  ] Started Load Kernel Modules.
+[  OK  ] Started File System Check on Root Device.
+[  OK  ] Started File System Check Daemon to report status.
+         Starting Remount Root and Kernel File Systems...
+         Mounting FUSE Control File System...
+         Mounting Kernel Configuration File System...
+         Starting Apply Kernel Variables...
+[  OK  ] Started Journal Service.
+[  OK  ] Mounted FUSE Control File System.
+[  OK      4.047719] EXT4-fs (mmcblk0p4): re-mounted. Opts: (null)
+0m] Mounted Kernel Configuration File System.
+[  OK  ] Started Remount Root and Kernel File Systems.
+[  OK  ] Started Apply Kernel Variables.
+         Starting Create System Users...
+         Starting Load/Save Random Seed...
+[  OK  ] Started Create System Users.
+[  OK  ] Started Load/Save Random Seed.
+         Starting Create Static Device Nodes in /dev...
+[  OK  ] Started Create Static Device Nodes in /dev.
+[  OK  ] Reached target Local File Systems (Pre).
+         Mounting /var/log...
+         Starting udev Kernel Device Manager...
+[  OK  ] Started udev Coldplug all Devices.
+[  OK  ] Mounted /var/log.
+         Starting Flush Journal to Persistent Storage...
+         Starting Helper to synchronize boot up for ifupdown...
+[  OK  ] Started udev Kernel Device Manager.
+[  OK  ] Started Helper to synchronize boot up for ifupdown.
+[    4.431580] systemd-journald[153]: Received request to flush runtime journal from PID 1
+[  OK  ] Started VPU Daemon.
+[  OK  ] Started MDP Daemon.
+[  OK  ] Started Flush Journal to Persistent Storage.
+mdpd without fuse
+mdpd: shmem_length=1212416, shmem=0x7fadd7d000
+remap_shmem,line:311 vpud: shmem_length=1089536, shmem=0x7f83f3d000
+
+[Info]vpud_init,line:343 share_obj:56,1024,24, set:40387600,mva:c0187601,free:c0187602,flush:c0187603,get:c0387604,log:7f44007605,cache:c0187606
+vdec_codec_service_init() block mode
+The firmware version is 0.2.13
+--[mdp] create_rt_thread,line:217
+venc_codec_service_init()
+The firmware version is 0.2.14
+[  OK  ] Found device /dev/ttyS0.
+[    5.112140] wlan_mt7668_sdio: loading out-of-tree module taints kernel.
+[    5.204201] spdifrx_uninit() Dir has already uninited.
+[  OK  ] Found device /dev/disk/by-…b-1d90-492f-ab86-6952303b214e.
+[  OK  ] Found device /dev/disk/by-…9-3004-4e30-87dc-ed33fbf4dbfd.
+[  OK  ] Listening on Load/Save RF …itch Status /dev/rfkill Watch.
+         Starting Make File System …3004-4e30-87dc-ed33fbf4dbfd...
+         Starting File System Check…1d90-492f-ab86-6952303b214e...
+         Starting Load/Save RF Kill Switch Status...
+[  OK  ] Started Load/Save RF Kill Switch Status.
+[  OK  ] Started Make File System o…9-3004-4e30-87dc-ed33fbf4dbfd.
+         Starting File System Check…3004-4e30-87dc-ed33fbf4dbfd...
+[  OK  ] Started File System Check …b-1d90-492f-ab86-6952303b214e.
+         Mounting /boot...
+[    5.954847] EXT4-fs (mmcblk0p2): mounting ext2 file system using the ext4 subsystem
+Checking in progress on 0 disks[    5.967086] EXT4-fs (mmcblk0p2): mounted filesystem without journal. Opts: (null)
+[  OK  ] Started File System Check …9-3004-4e30-87dc-ed33fbf4dbfd.
+[  OK  ] Mounted /boot.
+         Mounting /home...
+[    6.000212] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null)
+[  OK  ] Mounted /home.
+[  OK  ] Reached target Local File Systems.
+         Starting Create Volatile Files and Directories...
+         Starting Raise network interfaces...
+[  OK  ] Started Create Volatile Files and Directories.
+[  OK  ] Started Entropy daemon using the HAVEGE algorithm.
+         Starting Network Time Synchronization...
+         Starting Update UTMP about System Boot/Shutdown...
+[    6.130626] net lo: No handler found (wireless_process_ioctl)
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[  OK  ] Started Raise network interfaces.
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Reached target System Time Synchronized.
+[  OK  ] Reached target System Initialization.
+         Starting Scripts that should be run only once...
+[  OK  ] Started Daily rotation of log files.
+[  OK  ] Sta[    6.369692] [XO] xocap_timer_func
+rted Da[    6.374164] [XO] xocap_work_func
+ily apt download[    6.378781] [MT6620][nvram_read] : failed to open!!
+ activities.[    6.385080]  ret is -1!
+
+[  OK  ] Started Daily apt upgrade and clean activities.
+[  OK  ] Started Restart mdt-keymas… when authorized_keys changes.
+[  OK  ] Reached target Paths.
+[  OK  ] Li[    6.409400] current cap code(after nvram):0x24
+stening on D-Bus System Message Bus Socket.
+[  OK  ] Started Daily man-db regeneration.
+[  OK  ] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Reached target Timers.
+[  OK  ] Started Scripts that should be run only once.
+[  OK  ] Reached target Basic System.
+[  OK  ] Started D-Bus System Message Bus.
+[  OK  ] Started Regular background program processing daemon.
+[  OK  ] Started Excelsior bootloader install service.
+         Starting Avahi mDNS/DNS-SD Stack...
+         Starting Login Service...
+         Starting USB Gadget...
+         Starting System Logging Service...
+         Starting WPA supplicant...
+         Starting Initialize hardware monitoring sensors...
+         Starting Network Manager...
+[  OK  ] Started Manage Sound Card State (restore and store).
+         Starting Save/Restore Sound Card State...
+[  OK  ] Started Avahi mDNS/DNS-SD Stack.
+[  OK  ] Started System Logging Service.
+[  OK  ] Started Initialize hardware monitoring sensors.
+[    6.822941] spdifrx_uninit() Dir has already uninited.
+[  OK  ] Started WPA supplicant.
+[  OK  ] Started Login Service.
+[  OK  ] Started Network Manager.
+         Starting Hostname Service...
+[  OK  ] Started Hostname Service.
+         Starting Network Manager Script Dispatcher Service...
+[  OK  ] Started Network Manager Script Dispatcher Service.
+         Starting Authorization Manager...
+[  OK  ] Started Authorization Manager.
+[    7.705010] using random self ethernet address
+[    7.709531] using random host ethernet address
+[    7.725986] using random self ethernet address
+[    7.730485] using random host ethernet address
+[    7.790291] spdifrx_uninit() Dir has already uninited.
+[  OK  ] Started Save/Restore Sound Card State.
+[  OK  ] Reached target Sound Card.
+[    7.944062] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[  OK  ] Started     8.019326] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+1;39mExcelsior Bluetooth Module.
+[    8.029391] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[    8.144461] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[    8.314775] BTMTK_init
+[    8.317137] proc initialized
+[    8.317163] major number:244
+[    8.323129] BT_majorfwlog number: 243
+[    8.326807] BT_chrdev driver(major 244) installed.
+[    8.331639] BT_chrdevfwlog driver(major 243) installed.
+[    8.337349] BTMTK_init: BT_major 244, BT_majorfwlog 243
+[    8.342603] BTMTK_init: devID 255852544, devIDfwlog 254803968
+[    8.348547] btmtk_sdio_probe Mediatek Bluetooth driver Version=v0.0.0.53_2018072701_YOCTO
+[    8.356782] vendor=0x37a, device=0x7668, class=255, fn=2, support func_num 2
+[    8.363847] btmtk_sdio_probe chip_id is 7668
+[    8.368215] before claim irq read SDIO_CCCR_IENx 0, func num 2
+[    8.374127] sdio_claim_irq success: ret=0
+[    8.378186] after claim irq read SDIO_CCCR_IENx 0
+[    8.383020] SDIO FUNC2 IO port: 0xf07668
+[    8.387058] btmtk_sdio_enable_host_int read CSDIOCSR is 0x1
+[    8.392722] btmtk_sdio_enable_host_int write CSDIOCSR is 0x5
+[    8.398386] btmtk_sdio_download_fw begin
+[    8.402473] btmtk_sdio_send_wohci retrun  0x0
+[    8.406948] btmtk_sdio_bt_memRegister_read: read cr 80000000
+[    8.427872] btmtk_sdio_bt_memRegister_read: retrytime 299
+[    8.433287] btmtk_sdio_bt_memRegister_read: ger cr 0x80000000 value 0x8b11
+[    8.440149] btmtk_sdio_download_rom_patch uhwversion 0x8b11
+[    8.445751] btmtk_sdio_download_rom_patch request_firmware(firmware name mt7668_patch_e2_hdr.bin)
+[    8.455038] btmtk_sdio_download_rom_patch patch is ready no need load patch again
+[    8.462593] btmtk_sdio_download_rom_patch read chipid =  f07668
+[    8.468614] btmtk_sdio_bt_set_power: onoff 1
+[    8.577965] btmtk_eeprom_bin_file: 7668 series
+[    8.717960] btmtk_set_eeprom2ctrler: set BDAddress(F4-F5-E8-EC-AF-E8) OK
+[    8.786175] usb0: HOST MAC 8a:3b:f4:01:4b:cc
+[    8.787157] net usb0: No handler found (wireless_process_ioctl)
+[    8.800024] usb0: MAC 02:22:78:0d:f6:df
+[    8.807789] usb1: HOST MAC 02:22:78:0d:f6:dd
+[    8.809590] net usb1: No handler found (wireless_process_ioctl)
+[    8.818335] usb1: MAC 02:22:78:0d:f6:de
+[    8.830361] btmtk_set_eeprom2ctrler: set radio(BT/BLE default power: 5/5 MAX power: 5) OK
+[    8.958217] btmtk_sdio_recv_rx_data: retry_count = 0,timeout
+[    9.069930] btmtk_set_eeprom2ctrler: set power offset(FE FD FD FD FC FB) OK
+[    9.108121] IPv6: ADDRCONF(NETDEV_UP): usb0: link is not ready
+[    9.114588] IPv6: ADDRCONF(NETDEV_UP): usb0: link is not ready
+[    9.130062] IPv6: ADDRCONF(NETDEV_UP): usb0: link is not ready
+[    9.154072] IPv6: ADDRCONF(NETDEV_UP): usb0: link is not ready
+[    9.181917] btmtk_set_eeprom2ctrler: set XTAL(0xAB 00) OK
+[    9.187363] btmtk_sdio_set_sleep begin
+[    9.194658] btmtk_sdio_set_write_clear write CHCR 0x00000002
+[    9.200457] btmtk_sdio_set_write_clear read CHCR 0x00000002
+[    9.206102] btmtk_sdio_set_write_clear write clear
+[    9.211012] btmtk_sdio_set_i2s_slave
+[    9.218336] btmtk_sdio_read_pin_mux_setting
+[    9.226012] btmtk_sdio_write_pin_mux_setting begin
+[    9.234167] btmtk_sdio_read_pin_mux_setting
+[    9.241791] confirm pinmux 22220000
+[    9.245272] btmtk_add_card begin
+[    9.248600] Starting kthread...
+[    9.251970] main_thread begin 50
+[    9.255406] btmtk_service_main_thread probe_ready 0 delay 10ms~15ms
+[    9.255827] btmtk_sdio_probe normal end
+[    9.267605] SDIO Driver Registration Success
+[    9.282259] Bluetooth: hci0: unexpected event for opcode 0xfcd1
+         Starting Bluetooth service...
+[  OK  ] Started Bluetooth service.
+[  OK  ] Reached target Bluetooth.
+[    9.692177] IPv6: ADDRCONF(NETDEV_UP): usb1: link is not ready
+[    9.698621] IPv6: ADDRCONF(NETDEV_UP): usb1: link is not ready
+[    9.713778] IPv6: ADDRCONF(NETDEV_UP): usb1: link is not ready
+[    9.735793] IPv6: ADDRCONF(NETDEV_UP): usb1: link is not ready
+[  OK  ] Started USB Gadget.
+[  OK  ] Reached target Network.
+         Starting dnsmasq - A light…DHCP and caching DNS server...
+         Starting Permit User Sessions...
+[  OK  ] Started Unattended Upgrades Shutdown.
+         Starting OpenBSD Secure Shell server...
+[  OK  ] Started MDT public key management service.
+[  OK  ] Started Permit User Sessions.
+         Starting Weston Wayland Compositor (on tty7)...
+[  OK  ] Started Serial Getty on ttyS0.
+[  OK  ] Started Getty on tty1.
+[  OK  ] Started Getty on ttyGS0.
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Started Update LED behavior after boot.
+[  OK  ] Started Weston Wayland Compositor (on tty7).
+[  OK  ] Started OpenBSD Secure Shell server.
+[  OK  ] Created slice User Slice of UID 1000.
+         Starting User Runtime Directory /run/user/1000...
+[  OK  ] Started dnsmasq - A lightw…t DHCP and caching DNS server.
+[  OK  ] Reached target Multi-User System.
+[  OK  ] Reached target Graphical Interface.
+         Starting Update UTMP about System Runlevel Changes...
+[  OK  ] Reached target Host and Network Name Lookups.
+[  OK  ] Started Update UTMP about System Runlevel Changes.
+[  OK  ] Started User Runtime Directory /run/user/1000.
+         Starting User Manager for UID 1000...
+[   10.612957] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+[  OK  ] Started User Manager for UID 1000.
+[  OK  ] Started    11.088226] PVR_K:  726: RGX Firmware image 'rgx.fw.22.40.54.30' loaded
+
+Mendel GNU/Linux (eagle) bored-yarn ttyS0
+
+bored-yarn login: [   33.761764] usb0_vbus: disabling
+[   33.765006] usb0_vbus_old: disabling
+[   33.768676] backlight_vbus: disabling
+[   33.772450] ldo_vm25: disabling
+                                                   
+
