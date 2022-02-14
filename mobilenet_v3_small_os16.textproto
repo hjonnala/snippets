@@ -55,14 +55,6 @@ trainer_options {
       weight: 1.0
       top_k_percent: 0.2
     }
-    center_loss {
-      name: "mse"
-      weight: 200
-    }
-    regression_loss {
-      name: "l1"
-      weight: 0.01
-    }
   }
   solver_options {
     base_learning_rate: 0.001
@@ -73,12 +65,12 @@ trainer_options {
 train_dataset_options {
   dataset: "cityscapes_panoptic"
   # Update the path to training set.
-  file_pattern: "/home/hemanthreddyj/deeplab_edge/moto_out/train*.tfrecord"
+  file_pattern: "/usr/local/google/home/ndodda/Documents/deeplab_exp/train*.tfrecord"
   # Adjust the batch_size accordingly to better fit your GPU/TPU memory.
   # Also see Q1 in g3doc/faq.md.
   batch_size: 64
-  crop_size: 224
-  crop_size: 224
+  crop_size: 256
+  crop_size: 256
   # Skip resizing.
   min_resize_value: 0
   max_resize_value: 0
@@ -94,10 +86,10 @@ train_dataset_options {
 eval_dataset_options {
   dataset: "cityscapes_panoptic"
   # Update the path to validation set.
-  file_pattern: "/home/hemanthreddyj/deeplab_edge/moto_out/test*.tfrecord"
+  file_pattern: "/usr/local/google/home/ndodda/Documents/deeplab_exp/test*.tfrecord"
   batch_size: 1
-  crop_size: 224
-  crop_size: 224
+  crop_size: 256
+  crop_size: 256
   # Skip resizing.
   min_resize_value: 0
   max_resize_value: 0
