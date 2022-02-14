@@ -65,7 +65,7 @@ trainer_options {
 train_dataset_options {
   dataset: "cityscapes_panoptic"
   # Update the path to training set.
-  file_pattern: "/usr/local/google/home/ndodda/Documents/deeplab_exp/train*.tfrecord"
+  file_pattern: "/usr/local/google/home/ndodda/Documents/deeplab_exp/out/semantic/train*.tfrecord"
   # Adjust the batch_size accordingly to better fit your GPU/TPU memory.
   # Also see Q1 in g3doc/faq.md.
   batch_size: 64
@@ -86,7 +86,7 @@ train_dataset_options {
 eval_dataset_options {
   dataset: "cityscapes_panoptic"
   # Update the path to validation set.
-  file_pattern: "/usr/local/google/home/ndodda/Documents/deeplab_exp/test*.tfrecord"
+  file_pattern: "/usr/local/google/home/ndodda/Documents/deeplab_exp/out/semantic/test*.tfrecord"
   batch_size: 1
   crop_size: 256
   crop_size: 256
