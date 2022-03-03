@@ -32,7 +32,7 @@ input_data = np.array(np.random.random_sample(input_shape), dtype=input_details[
 interpreter.set_tensor(input_details[0]['index'], input_data)
 
 inference_time = 0
-count = 10
+count = 100
 for i in range(count):
     start = time.perf_counter()
     interpreter.invoke()
