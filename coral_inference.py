@@ -3,6 +3,7 @@ import tflite_runtime.interpreter as tflite
 import os
 import time
 import platform
+import argparse
 
 _EDGETPU_SHARED_LIB = {
   'Linux': 'libedgetpu.so.1',
@@ -10,12 +11,16 @@ _EDGETPU_SHARED_LIB = {
   'Windows': 'edgetpu.dll'
 }[platform.system()]
 
-base_dir = '/home/Downloads/'
-model_name = 'deeplabv3_mnv2_pascal_quant_edgetpu.tflite'
+parser = argparse.ArgumentParser(
+      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+parser.add_argument(
+      '-m', '--model', required=True, help='File path of .tflite file.')
 
-model_path = os.path.join(base_dir, model_name)
+args = parser.parse_args()
 
-if 'edgetpu.tflite'  in model_name:
+model_path = args.model
+
+if 'edgetpu.tflite'  in model_path:
     interpreter = tflite.Interpreter(
         model_path=model_path, experimental_delegates=[tflite.load_delegate(_EDGETPU_SHARED_LIB,  {})])
 else:
@@ -40,4 +45,4 @@ for i in range(count):
 print('%.2f ms' % (inference_time * 1000/count))
 
 output_data = interpreter.get_tensor(output_details[0]['index'])
-print(output_data)
+#print(output_data)
