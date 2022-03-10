@@ -37,7 +37,7 @@ from PIL import Image
 
 from pycoral.adapters import classify
 from pycoral.adapters import common
-import pycoral.pipeline.pipelined_model_runner as pipeline
+import pipelined_model_runner as pipeline
 from pycoral.utils.dataset import read_label_file
 from pycoral.utils.edgetpu import list_edge_tpus
 from pycoral.utils.edgetpu import make_interpreter
