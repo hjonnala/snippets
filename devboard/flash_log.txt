@@ -1,0 +1,990 @@
+
+U-Boot SPL 2019.04.1 (Sep 30 2021 - 17:13:18 +0000)
+power_bd71837_init
+Board id: 2
+DDRINFO: start DRAM init
+DDRINFO:ddrphy calibration done
+DDRINFO: ddrmix config done
+Normal Boot
+Trying to boot from MMC2
+hdr read sector 300, count=1
+
+
+U-Boot 2019.04.1 (Sep 30 2021 - 17:13:18 +0000), Build: jenkins-enterprise.uboot-imx-2
+
+CPU:   Freescale i.MX8MQ rev2.1 1500 MHz (running at 1000 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 25C
+Reset cause: POR
+Model: Freescale i.MX8MQ Phanbell
+DRAM:  1 GiB
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+Loading Environment from MMC... *** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+
+ BuildInfo:
+  - ATF 
+  - U-Boot 2019.04.1
+
+flash target is MMC:0
+Net:   
+Warning: ethernet@30be0000 using MAC address from ROM
+eth0: ethernet@30be0000
+Cannot find partition 2
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Normal Boot
+Hit any key to stop autoboot:  0 
+407 bytes read in 7 ms (56.6 KiB/s)
+## Executing script at 40480000
+23110144 bytes read in 1006 ms (21.9 MiB/s)
+56820 bytes read in 15 ms (3.6 MiB/s)
+1160978 bytes read in 73 ms (15.2 MiB/s)
+## Loading init Ramdisk from Legacy Image at 43800000 ...
+   Image Name:   initramfs
+   Image Type:   AArch64 Linux RAMDisk Image (gzip compressed)
+   Data Size:    1160914 Bytes = 1.1 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 43000000
+   Booting using the fdt blob at 0x43000000
+   Using Device Tree in place at 0000000043000000, end 0000000043010df3
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.14.98-imx (pbuilder@linux-imx-7c598330-766d-4b03-a12e-333509ed9db6-d1dc9-rtjkh) (gcc version 8.3.0 (Debian 8.3.0-2)) #1 SMP PREEMPT Tue Nov 2 02:55:21 UTC 2021
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] Machine model: Freescale i.MX8MQ Phanbell
+[    0.000000] earlycon: ec_imx6q0 at MMIO 0x0000000030860000 (options '115200')
+[    0.000000] bootconsole [ec_imx6q0] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] Reserved memory: created CMA memory pool at 0x000000006c000000, size 320 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x000000007fffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0x6bfb2300-0x6bfb40ff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] percpu: Embedded 24 pages/cpu @ffff80002bf4d000 s57624 r8192 d32488 u98304
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Speculative Store Bypass Disable mitigation not required
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 258048
+[    0.000000] Policy zone: DMA
+[    0.000000] Kernel command line: console=ttymxc0 console=tty0 earlycon=ec_imx6q,0x30860000,115200
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Memory: 679540K/1048576K available (13244K kernel code, 1768K rwdata, 6220K rodata, 1280K init, 432K bss, 41356K reserved, 327680K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffff000000000000 - 0xffff000008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffff000008000000 - 0xffff7dffbfff0000   (129022 GB)
+[    0.000000]       .text : 0xffff000008080000 - 0xffff000008d70000   ( 13248 KB)
+[    0.000000]     .rodata : 0xffff000008d70000 - 0xffff000009390000   (  6272 KB)
+[    0.000000]       .init : 0xffff000009390000 - 0xffff0000094d0000   (  1280 KB)
+[    0.000000]       .data : 0xffff0000094d0000 - 0xffff00000968a200   (  1769 KB)
+[    0.000000]        .bss : 0xffff00000968a200 - 0xffff0000096f64a0   (   433 KB)
+[    0.000000]     fixed   : 0xffff7dfffe7f9000 - 0xffff7dfffec00000   (  4124 KB)
+[    0.000000]     PCI I/O : 0xffff7dfffee00000 - 0xffff7dffffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffff7e0000000000 - 0xffff800000000000   (  2048 GB maximum)
+[    0.000000]               0xffff7e0000000000 - 0xffff7e0001000000   (    16 MB actual)
+[    0.000000]     memory  : 0xffff800000000000 - 0xffff800040000000   (  1024 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: no VLPI support, no direct LPI support
+[    0.000000] ITS: No ITS available, not enabling LPIs
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x0000000038880000
+[    0.000000] i.MX8MQ clock driver init done
+[    0.000000] arch_timer: cp15 timer(s) running at 8.33MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.000004] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.008697] system counter timer init
+[    0.011729] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.019710] clocksource: imx sysctr: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.030965] Console: colour dummy device 80x25
+[    0.034447] console [tty0] enabled
+[    0.037857] bootconsole [ec_imx6q0] disabled
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.14.98-imx (pbuilder@linux-imx-7c598330-766d-4b03-a12e-333509ed9db6-d1dc9-rtjkh) (gcc version 8.3.0 (Debian 8.3.0-2)) #1 SMP PREEMPT Tue Nov 2 02:55:21 UTC 2021
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] Machine model: Freescale i.MX8MQ Phanbell
+[    0.000000] earlycon: ec_imx6q0 at MMIO 0x0000000030860000 (options '115200')
+[    0.000000] bootconsole [ec_imx6q0] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] Reserved memory: created CMA memory pool at 0x000000006c000000, size 320 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x000000007fffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0x6bfb2300-0x6bfb40ff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] percpu: Embedded 24 pages/cpu @ffff80002bf4d000 s57624 r8192 d32488 u98304
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Speculative Store Bypass Disable mitigation not required
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 258048
+[    0.000000] Policy zone: DMA
+[    0.000000] Kernel command line: console=ttymxc0 console=tty0 earlycon=ec_imx6q,0x30860000,115200
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Memory: 679540K/1048576K available (13244K kernel code, 1768K rwdata, 6220K rodata, 1280K init, 432K bss, 41356K reserved, 327680K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffff000000000000 - 0xffff000008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffff000008000000 - 0xffff7dffbfff0000   (129022 GB)
+[    0.000000]       .text : 0xffff000008080000 - 0xffff000008d70000   ( 13248 KB)
+[    0.000000]     .rodata : 0xffff000008d70000 - 0xffff000009390000   (  6272 KB)
+[    0.000000]       .init : 0xffff000009390000 - 0xffff0000094d0000   (  1280 KB)
+[    0.000000]       .data : 0xffff0000094d0000 - 0xffff00000968a200   (  1769 KB)
+[    0.000000]        .bss : 0xffff00000968a200 - 0xffff0000096f64a0   (   433 KB)
+[    0.000000]     fixed   : 0xffff7dfffe7f9000 - 0xffff7dfffec00000   (  4124 KB)
+[    0.000000]     PCI I/O : 0xffff7dfffee00000 - 0xffff7dffffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffff7e0000000000 - 0xffff800000000000   (  2048 GB maximum)
+[    0.000000]               0xffff7e0000000000 - 0xffff7e0001000000   (    16 MB actual)
+[    0.000000]     memory  : 0xffff800000000000 - 0xffff800040000000   (  1024 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: no VLPI support, no direct LPI support
+[    0.000000] ITS: No ITS available, not enabling LPIs
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x0000000038880000
+[    0.000000] i.MX8MQ clock driver init done
+[    0.000000] arch_timer: cp15 timer(s) running at 8.33MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.000004] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.008697] system counter timer init
+[    0.011729] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.019710] clocksource: imx sysctr: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.030965] Console: colour dummy device 80x25
+[    0.034447] console [tty0] enabled
+[    0.037857] bootconsole [ec_imx6q0] disabled
+[    0.042171] Calibrating delay loop (skipped), value calculated using timer frequency.. 16.66 BogoMIPS (lpj=33333)
+[    0.042193] pid_max: default: 32768 minimum: 301
+[    0.042271] Security Framework initialized
+[    0.042600] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.042767] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.042798] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.042818] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.058198] ASID allocator initialised with 32768 entries
+[    0.066199] Hierarchical SRCU implementation.
+[    0.074676] Cannot find MU entry in device tree
+[    0.074816] CPU identified as i.MX8MQ, silicon rev 2.1
+[    0.075631] EFI services will not be available.
+[    0.082239] smp: Bringing up secondary CPUs ...
+[    0.110380] Detected VIPT I-cache on CPU1
+[    0.110404] GICv3: CPU1: found redistributor 1 region 0:0x00000000388a0000
+[    0.110425] CPU1: Booted secondary processor [410fd034]
+[    0.138436] Detected VIPT I-cache on CPU2
+[    0.138453] GICv3: CPU2: found redistributor 2 region 0:0x00000000388c0000
+[    0.138468] CPU2: Booted secondary processor [410fd034]
+[    0.166505] Detected VIPT I-cache on CPU3
+[    0.166522] GICv3: CPU3: found redistributor 3 region 0:0x00000000388e0000
+[    0.166536] CPU3: Booted secondary processor [410fd034]
+[    0.166746] smp: Brought up 1 node, 4 CPUs
+[    0.166830] SMP: Total of 4 processors activated.
+[    0.166843] CPU features: detected feature: GIC system register CPU interface
+[    0.166858] CPU features: detected feature: 32-bit EL0 Support
+[    0.166871] CPU features: detected feature: Kernel page table isolation (KPTI)
+[    0.195986] CPU: All CPU(s) started at EL2
+[    0.196163] alternatives: patching kernel code
+[    0.197206] devtmpfs: initialized
+[    0.203835] random: get_random_u32 called from bucket_table_alloc+0x104/0x268 with crng_init=0
+[    0.204710] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.204763] futex hash table entries: 1024 (order: 5, 131072 bytes)
+[    0.213260] pinctrl core: initialized pinctrl subsystem
+[    0.215319] DMI not present or invalid.
+[    0.215720] NET: Registered protocol family 16
+[    0.222786] cpuidle: using governor menu
+[    0.223530] vdso: 2 pages (1 code @ ffff000008d76000, 1 data @ ffff0000094d4000)
+[    0.223554] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.229672] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.231338] Serial: AMBA PL011 UART driver
+[    0.231829] imx rpmsg driver is registered.
+[    0.239334] imx8mq-pinctrl 30330000.iomuxc: initialized IMX pinctrl driver
+[    0.248507] MU is ready for cross core communication!
+[    0.250080] virtio_rpmsg_bus virtio0: rpmsg host is online
+[    0.291439] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.300912] ACPI: Interpreter disabled.
+[    0.836650] vgaarb: loaded
+[    0.837165] SCSI subsystem initialized
+[    0.838462] usbcore: registered new interface driver usbfs
+[    0.838567] usbcore: registered new interface driver hub
+[    0.838892] usbcore: registered new device driver usb
+[    0.847696] bd71837 0-004b: Device ID=0xA2
+[    0.847712] bd71837 0-004b: gpio_intr = 3 
+[    0.847726] bd71837 0-004b: chip_irq=71 
+[    0.883960] bd71837-pmic bd71837-pmic: regulator register name 'buck1'
+[    0.912188] bd71837-pmic bd71837-pmic: regulator register name 'buck2'
+[    0.932236] bd71837-pmic bd71837-pmic: regulator register name 'buck3'
+[    0.952358] bd71837-pmic bd71837-pmic: regulator register name 'buck4'
+[    0.972332] bd71837-pmic bd71837-pmic: regulator register name 'buck5'
+[    0.988373] bd71837-pmic bd71837-pmic: regulator register name 'buck6'
+[    1.004419] bd71837-pmic bd71837-pmic: regulator register name 'buck7'
+[    1.020458] bd71837-pmic bd71837-pmic: regulator register name 'buck8'
+[    1.036498] bd71837-pmic bd71837-pmic: regulator register name 'ldo1'
+[    1.052537] bd71837-pmic bd71837-pmic: regulator register name 'ldo2'
+[    1.056641] bd71837-pmic bd71837-pmic: regulator register name 'ldo3'
+[    1.072646] bd71837-pmic bd71837-pmic: regulator register name 'ldo4'
+[    1.088687] bd71837-pmic bd71837-pmic: regulator register name 'ldo5'
+[    1.104731] bd71837-pmic bd71837-pmic: regulator register name 'ldo6'
+[    1.120775] bd71837-pmic bd71837-pmic: regulator register name 'ldo7'
+[    1.124533] random: fast init done
+[    1.136819] bd71837-pmic bd71837-pmic: Buck1: DVS Run-Idle-Susp[900000 - 900000 - 800000].
+[    1.148637] bd71837-pmic bd71837-pmic: Buck2: DVS Run-Idle-Susp[1000000 - 900000 - 0].
+[    1.156656] bd71837-pmic bd71837-pmic: Buck3: DVS Run-Idle-Susp[900000 - 0 - 0].
+[    1.160721] bd71837-pmic bd71837-pmic: Buck4: DVS Run-Idle-Susp[900000 - 0 - 0].
+[    1.177024] i2c i2c-0: IMX I2C adapter registered
+[    1.177042] i2c i2c-0: can't use DMA, using PIO instead.
+[    1.177901] i2c i2c-1: IMX I2C adapter registered
+[    1.177919] i2c i2c-1: can't use DMA, using PIO instead.
+[    1.178587] i2c i2c-2: IMX I2C adapter registered
+[    1.178604] i2c i2c-2: can't use DMA, using PIO instead.
+[    1.179994] media: Linux media interface: v0.10
+[    1.180094] Linux video capture interface: v2.00
+[    1.180317] pps_core: LinuxPPS API ver. 1 registered
+[    1.180331] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.180415] PTP clock support registered
+[    1.180811] EDAC MC: Ver: 3.0.0
+[    1.181490] dmi: Firmware registration failed.
+[    1.182384] Advanced Linux Sound Architecture Driver Initialized.
+[    1.183098] Bluetooth: Core ver 2.22
+[    1.183200] NET: Registered protocol family 31
+[    1.183213] Bluetooth: HCI device and connection manager initialized
+[    1.183231] Bluetooth: HCI socket layer initialized
+[    1.183245] Bluetooth: L2CAP socket layer initialized
+[    1.183271] Bluetooth: SCO socket layer initialized
+[    1.184377] BD71837:bd71837_pmic_interrupt() in.
+[    1.184940] clocksource: Switched to clocksource arch_sys_counter
+[    1.185216] VFS: Disk quotas dquot_6.6.0
+[    1.185272] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.185447] pnp: PnP ACPI: disabled
+[    1.188409] BD71837:IRQ_WDOG
+[    1.188420] BD71837:IRQ_ON_REQ
+[    1.203557] NET: Registered protocol family 2
+[    1.204065] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[    1.204167] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
+[    1.204302] TCP: Hash tables configured (established 8192 bind 8192)
+[    1.204383] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    1.204424] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    1.204545] NET: Registered protocol family 1
+[    1.205620] RPC: Registered named UNIX socket transport module.
+[    1.205635] RPC: Registered udp transport module.
+[    1.205647] RPC: Registered tcp transport module.
+[    1.205658] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.205790] Unpacking initramfs...
+[    1.252717] Freeing initrd memory: 1128K
+[    1.254097] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    1.254685] kvm [1]: 8-bit VMID
+[    1.255610] kvm [1]: GICv3: no GICV resource entry
+[    1.255624] kvm [1]: disabling GICv2 emulation
+[    1.255750] kvm [1]: GIC system register CPU interface enabled
+[    1.256121] kvm [1]: vgic interrupt IRQ1
+[    1.256554] kvm [1]: Hyp mode initialized successfully
+[    1.265407] audit: initializing netlink subsys (disabled)
+[    1.265708] audit: type=2000 audit(1.231:1): state=initialized audit_enabled=0 res=1
+[    1.266422] workingset: timestamp_bits=44 max_order=18 bucket_order=0
+[    1.276665] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    1.277796] NFS: Registering the id_resolver key type
+[    1.277828] Key type id_resolver registered
+[    1.277840] Key type id_legacy registered
+[    1.277860] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    1.277889] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    1.278477] 9p: Installing v9fs 9p2000 file system support
+[    1.298272] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+[    1.298739] io scheduler noop registered
+[    1.298908] io scheduler cfq registered (default)
+[    1.298922] io scheduler mq-deadline registered
+[    1.298934] io scheduler kyber registered
+[    1.321703] mxs-dma 33000000.dma-apbh: initialized
+[    1.323342] Bus freq driver module loaded
+[    1.325434] Config NOC for VPU and CPU
+[    1.336164] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    1.339830] SuperH (H)SCI(F) driver initialized
+[    1.340641] 30860000.serial: ttymxc0 at MMIO 0x30860000 (irq = 41, base_baud = 1562500) is a IMX
+[    1.340667] Console IMX rounded baud rate from 114679 to 114700
+[    2.541717] console [ttymxc0] enabled
+[    2.546285] 30880000.serial: ttymxc2 at MMIO 0x30880000 (irq = 42, base_baud = 1562500) is a IMX
+[    2.555956] clk: failed to reparent uart2 to sys1_pll_160m: -22
+[    2.562075] 30890000.serial: ttymxc1 at MMIO 0x30890000 (irq = 43, base_baud = 1562500) is a IMX
+[    2.572046] msm_serial: driver initialized
+[    2.590294] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    2.597004] [drm] No driver support for vblank timestamp query.
+[    2.603068] imx-drm display-subsystem: bound imx-dcss-crtc.0 (ops dcss_crtc_ops)
+[    2.610725] [drm] CDN_API_General_Test_Echo_Ext_blocking - APB(ret = 0 echo_resp = echo test)
+[    2.619277] [drm] CDN_API_General_getCurVersion - ver 13196 verlib 13062
+[    2.626097] [drm] Pixel clock frequency: 594000 KHz, character clock frequency: 594000, color depth is 8-bit.
+[    2.636040] [drm] Pixel clock frequency (594000 KHz) is supported in this color depth (8-bit). Settings found in row 27
+[    2.646903] [drm] VCO frequency is 5940000
+[    2.651018] [drm] VCO frequency (5940000 KHz) is supported. Settings found in row 14
+[    2.683828] [drm] CDN_API_General_Write_Register_blocking LANES_CONFIG ret = 0
+[    2.691092] [drm] Failed to get HDCP config - using HDCP 2.2 only
+[    2.697290] [drm] Failed to initialize HDCP
+[    2.703111] [drm] hdmi-audio-codec driver bound to HDMI
+[    2.708371] imx-drm display-subsystem: bound 32c00000.hdmi (ops imx_hdp_imx_ops)
+[    2.739873] i.mx8-hdp 32c00000.hdmi: 0,ff,ff,ff,ff,ff,ff,0
+[    2.750516] [drm] Pixel clock frequency: 148500 KHz, character clock frequency: 148500, color depth is 8-bit.
+[    2.750525] [drm] Pixel clock frequency (148500 KHz) is supported in this color depth (8-bit). Settings found in row 16
+[    2.750529] [drm] VCO frequency is 5940000
+[    2.750534] [drm] VCO frequency (5940000 KHz) is supported. Settings found in row 14
+[    2.765378] [drm] CDN_API_General_Write_Register_blocking LANES_CONFIG ret = 0
+[    3.447954] Console: switching to colour frame buffer device 240x67
+[    3.526572] imx-drm display-subsystem: fb0:  frame buffer device
+[    3.533350] [drm] Initialized imx-drm 1.0.0 20120507 for display-subsystem on minor 0
+[    3.549163] loop: module loaded
+[    3.557632] slram: not enough parameters.
+[    3.563660] spi_imx 30820000.ecspi: dma setup error -19, use pio
+[    3.571443] spi_imx 30820000.ecspi: probed
+[    3.578377] libphy: Fixed MDIO Bus: probed
+[    3.583835] NXP PHY: loading NXP PHY driver: [autonomous mode]
+[    3.590220] tun: Universal TUN/TAP device driver, 1.6
+[    3.595744] CAN device driver interface
+[    3.601862] fec 30be0000.ethernet: 30be0000.ethernet supply phy not found, using dummy regulator
+[    3.611414] pps pps0: new PPS source ptp0
+[    3.620343] libphy: fec_enet_mii_bus: probed
+[    3.625864] fec 30be0000.ethernet eth0: registered PHC device 0
+[    3.632876] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    3.638939] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    3.645104] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    3.652306] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    3.658106] igbvf: Intel(R) Gigabit Virtual Function Network Driver - version 2.4.0-k
+[    3.666182] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+[    3.672876] sky2: driver version 1.30
+[    3.685179] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    3.691947] ehci-pci: EHCI PCI platform driver
+[    3.696599] ehci-platform: EHCI generic platform driver
+[    3.702239] ehci-orion: EHCI orion driver
+[    3.706527] ehci-exynos: EHCI EXYNOS driver
+[    3.711109] ehci-msm: Qualcomm On-Chip EHCI Host Controller
+[    3.717105] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    3.723464] ohci-pci: OHCI PCI platform driver
+[    3.728166] ohci-platform: OHCI generic platform driver
+[    3.733750] ohci-exynos: OHCI EXYNOS driver
+[    3.738661] Can't support > 32 bit dma.
+[    3.749495] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    3.762034] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[    3.782364] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe6c hci version 0x110 quirks 0x0000000001010810
+[    3.798945] xhci-hcd xhci-hcd.0.auto: irq 230, io mem 0x38200000
+[    3.812715] hub 1-0:1.0: USB hub found
+[    3.823411] hub 1-0:1.0: 1 port detected
+[    3.834558] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    3.846850] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[    3.861375] xhci-hcd xhci-hcd.0.auto: Host supports USB 3.0  SuperSpeed
+[    3.875442] hub 2-0:1.0: USB hub found
+[    3.885891] hub 2-0:1.0: 1 port detected
+[    3.897409] usbcore: registered new interface driver usb-storage
+[    3.910256] usbcore: registered new interface driver usbserial
+[    3.922701] usbcore: registered new interface driver cp210x
+[    3.934866] usbserial: USB Serial support registered for cp210x
+[    3.947361] usbcore: registered new interface driver ftdi_sio
+[    3.959618] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    3.973377] ftdi_elan: driver ftdi-elan
+[    3.983687] usbcore: registered new interface driver ftdi-elan
+[    3.996014] usbcore: registered new interface driver usb_ehset_test
+[    4.012225] input: 30370000.snvs:snvs-powerkey as /devices/platform/30370000.snvs/30370000.snvs:snvs-powerkey/input/input0
+[    4.033194] snvs_rtc 30370000.snvs:snvs-rtc-lp: rtc core: registered 30370000.snvs:snvs-rtc-lp as rtc0
+[    4.049908] i2c /dev entries driver
+[    4.063186] IR NEC protocol handler initialized
+[    4.074224] IR RC5(x/sz) protocol handler initialized
+[    4.085683] IR RC6 protocol handler initialized
+[    4.096552] IR JVC protocol handler initialized
+[    4.107307] IR Sony protocol handler initialized
+[    4.118151] IR SANYO protocol handler initialized
+[    4.128965] IR Sharp protocol handler initialized
+[    4.139745] IR MCE Keyboard/mouse protocol handler initialized
+[    4.151583] IR XMP protocol handler initialized
+[    4.163654] ov5645_mipi 1-003c: 1-003c supply DOVDD not found, using dummy regulator
+[    4.177541] ov5645_mipi 1-003c: 1-003c supply DVDD not found, using dummy regulator
+[    4.191345] ov5645_mipi 1-003c: 1-003c supply AVDD not found, using dummy regulator
+[    4.277251] ov5645_read_reg:write reg error:reg=300a
+[    4.288248] camera ov5645_mipi is not found
+[    4.299890] mxc-mipi-csi2_yav 30a70000.mipi_csi1: mipi_csi2_probe
+[    4.312123] CSI: Registered sensor subdevice: mxc-mipi-csi2.0
+[    4.323942] mxc-mipi-csi2_yav 30a70000.mipi_csi: Remote device at /mipi_csi1@30a70000/port/endpoint1 XXX found
+[    4.340129] mxc-mipi-csi2_yav 30a70000.mipi_csi1: lanes: 2, name: mxc-mipi-csi2.0
+[    4.356635] gpio-fan gpio_fan: GPIO fan initialized
+[    4.370758] imx2-wdt 30280000.wdog: timeout 60 sec (nowayout=0)
+[    4.383853] Bluetooth: HCI UART driver ver 2.3
+[    4.394393] Bluetooth: HCI UART protocol H4 registered
+[    4.405646] Bluetooth: HCI UART protocol BCSP registered
+[    4.416929] Bluetooth: HCI UART protocol ATH3K registered
+[    4.428303] Bluetooth: HCI UART protocol Three-wire (H5) registered
+[    4.440746] Bluetooth: HCI UART protocol Broadcom registered
+[    4.452184] Bluetooth: HCI UART protocol QCA registered
+[    4.465066] sdhci: Secure Digital Host Controller Interface driver
+[    4.477041] sdhci: Copyright(c) Pierre Ossman
+[    4.487354] Synopsys Designware Multimedia Card Interface Driver
+[    4.500495] sdhci-pltfm: SDHCI platform and OF driver helper
+[    4.557600] mmc0: SDHCI controller on 30b40000.usdhc [30b40000.usdhc] using ADMA
+[    4.565077] i.mx8-hdp 32c00000.hdmi: 0,ff,ff,ff,ff,ff,ff,0
+[    4.573363] sdhci-esdhc-imx 30b50000.usdhc: Got CD GPIO
+[    4.647171] mmc1: SDHCI controller on 30b50000.usdhc [30b50000.usdhc] using ADMA
+[    4.670736] update hantro voltage from 900 mV to 1000 mV
+[    4.682388] hantrodec: module inserted. Major = 237
+[    4.696733] ledtrig-cpu: registered to indicate activity on CPUs
+[    4.703766] mmc0: new HS400 MMC card at address 0001
+[    4.709822] caam 30900000.caam: ERA source: CCBVID.
+[    4.720557] mmcblk0: mmc0:0001 008G30 7.28 GiB 
+[    4.733638] caam 30900000.caam: device ID = 0x0a16040100000000 (Era 9)
+[    4.741700] mmcblk0boot0: mmc0:0001 008G30 partition 1 4.00 MiB
+[    4.753727] caam 30900000.caam: job rings = 3, qi = 0, dpaa2 = no
+[    4.778414] mmcblk0boot1: mmc0:0001 008G30 partition 2 4.00 MiB
+[    4.790884] mmcblk0rpmb: mmc0:0001 008G30 partition 3 4.00 MiB
+[    4.805581] caam_jr 30901000.jr0: Entropy delay = 3200
+[    4.817397] caam_jr 30901000.jr0: Entropy delay = 3600
+[    4.818365]  mmcblk0: p1 p2 p3 p4
+[    4.869815] mmc1: host does not support reading read-only switch, assuming write-enable
+[    4.896225] caam_jr 30901000.jr0: Instantiated RNG4 SH0.
+[    4.964384] caam_jr 30901000.jr0: Instantiated RNG4 SH1.
+[    4.997388] caam algorithms registered in /proc/crypto
+[    5.008972] mmc1: new ultra high speed DDR50 SDHC card at address aaaa
+[    5.014151] caam_jr 30901000.jr0: registering rng-caam
+[    5.022378] mmcblk1: mmc1:aaaa SS08G 7.40 GiB 
+[    5.033371] caam 30900000.caam: caam pkc algorithms registered in /proc/crypto
+[    5.049378]  mmcblk1: p1
+[    5.058488] platform caam_sm: blkkey_ex: 2 keystore units available
+[    5.083479] caam-snvs 30370000.caam-snvs: can't get snvs clock
+[    5.095357] caam-snvs 30370000.caam-snvs: violation handlers armed - non-secure state
+[    5.109882] usbcore: registered new interface driver usbhid
+[    5.121445] usbhid: USB HID core driver
+[    5.152737] rt5645: Raising HP charge pump threshold to prevent jack event mis-detects.
+[    5.167026] rt5645 2-001a: 2-001a supply avdd not found, using dummy regulator
+[    5.180501] rt5645 2-001a: 2-001a supply cpvdd not found, using dummy regulator
+[    5.224129] edgetpu-audio-card sound-rt5645: clock set to 24576000
+[    5.248087] edgetpu-audio-card sound-rt5645: rt5645-aif1 <-> 308b0000.sai mapping ok
+[    5.262396] edgetpu-audio-card sound-rt5645: ASoC: no DMI vendor name!
+[    5.354264] input: edgetpu-audio-card Headphone Jack as /devices/platform/sound-rt5645/sound/card0/input1
+[    5.373291] NET: Registered protocol family 26
+[    5.384736] NET: Registered protocol family 10
+[    5.397047] Segment Routing with IPv6
+[    5.407167] NET: Registered protocol family 17
+[    5.417939] can: controller area network core (rev 20170425 abi 9)
+[    5.430595] NET: Registered protocol family 29
+[    5.441375] can: raw protocol (rev 20170425)
+[    5.452003] can: broadcast manager protocol (rev 20170425 t)
+[    5.463901] can: netlink gateway (rev 20170425) max_hops=1
+[    5.476712] Bluetooth: RFCOMM TTY layer initialized
+[    5.487752] Bluetooth: RFCOMM socket layer initialized
+[    5.499067] Bluetooth: RFCOMM ver 1.11
+[    5.508904] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    5.520357] Bluetooth: BNEP filters: protocol multicast
+[    5.531686] Bluetooth: BNEP socket layer initialized
+[    5.542822] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    5.554897] Bluetooth: HIDP socket layer initialized
+[    5.566102] lib80211: common routines for IEEE802.11 drivers
+[    5.578012] 9pnet: Installing 9P2000 support
+[    5.588613] Key type dns_resolver registered
+[    5.602626] registered taskstats version 1
+[    5.619951] failed to disable 800MHz OPP!
+[    5.630096] failed to disable 1.3GHz OPP!
+[    5.641596] cpu cpu0: registered imx8mq-cpufreq
+[    5.651519] imx6q-pcie 33800000.pcie: 33800000.pcie supply epdev_on not found, using dummy regulator
+[    5.668762] OF: PCI: host bridge /pcie@0x33800000 ranges:
+[    5.678182] OF: PCI:   No bus range found for /pcie@0x33800000, using [bus 00-ff]
+[    5.689758] OF: PCI:    IO 0x1ff80000..0x1ff8ffff -> 0x00000000
+[    5.699755] OF: PCI:   MEM 0x18000000..0x1fefffff -> 0x18000000
+[    5.713117] imx6q-pcie 33800000.pcie: pcie phy pll is locked.
+[    5.784143] imx6q-pcie 33800000.pcie: Link: Gen2 disabled
+[    5.793489] imx6q-pcie 33800000.pcie: Link up, Gen1
+[    5.805200] imx6q-pcie 33800000.pcie: PCI host bridge to bus 0000:00
+[    5.823260] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    5.832686] pci_bus 0000:00: root bus resource [io  0x0000-0xffff]
+[    5.842722] pci_bus 0000:00: root bus resource [mem 0x18000000-0x1fefffff]
+[    5.865063] pci 0000:00:00.0: BAR 14: assigned [mem 0x18000000-0x181fffff]
+[    5.877729] pci 0000:00:00.0: BAR 0: assigned [mem 0x18200000-0x182fffff 64bit]
+[    5.890746] pci 0000:00:00.0: BAR 6: assigned [mem 0x18300000-0x1830ffff pref]
+[    5.901842] pci 0000:01:00.0: BAR 0: assigned [mem 0x18000000-0x181fffff 64bit]
+[    5.912978] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[    5.921994] pci 0000:00:00.0:   bridge window [mem 0x18000000-0x181fffff]
+[    5.932930] pcieport 0000:00:00.0: Signaling PME with IRQ 234
+[    5.942693] pcieport 0000:00:00.0: AER enabled with IRQ 234
+[    5.952854] imx6q-pcie 33c00000.pcie: 33c00000.pcie supply epdev_on not found, using dummy regulator
+[    5.966580] OF: PCI: host bridge /pcie@0x33c00000 ranges:
+[    5.975849] OF: PCI:   No bus range found for /pcie@0x33c00000, using [bus 00-ff]
+[    5.987199] OF: PCI:    IO 0x27f80000..0x27f8ffff -> 0x00000000
+[    5.997057] OF: PCI:   MEM 0x20000000..0x27efffff -> 0x20000000
+[    6.009653] imx6q-pcie 33c00000.pcie: pcie phy pll is locked.
+[    6.075542] imx6q-pcie 33c00000.pcie: Link up, Gen2
+[    6.086539] imx6q-pcie 33c00000.pcie: PCI host bridge to bus 0001:00
+[    6.104074] pci_bus 0001:00: root bus resource [bus 00-ff]
+[    6.113504] pci_bus 0001:00: root bus resource [io  0x10000-0x1ffff] (bus address [0x0000-0xffff])
+[    6.126206] pci_bus 0001:00: root bus resource [mem 0x20000000-0x27efffff]
+[    6.149051] pci 0001:00:00.0: BAR 0: assigned [mem 0x20000000-0x200fffff 64bit]
+[    6.167386] pci 0001:00:00.0: BAR 15: assigned [mem 0x20100000-0x202fffff pref]
+[    6.178358] pci 0001:00:00.0: BAR 6: assigned [mem 0x20300000-0x2030ffff pref]
+[    6.189264] pci 0001:00:00.0: PCI bridge to [bus 01-ff]
+[    6.198100] pci 0001:00:00.0:   bridge window [mem 0x20100000-0x202fffff pref]
+[    6.209508] pcieport 0001:00:00.0: Signaling PME with IRQ 363
+[    6.219043] pcieport 0001:00:00.0: AER enabled with IRQ 363
+[    6.231636] asoc-simple-card sound-header: snd-soc-dummy-dai <-> 30010000.sai mapping ok
+[    6.243443] asoc-simple-card sound-header: ASoC: no DMI vendor name!
+[    6.260803] snvs_rtc 30370000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:02 UTC (2)
+[    6.274794] buck3: disabling
+[    6.282807] ALSA device list:
+[    6.289535]   #0: edgetpu-audio-card
+[    6.296742]   #1: 40-pin Header
+[    6.303943] Freeing unused kernel memory: 1280K
+[    6.332671] EXT4-fs (mmcblk1p1): warning: mounting unchecked fs, running e2fsck is recommended
+[    6.352251] EXT4-fs (mmcblk1p1): mounted filesystem without journal. Opts: (null)
+
+=== FLASH START! ===
+* Writing partition table
+67+0 records in
+67+0 records out
+34304 bytes (33.5KB) copied, 0.011321 seconds, 2.9MB/s
+[    6.399173]  mmcblk0: p1 p2 p3 p4
+* Writing bootloader...
+2078+1 records in
+2078+1 records out
+1064388 bytes (1.0MB) copied, 0.117524 seconds, 8.6MB/s
+* Writing boot filesystem...
+[    7.834991] random: crng init done
+262144+0 records in
+262144+0 records out
+134217728 bytes (128.0MB) copied, 12.667720 seconds, 10.1MB/s
+* Writing home filesystem...
+4194304+0 records in
+4194304+0 records out
+2147483648 bytes (2.0GB) copied, 204.793537 seconds, 10.0MB/s
+* Writing root filesystem...
+8388608+0 records in
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+8388608+0 records in
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+* Writing root filesystem...
+8388608+0 records in
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+2147483648 bytes (2.0GB) copied, 204.793537 seconds, 10.0MB/s
+* Writing root filesystem...
+8388608+0 records in
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+* Writing home filesystem...
+4194304+0 records in
+4194304+0 records out
+2147483648 bytes (2.0GB) copied, 204.793537 seconds, 10.0MB/s
+* Writing root filesystem...
+8388608+0 records in
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+134217728 bytes (128.0MB) copied, 12.667720 seconds, 10.1MB/s
+* Writing home filesystem...
+4194304+0 records in
+4194304+0 records out
+2147483648 bytes (2.0GB) copied, 204.793537 seconds, 10.0MB/s
+* Writing root filesystem...
+8388608+0 records in
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+262144+0 records out
+134217728 bytes (128.0MB) copied, 12.667720 seconds, 10.1MB/s
+* Writing home filesystem...
+4194304+0 records in
+4194304+0 records out
+2147483648 bytes (2.0GB) copied, 204.793537 seconds, 10.0MB/s
+* Writing root filesystem...
+8388608+0 records in
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+[    7.834991] random: crng init done
+262144+0 records in
+262144+0 records out
+134217728 bytes (128.0MB) copied, 12.667720 seconds, 10.1MB/s
+* Writing home filesystem...
+4194304+0 records in
+4194304+0 records out
+2147483648 bytes (2.0GB) copied, 204.793537 seconds, 10.0MB/s
+* Writing root filesystem...
+8388608+0 records in
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+* Writing boot filesystem...
+[    7.834991] random: crng init done
+262144+0 records in
+262144+0 records out
+134217728 bytes (128.0MB) copied, 12.667720 seconds, 10.1MB/s
+* Writing home filesystem...
+4194304+0 records in
+4194304+0 records out
+2147483648 bytes (2.0GB) copied, 204.793537 seconds, 10.0MB/s
+* Writing root filesystem...
+8388608+0 records in
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+2078+1 records out
+1064388 bytes (1.0MB) copied, 0.117524 seconds, 8.6MB/s
+* Writing boot filesystem...
+[    7.834991] random: crng init done
+262144+0 records in
+262144+0 records out
+134217728 bytes (128.0MB) copied, 12.667720 seconds, 10.1MB/s
+* Writing home filesystem...
+4194304+0 records in
+4194304+0 records out
+2147483648 bytes (2.0GB) copied, 204.793537 seconds, 10.0MB/s
+* Writing root filesystem...
+8388608+0 records in
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+2078+1 records in
+2078+1 records out
+1064388 bytes (1.0MB) copied, 0.117524 seconds, 8.6MB/s
+* Writing boot filesystem...
+[    7.834991] random: crng init done
+262144+0 records in
+262144+0 records out
+134217728 bytes (128.0MB) copied, 12.667720 seconds, 10.1MB/s
+* Writing home filesystem...
+4194304+0 records in
+4194304+0 records out
+2147483648 bytes (2.0GB) copied, 204.793537 seconds, 10.0MB/s
+* Writing root filesystem...
+8388608+0 records in
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+* Writing bootloader...
+2078+1 records in
+2078+1 records out
+1064388 bytes (1.0MB) copied, 0.117524 seconds, 8.6MB/s
+* Writing boot filesystem...
+[    7.834991] random: crng init done
+262144+0 records in
+262144+0 records out
+134217728 bytes (128.0MB) copied, 12.667720 seconds, 10.1MB/s
+* Writing home filesystem...
+4194304+0 records in
+4194304+0 records out
+2147483648 bytes (2.0GB) copied, 204.793537 seconds, 10.0MB/s
+* Writing root filesystem...
+8388608+0 records in
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+[    6.399173]  mmcblk0: p1 p2 p3 p4
+* Writing bootloader...
+2078+1 records in
+2078+1 records out
+1064388 bytes (1.0MB) copied, 0.117524 seconds, 8.6MB/s
+* Writing boot filesystem...
+[    7.834991] random: crng init done
+262144+0 records in
+262144+0 records out
+134217728 bytes (128.0MB) copied, 12.667720 seconds, 10.1MB/s
+* Writing home filesystem...
+4194304+0 records in
+4194304+0 records out
+2147483648 bytes (2.0GB) copied, 204.793537 seconds, 10.0MB/s
+* Writing root filesystem...
+8388608+0 records in
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+34304 bytes (33.5KB) copied, 0.011321 seconds, 2.9MB/s
+[    6.399173]  mmcblk0: p1 p2 p3 p4
+* Writing bootloader...
+2078+1 records in
+2078+1 records out
+1064388 bytes (1.0MB) copied, 0.117524 seconds, 8.6MB/s
+* Writing boot filesystem...
+[    7.834991] random: crng init done
+262144+0 records in
+262144+0 records out
+134217728 bytes (128.0MB) copied, 12.667720 seconds, 10.1MB/s
+* Writing home filesystem...
+4194304+0 records in
+4194304+0 records out
+2147483648 bytes (2.0GB) copied, 204.793537 seconds, 10.0MB/s
+* Writing root filesystem...
+8388608+0 records in
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+67+0 records out
+34304 bytes (33.5KB) copied, 0.011321 seconds, 2.9MB/s
+[    6.399173]  mmcblk0: p1 p2 p3 p4
+* Writing bootloader...
+2078+1 records in
+2078+1 records out
+1064388 bytes (1.0MB) copied, 0.117524 seconds, 8.6MB/s
+* Writing boot filesystem...
+[    7.834991] random: crng init done
+262144+0 records in
+262144+0 records out
+134217728 bytes (128.0MB) copied, 12.667720 seconds, 10.1MB/s
+* Writing home filesystem...
+4194304+0 records in
+4194304+0 records out
+2147483648 bytes (2.0GB) copied, 204.793537 seconds, 10.0MB/s
+* Writing root filesystem...
+8388608+0 records in
+8388608+0 records out
+4294967296 bytes (4.0GB) copied, 409.952798 seconds, 10.0MB/s
+=== FLASH END! ===
+
+===============================================================
+Powering down the system. Please remove the SD card, change the
+boot switches to boot from the internal eMMC (should be set to
+on-off-off-off), remove and reconnect power.
+===============================================================
+
+Board will power down in 10 seconds...
+[  644.028486] kvm: exiting hardware virtualization
+[  644.117986] reboot: Power down
+
+
