@@ -53,7 +53,7 @@ MNV3Small_BLOCK_SPECS = {
          'relu6', 0.25, 3., False),
         ('inverted_bottleneck', 5, 1, 48,
          'relu6', 0.25, 3., True),
-        ('inverted_bottleneck', 5, 2, 96,
+        ('inverted_bottleneck', 5, 1, 96,
          'relu6', 0.25, 6., False),
         ('inverted_bottleneck', 5, 1, 96,
          'relu6', 0.25, 6., False),
