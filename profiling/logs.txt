@@ -1,0 +1,37 @@
+I20220604 07:36:50.026463 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:97,1
+I20220604 07:36:50.026484 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 23639750, target: 19888657
+I20220604 07:36:50.026495 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:96,2
+I20220604 07:36:50.026504 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 22029974, target: 19888657
+I20220604 07:36:50.026513 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:95,3
+I20220604 07:36:50.026521 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 21102571, target: 19888657
+I20220604 07:36:50.026530 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:94,4
+I20220604 07:36:50.026538 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 21930925, target: 19888657
+I20220604 07:36:50.026549 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:93,5
+I20220604 07:36:50.026558 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 22631861, target: 19888657
+I20220604 07:36:50.026567 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:92,6
+I20220604 07:36:50.026576 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 23967190, target: 19888657
+I20220604 07:36:50.026585 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:91,7
+I20220604 07:36:50.026594 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 28459138, target: 19888657
+I20220604 07:36:50.026603 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:90,8
+I20220604 07:36:50.026612 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 25279410, target: 19888657
+I20220604 07:36:50.026621 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:89,9
+I20220604 07:36:50.026630 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 25524602, target: 19888657
+I20220604 07:36:50.026639 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:88,10
+I20220604 07:36:50.026648 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 23825908, target: 19888657
+I20220604 07:36:50.026657 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:87,11
+I20220604 07:36:50.026665 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 25281453, target: 19888657
+I20220604 07:36:50.026675 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:86,12
+I20220604 07:36:50.026683 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 27790708, target: 19888657
+I20220604 07:36:50.026693 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:85,13
+I20220604 07:36:50.026701 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 24997313, target: 19888657
+I20220604 07:36:50.026711 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:84,14
+I20220604 07:36:50.026719 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 27967705, target: 19888657
+I20220604 07:36:50.026728 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:83,15
+I20220604 07:36:50.026737 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 25157267, target: 19888657
+I20220604 07:36:50.026746 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:82,16
+I20220604 07:36:50.026755 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 25896924, target: 19888657
+I20220604 07:36:50.026764 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:81,17
+I20220604 07:36:50.026773 2337870 profiling_based_partitioner.cc:263] Search segment 0, latency: 16750411, target: 19888657
+I20220604 07:36:50.026782 2337870 profiling_based_partitioner.cc:131] Analyzing partition candidate, num_ops:81,17
+I20220604 07:36:50.026791 2337870 profiling_based_partitioner.cc:314] target_latency: 19888657, num_ops: 81,17, last segment latency: 13324312
+I20220604 07:36:50.026801 2337870 profiling_based_partitioner.cc:366] Updated upper_bound: 19888657, lower_bound: 19010875
