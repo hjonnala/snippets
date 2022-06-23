@@ -1,0 +1,118 @@
+heman@DESKTOP-NJNFF60 MINGW64 ~/libcoral (master)
+$ bazel build coral/pose_estimation:posenet_decoder.dll
+WARNING: Running Bazel server needs to be killed, because the startup options are different.
+Starting local Bazel server and connecting to it...
+Loading:
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+Analyzing: target //coral/pose_estimation:posenet_decoder.dll (1 packages loaded)
+Analyzing: target //coral/pose_estimation:posenet_decoder.dll (1 packages loaded, 0 targets configured)
+Analyzing: target //coral/pose_estimation:posenet_decoder.dll (11 packages loaded, 11 targets configured)
+Analyzing: target //coral/pose_estimation:posenet_decoder.dll (11 packages loaded, 11 targets configured)
+DEBUG: Rule 'io_bazel_rules_docker' indicated that a canonical reproducible form can be obtained by modifying arguments shallow_since = "1556410077 -0400"
+DEBUG: Repository io_bazel_rules_docker instantiated at:
+  C:/users/heman/libcoral/WORKSPACE:37:14: in <toplevel>
+  C:/users/heman/_bazel_heman/rhu7tw3w/external/org_tensorflow/tensorflow/workspace0.bzl:105:34: in workspace
+  C:/users/heman/_bazel_heman/rhu7tw3w/external/bazel_toolchains/repositories/repositories.bzl:37:23: in repositories
+Repository rule git_repository defined at:
+  C:/users/heman/_bazel_heman/rhu7tw3w/external/bazel_tools/tools/build_defs/repo/git.bzl:199:33: in <toplevel>
+Analyzing: target //coral/pose_estimation:posenet_decoder.dll (12 packages loaded, 11 targets configured)
+Analyzing: target //coral/pose_estimation:posenet_decoder.dll (12 packages loaded, 11 targets configured)
+Analyzing: target //coral/pose_estimation:posenet_decoder.dll (14 packages loaded, 11 targets configured)
+Analyzing: target //coral/pose_estimation:posenet_decoder.dll (14 packages loaded, 11 targets configured)
+Analyzing: target //coral/pose_estimation:posenet_decoder.dll (27 packages loaded, 166 targets configured)
+INFO: Analyzed target //coral/pose_estimation:posenet_decoder.dll (52 packages loaded, 684 targets configured).
+INFO: Found 1 target...
+[0 / 36] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+SUBCOMMAND: # @flatbuffers//src:flatbuffers [action 'Compiling src/util.cpp [for host]', configuration: bf9a8e36382dc0986db3377770a7d2594ba473d030e9bf1e5e1dc38f165292c7, execution platform: @local_execution_config_platform//:platform]
+cd C:/users/heman/_bazel_heman/rhu7tw3w/execroot/libcoral
+  SET INCLUDE=msvc_not_found
+    SET PATH=msvc_not_found
+    SET PWD=/proc/self/cwd
+    SET RUNFILES_MANIFEST_ONLY=1
+    SET TEMP=msvc_not_found
+    SET TMP=msvc_not_found
+  external/local_config_cc/vc_installation_error_x64.bat /nologo /DCOMPILER_MSVC /DNOMINMAX /D_WIN32_WINNT=0x0601 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /bigobj /Zm500 /EHsc /wd4351 /wd4291 /wd4250 /wd4996 /Iexternal/flatbuffers /Ibazel-out/host/bin/external/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatbuffers /showIncludes /MD /O2 /Oy- /DNDEBUG /wd4117 -D__DATE__="redacted" -D__TIMESTAMP__="redacted" -D__TIME__="redacted" /Gy /Gw /Fobazel-out/host/bin/external/flatbuffers/src/_objs/flatbuffers/util.obj /c external/flatbuffers/src/util.cpp
+SUBCOMMAND: # @flatbuffers//src:flatc [action 'Compiling src/idl_gen_kotlin.cpp [for host]', configuration: bf9a8e36382dc0986db3377770a7d2594ba473d030e9bf1e5e1dc38f165292c7, execution platform: @local_execution_config_platform//:platform]
+cd C:/users/heman/_bazel_heman/rhu7tw3w/execroot/libcoral
+  SET INCLUDE=msvc_not_found
+    SET PATH=msvc_not_found
+    SET PWD=/proc/self/cwd
+    SET RUNFILES_MANIFEST_ONLY=1
+    SET TEMP=msvc_not_found
+    SET TMP=msvc_not_found
+  external/local_config_cc/vc_installation_error_x64.bat /nologo /DCOMPILER_MSVC /DNOMINMAX /D_WIN32_WINNT=0x0601 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /bigobj /Zm500 /EHsc /wd4351 /wd4291 /wd4250 /wd4996 /Iexternal/flatbuffers /Ibazel-out/host/bin/external/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatc /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatc_library /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/cpp_generator /Ibazel-out/host/bin/external/flatbuffers/_virtual_includes/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/go_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/java_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/python_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/python_generator_private /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/swift_generator /showIncludes /MD /O2 /Oy- /DNDEBUG /wd4117 -D__DATE__="redacted" -D__TIMESTAMP__="redacted" -D__TIME__="redacted" /Gy /Gw /Fobazel-out/host/bin/external/flatbuffers/src/_objs/flatc/idl_gen_kotlin.obj /c external/flatbuffers/src/idl_gen_kotlin.cpp
+SUBCOMMAND: # @flatbuffers//src:flatc [action 'Compiling src/idl_gen_java.cpp [for host]', configuration: bf9a8e36382dc0986db3377770a7d2594ba473d030e9bf1e5e1dc38f165292c7, execution platform: @local_execution_config_platform//:platform]
+cd C:/users/heman/_bazel_heman/rhu7tw3w/execroot/libcoral
+  SET INCLUDE=msvc_not_found
+    SET PATH=msvc_not_found
+    SET PWD=/proc/self/cwd
+    SET RUNFILES_MANIFEST_ONLY=1
+    SET TEMP=msvc_not_found
+    SET TMP=msvc_not_found
+  external/local_config_cc/vc_installation_error_x64.bat /nologo /DCOMPILER_MSVC /DNOMINMAX /D_WIN32_WINNT=0x0601 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /bigobj /Zm500 /EHsc /wd4351 /wd4291 /wd4250 /wd4996 /Iexternal/flatbuffers /Ibazel-out/host/bin/external/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatc /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatc_library /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/cpp_generator /Ibazel-out/host/bin/external/flatbuffers/_virtual_includes/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/go_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/java_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/python_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/python_generator_private /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/swift_generator /showIncludes /MD /O2 /Oy- /DNDEBUG /wd4117 -D__DATE__="redacted" -D__TIMESTAMP__="redacted" -D__TIME__="redacted" /Gy /Gw /Fobazel-out/host/bin/external/flatbuffers/src/_objs/flatc/idl_gen_java.obj /c external/flatbuffers/src/idl_gen_java.cpp
+SUBCOMMAND: # @flatbuffers//src:flatc [action 'Compiling src/idl_gen_go.cpp [for host]', configuration: bf9a8e36382dc0986db3377770a7d2594ba473d030e9bf1e5e1dc38f165292c7, execution platform: @local_execution_config_platform//:platform]
+cd C:/users/heman/_bazel_heman/rhu7tw3w/execroot/libcoral
+  SET INCLUDE=msvc_not_found
+    SET PATH=msvc_not_found
+    SET PWD=/proc/self/cwd
+    SET RUNFILES_MANIFEST_ONLY=1
+    SET TEMP=msvc_not_found
+    SET TMP=msvc_not_found
+  external/local_config_cc/vc_installation_error_x64.bat /nologo /DCOMPILER_MSVC /DNOMINMAX /D_WIN32_WINNT=0x0601 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /bigobj /Zm500 /EHsc /wd4351 /wd4291 /wd4250 /wd4996 /Iexternal/flatbuffers /Ibazel-out/host/bin/external/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatc /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatc_library /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/cpp_generator /Ibazel-out/host/bin/external/flatbuffers/_virtual_includes/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/go_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/java_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/python_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/python_generator_private /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/swift_generator /showIncludes /MD /O2 /Oy- /DNDEBUG /wd4117 -D__DATE__="redacted" -D__TIMESTAMP__="redacted" -D__TIME__="redacted" /Gy /Gw /Fobazel-out/host/bin/external/flatbuffers/src/_objs/flatc/idl_gen_go.obj /c external/flatbuffers/src/idl_gen_go.cpp
+SUBCOMMAND: # @flatbuffers//src:flatc [action 'Compiling src/idl_gen_cpp.cpp [for host]', configuration: bf9a8e36382dc0986db3377770a7d2594ba473d030e9bf1e5e1dc38f165292c7, execution platform: @local_execution_config_platform//:platform]
+cd C:/users/heman/_bazel_heman/rhu7tw3w/execroot/libcoral
+  SET INCLUDE=msvc_not_found
+    SET PATH=msvc_not_found
+    SET PWD=/proc/self/cwd
+    SET RUNFILES_MANIFEST_ONLY=1
+    SET TEMP=msvc_not_found
+    SET TMP=msvc_not_found
+  external/local_config_cc/vc_installation_error_x64.bat /nologo /DCOMPILER_MSVC /DNOMINMAX /D_WIN32_WINNT=0x0601 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /bigobj /Zm500 /EHsc /wd4351 /wd4291 /wd4250 /wd4996 /Iexternal/flatbuffers /Ibazel-out/host/bin/external/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatc /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatc_library /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/cpp_generator /Ibazel-out/host/bin/external/flatbuffers/_virtual_includes/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/go_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/java_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/python_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/python_generator_private /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/swift_generator /showIncludes /MD /O2 /Oy- /DNDEBUG /wd4117 -D__DATE__="redacted" -D__TIMESTAMP__="redacted" -D__TIME__="redacted" /Gy /Gw /Fobazel-out/host/bin/external/flatbuffers/src/_objs/flatc/idl_gen_cpp.obj /c external/flatbuffers/src/idl_gen_cpp.cpp
+SUBCOMMAND: # @flatbuffers//src:flatc [action 'Compiling src/flatc_main.cpp [for host]', configuration: bf9a8e36382dc0986db3377770a7d2594ba473d030e9bf1e5e1dc38f165292c7, execution platform: @local_execution_config_platform//:platform]
+cd C:/users/heman/_bazel_heman/rhu7tw3w/execroot/libcoral
+  SET INCLUDE=msvc_not_found
+    SET PATH=msvc_not_found
+    SET PWD=/proc/self/cwd
+    SET RUNFILES_MANIFEST_ONLY=1
+    SET TEMP=msvc_not_found
+    SET TMP=msvc_not_found
+  external/local_config_cc/vc_installation_error_x64.bat /nologo /DCOMPILER_MSVC /DNOMINMAX /D_WIN32_WINNT=0x0601 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /bigobj /Zm500 /EHsc /wd4351 /wd4291 /wd4250 /wd4996 /Iexternal/flatbuffers /Ibazel-out/host/bin/external/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatc /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatc_library /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/cpp_generator /Ibazel-out/host/bin/external/flatbuffers/_virtual_includes/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/go_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/java_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/python_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/python_generator_private /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/swift_generator /showIncludes /MD /O2 /Oy- /DNDEBUG /wd4117 -D__DATE__="redacted" -D__TIMESTAMP__="redacted" -D__TIME__="redacted" /Gy /Gw /Fobazel-out/host/bin/external/flatbuffers/src/_objs/flatc/flatc_main.obj /c external/flatbuffers/src/flatc_main.cpp
+SUBCOMMAND: # @flatbuffers//src:flatbuffers [action 'Compiling src/idl_gen_fbs.cpp [for host]', configuration: bf9a8e36382dc0986db3377770a7d2594ba473d030e9bf1e5e1dc38f165292c7, execution platform: @local_execution_config_platform//:platform]
+cd C:/users/heman/_bazel_heman/rhu7tw3w/execroot/libcoral
+  SET INCLUDE=msvc_not_found
+    SET PATH=msvc_not_found
+    SET PWD=/proc/self/cwd
+    SET RUNFILES_MANIFEST_ONLY=1
+    SET TEMP=msvc_not_found
+    SET TMP=msvc_not_found
+  external/local_config_cc/vc_installation_error_x64.bat /nologo /DCOMPILER_MSVC /DNOMINMAX /D_WIN32_WINNT=0x0601 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /bigobj /Zm500 /EHsc /wd4351 /wd4291 /wd4250 /wd4996 /Iexternal/flatbuffers /Ibazel-out/host/bin/external/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatbuffers /showIncludes /MD /O2 /Oy- /DNDEBUG /wd4117 -D__DATE__="redacted" -D__TIMESTAMP__="redacted" -D__TIME__="redacted" /Gy /Gw /Fobazel-out/host/bin/external/flatbuffers/src/_objs/flatbuffers/idl_gen_fbs.obj /c external/flatbuffers/src/idl_gen_fbs.cpp
+SUBCOMMAND: # @flatbuffers//src:flatc [action 'Compiling src/idl_gen_lobster.cpp [for host]', configuration: bf9a8e36382dc0986db3377770a7d2594ba473d030e9bf1e5e1dc38f165292c7, execution platform: @local_execution_config_platform//:platform]
+cd C:/users/heman/_bazel_heman/rhu7tw3w/execroot/libcoral
+  SET INCLUDE=msvc_not_found
+    SET PATH=msvc_not_found
+    SET PWD=/proc/self/cwd
+    SET RUNFILES_MANIFEST_ONLY=1
+    SET TEMP=msvc_not_found
+    SET TMP=msvc_not_found
+  external/local_config_cc/vc_installation_error_x64.bat /nologo /DCOMPILER_MSVC /DNOMINMAX /D_WIN32_WINNT=0x0601 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /bigobj /Zm500 /EHsc /wd4351 /wd4291 /wd4250 /wd4996 /Iexternal/flatbuffers /Ibazel-out/host/bin/external/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatc /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatc_library /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/cpp_generator /Ibazel-out/host/bin/external/flatbuffers/_virtual_includes/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/go_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/java_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/python_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/python_generator_private /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/swift_generator /showIncludes /MD /O2 /Oy- /DNDEBUG /wd4117 -D__DATE__="redacted" -D__TIMESTAMP__="redacted" -D__TIME__="redacted" /Gy /Gw /Fobazel-out/host/bin/external/flatbuffers/src/_objs/flatc/idl_gen_lobster.obj /c external/flatbuffers/src/idl_gen_lobster.cpp
+ERROR: C:/users/heman/_bazel_heman/rhu7tw3w/external/flatbuffers/src/BUILD:40:11: Compiling src/idl_gen_lobster.cpp [for host] failed: (Exit 1): vc_installation_error_x64.bat failed: error executing command
+  cd C:/users/heman/_bazel_heman/rhu7tw3w/execroot/libcoral
+  SET INCLUDE=msvc_not_found
+    SET PATH=msvc_not_found
+    SET PWD=/proc/self/cwd
+    SET RUNFILES_MANIFEST_ONLY=1
+    SET TEMP=msvc_not_found
+    SET TMP=msvc_not_found
+  external/local_config_cc/vc_installation_error_x64.bat /nologo /DCOMPILER_MSVC /DNOMINMAX /D_WIN32_WINNT=0x0601 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /bigobj /Zm500 /EHsc /wd4351 /wd4291 /wd4250 /wd4996 /Iexternal/flatbuffers /Ibazel-out/host/bin/external/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatc /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatc_library /Ibazel-out/host/bin/external/flatbuffers/src/_virtual_includes/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/cpp_generator /Ibazel-out/host/bin/external/flatbuffers/_virtual_includes/flatbuffers /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/go_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/java_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/python_generator /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/python_generator_private /Ibazel-out/host/bin/external/flatbuffers/grpc/src/compiler/_virtual_includes/swift_generator /showIncludes /MD /O2 /Oy- /DNDEBUG /wd4117 -D__DATE__="redacted" -D__TIMESTAMP__="redacted" -D__TIME__="redacted" /Gy /Gw /Fobazel-out/host/bin/external/flatbuffers/src/_objs/flatc/idl_gen_lobster.obj /c external/flatbuffers/src/idl_gen_lobster.cpp
+Execution platform: @local_execution_config_platform//:platform
+
+The target you are compiling requires Visual C++ build tools.
+Bazel couldn't find a valid Visual C++ build tools installation on your machine.
+Please check your installation following https://docs.bazel.build/versions/master/windows.html#using
+
+Target //coral/pose_estimation:posenet_decoder.dll failed to build
+INFO: Elapsed time: 48.157s, Critical Path: 0.31s
+INFO: 98 processes: 98 internal.
+FAILED: Build did NOT complete successfully
+FAILED: Build did NOT complete successfully
