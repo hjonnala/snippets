@@ -1,3 +1,5 @@
+https://github.com/google-coral/edgetpu/issues/505#issuecomment-972943815
+
 ```
 hemanth:~/Downloads/excelsior-eagle-20201210233645$ bash enable_lk_fastboot.sh 
 **********************************************************************
