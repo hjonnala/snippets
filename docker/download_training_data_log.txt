@@ -1,0 +1,143 @@
+root@7bd0d50af92a:/tensorflow/models/research# ./prepare_checkpoint_and_dataset.sh --network_type mobilenet_v1_ssd --train_whole_model false
++ network_type=mobilenet_v1_ssd
++ train_whole_model=false
++ [[ 4 -gt 0 ]]
++ case "$1" in
++ network_type=mobilenet_v1_ssd
++ shift 2
++ [[ 2 -gt 0 ]]
++ case "$1" in
++ train_whole_model=false
++ shift 2
++ [[ 0 -gt 0 ]]
++ source /tensorflow/models/research/constants.sh
+++ declare -A ckpt_link_map
+++ declare -A ckpt_name_map
+++ declare -A config_filename_map
+++ ckpt_link_map["mobilenet_v1_ssd"]=http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18.tar.gz
+++ ckpt_link_map["mobilenet_v2_ssd"]=http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v2_quantized_300x300_coco_2019_01_03.tar.gz
+++ ckpt_name_map["mobilenet_v1_ssd"]=ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18
+++ ckpt_name_map["mobilenet_v2_ssd"]=ssd_mobilenet_v2_quantized_300x300_coco_2019_01_03
+++ config_filename_map["mobilenet_v1_ssd-true"]=pipeline_mobilenet_v1_ssd_retrain_whole_model.config
+++ config_filename_map["mobilenet_v1_ssd-false"]=pipeline_mobilenet_v1_ssd_retrain_last_few_layers.config
+++ config_filename_map["mobilenet_v2_ssd-true"]=pipeline_mobilenet_v2_ssd_retrain_whole_model.config
+++ config_filename_map["mobilenet_v2_ssd-false"]=pipeline_mobilenet_v2_ssd_retrain_last_few_layers.config
+++ INPUT_TENSORS=normalized_input_image_tensor
+++ OUTPUT_TENSORS=TFLite_Detection_PostProcess,TFLite_Detection_PostProcess:1,TFLite_Detection_PostProcess:2,TFLite_Detection_PostProcess:3
+++ OBJ_DET_DIR=/tensorflow/models/research
+++ LEARN_DIR=/tensorflow/models/research/learn_pet
+++ DATASET_DIR=/tensorflow/models/research/learn_pet/pet
+++ CKPT_DIR=/tensorflow/models/research/learn_pet/ckpt
+++ TRAIN_DIR=/tensorflow/models/research/learn_pet/train
+++ OUTPUT_DIR=/tensorflow/models/research/learn_pet/models
++ echo 'PREPARING checkpoint...'
+PREPARING checkpoint...
++ mkdir -p /tensorflow/models/research/learn_pet
++ ckpt_link=http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18.tar.gz
++ ckpt_name=ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18
++ cd /tensorflow/models/research/learn_pet
++ wget -O ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18.tar.gz http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18.tar.gz
+--2022-07-16 16:16:06--  http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18.tar.gz
+Resolving download.tensorflow.org (download.tensorflow.org)... 142.250.188.48, 2607:f8b0:4004:835::2010
+Connecting to download.tensorflow.org (download.tensorflow.org)|142.250.188.48|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 85682182 (82M) [application/x-tar]
+Saving to: ‘ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18.tar.gz’
+
+ssd_mobilenet_v1_quantized_300x300_coco14_ 100%[======================================================================================>]  81.71M   161MB/s    in 0.5s    
+
+2022-07-16 16:16:06 (161 MB/s) - ‘ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18.tar.gz’ saved [85682182/85682182]
+
++ tar zxvf ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18.tar.gz
+ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18/pipeline.config
+ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18/tflite_graph.pb
+ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18/model.ckpt.meta
+ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18/
+ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18/tflite_graph.pbtxt
+ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18/model.ckpt.index
+ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18/model.ckpt.data-00000-of-00001
++ mv ssd_mobilenet_v1_quantized_300x300_coco14_sync_2018_07_18 /tensorflow/models/research/learn_pet/ckpt
++ echo 'CHOSING config file...'
+CHOSING config file...
++ config_filename=pipeline_mobilenet_v1_ssd_retrain_last_few_layers.config
++ cd /tensorflow/models/research
++ cp configs/pipeline_mobilenet_v1_ssd_retrain_last_few_layers.config /tensorflow/models/research/learn_pet/ckpt/pipeline.config
++ echo 'REPLACING variables in config file...'
+REPLACING variables in config file...
++ sed -i s%CKPT_DIR_TO_CONFIGURE%/tensorflow/models/research/learn_pet/ckpt%g /tensorflow/models/research/learn_pet/ckpt/pipeline.config
++ sed -i s%DATASET_DIR_TO_CONFIGURE%/tensorflow/models/research/learn_pet/pet%g /tensorflow/models/research/learn_pet/ckpt/pipeline.config
++ echo 'PREPARING dataset'
+PREPARING dataset
++ mkdir -p /tensorflow/models/research/learn_pet/pet
++ cd /tensorflow/models/research/learn_pet/pet
++ wget http://www.robots.ox.ac.uk/~vgg/data/pets/data/images.tar.gz
+--2022-07-16 16:16:08--  http://www.robots.ox.ac.uk/~vgg/data/pets/data/images.tar.gz
+Resolving www.robots.ox.ac.uk (www.robots.ox.ac.uk)... 129.67.94.2
+Connecting to www.robots.ox.ac.uk (www.robots.ox.ac.uk)|129.67.94.2|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.robots.ox.ac.uk/~vgg/data/pets/data/images.tar.gz [following]
+--2022-07-16 16:16:08--  https://www.robots.ox.ac.uk/~vgg/data/pets/data/images.tar.gz
+Connecting to www.robots.ox.ac.uk (www.robots.ox.ac.uk)|129.67.94.2|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 791918971 (755M) [application/x-gzip]
+Saving to: ‘images.tar.gz’
+
+images.tar.gz                              100%[======================================================================================>] 755.23M  34.4MB/s    in 24s     
+
+2022-07-16 16:16:32 (32.1 MB/s) - ‘images.tar.gz’ saved [791918971/791918971]
+
++ wget http://www.robots.ox.ac.uk/~vgg/data/pets/data/annotations.tar.gz
+--2022-07-16 16:16:32--  http://www.robots.ox.ac.uk/~vgg/data/pets/data/annotations.tar.gz
+Resolving www.robots.ox.ac.uk (www.robots.ox.ac.uk)... 129.67.94.2
+Connecting to www.robots.ox.ac.uk (www.robots.ox.ac.uk)|129.67.94.2|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.robots.ox.ac.uk/~vgg/data/pets/data/annotations.tar.gz [following]
+--2022-07-16 16:16:32--  https://www.robots.ox.ac.uk/~vgg/data/pets/data/annotations.tar.gz
+Connecting to www.robots.ox.ac.uk (www.robots.ox.ac.uk)|129.67.94.2|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 19173078 (18M) [application/x-gzip]
+Saving to: ‘annotations.tar.gz’
+
+annotations.tar.gz                         100%[======================================================================================>]  18.28M  15.3MB/s    in 1.2s    
+
+2022-07-16 16:16:34 (15.3 MB/s) - ‘annotations.tar.gz’ saved [19173078/19173078]
+
++ tar zxf images.tar.gz
++ tar zxf annotations.tar.gz
++ echo 'PREPARING dataset using first two classes of Oxford-IIIT Pet dataset...'
+PREPARING dataset using first two classes of Oxford-IIIT Pet dataset...
++ cp /tensorflow/models/research/learn_pet/pet/annotations/list.txt /tensorflow/models/research/learn_pet/pet/annotations/list_petsdataset.txt
++ cp /tensorflow/models/research/learn_pet/pet/annotations/trainval.txt /tensorflow/models/research/learn_pet/pet/annotations/trainval_petsdataset.txt
++ cp /tensorflow/models/research/learn_pet/pet/annotations/test.txt /tensorflow/models/research/learn_pet/pet/annotations/test_petsdataset.txt
++ grep Abyssinian /tensorflow/models/research/learn_pet/pet/annotations/list_petsdataset.txt
++ grep american_bulldog /tensorflow/models/research/learn_pet/pet/annotations/list_petsdataset.txt
++ grep Abyssinian /tensorflow/models/research/learn_pet/pet/annotations/trainval_petsdataset.txt
++ grep american_bulldog /tensorflow/models/research/learn_pet/pet/annotations/trainval_petsdataset.txt
++ grep Abyssinian /tensorflow/models/research/learn_pet/pet/annotations/test_petsdataset.txt
++ grep american_bulldog /tensorflow/models/research/learn_pet/pet/annotations/test_petsdataset.txt
++ echo 'PREPARING label map...'
+PREPARING label map...
++ cd /tensorflow/models/research
++ cp object_detection/data/pet_label_map.pbtxt /tensorflow/models/research/learn_pet/pet
++ echo 'CONVERTING dataset to TF Record...'
+CONVERTING dataset to TF Record...
++ python object_detection/dataset_tools/create_pet_tf_record.py --label_map_path=/tensorflow/models/research/learn_pet/pet/pet_label_map.pbtxt --data_dir=/tensorflow/models/research/learn_pet/pet --output_dir=/tensorflow/models/research/learn_pet/pet
+WARNING:tensorflow:From object_detection/dataset_tools/create_pet_tf_record.py:318: The name tf.app.run is deprecated. Please use tf.compat.v1.app.run instead.
+
+WARNING:tensorflow:From /tensorflow/models/research/object_detection/utils/label_map_util.py:132: The name tf.gfile.GFile is deprecated. Please use tf.io.gfile.GFile instead.
+
+W0716 16:16:46.062580 140592018569024 module_wrapper.py:139] From /tensorflow/models/research/object_detection/utils/label_map_util.py:132: The name tf.gfile.GFile is deprecated. Please use tf.io.gfile.GFile instead.
+
+I0716 16:16:46.065883 140592018569024 create_pet_tf_record.py:273] Reading from Pet dataset.
+I0716 16:16:46.066777 140592018569024 create_pet_tf_record.py:288] 140 training and 60 validation examples.
+WARNING:tensorflow:From /tensorflow/models/research/object_detection/dataset_tools/tf_record_creation_util.py:43: The name tf.python_io.TFRecordWriter is deprecated. Please use tf.io.TFRecordWriter instead.
+
+W0716 16:16:46.067006 140592018569024 module_wrapper.py:139] From /tensorflow/models/research/object_detection/dataset_tools/tf_record_creation_util.py:43: The name tf.python_io.TFRecordWriter is deprecated. Please use tf.io.TFRecordWriter instead.
+
+I0716 16:16:46.067633 140592018569024 create_pet_tf_record.py:241] On image 0 of 140
+/tensorflow/models/research/object_detection/utils/dataset_util.py:75: FutureWarning: The behavior of this method will change in future versions. Use specific 'len(elem)' or 'elem is not None' test instead.
+  if not xml:
+I0716 16:16:46.312997 140592018569024 create_pet_tf_record.py:241] On image 100 of 140
+W0716 16:16:46.315356 140592018569024 create_pet_tf_record.py:246] Could not find /tensorflow/models/research/learn_pet/pet/annotations/xmls/Abyssinian_104.xml, ignoring example.
+I0716 16:16:46.423907 140592018569024 create_pet_tf_record.py:241] On image 0 of 60
+root@7bd0d50af92a:/tensorflow/models/research# 
