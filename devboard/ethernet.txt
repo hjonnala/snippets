@@ -1,0 +1,19 @@
+mendel@bored-horse:~$ nmtui
+mendel@bored-horse:~$ nmcli connection show
+NAME                UUID                                  TYPE      DEVICE 
+gadget0             74214aed-25b8-4905-93bc-637e1f552a3c  ethernet  usb0   
+gadget1             266266fe-8c45-4bbe-b1b8-9f9c9fd70878  ethernet  usb1   
+Wired connection 1  a1fc91c3-7a5a-3d4d-8dfc-cd1178a5403f  ethernet  eth0   
+ChaseMe             11e5f743-2862-43ee-b652-5555a0a4a554  wifi      --     
+mendel@bored-horse:~$ ping google.com
+PING google.com (142.250.189.142) 56(84) bytes of data.
+64 bytes from mia09s26-in-f14.1e100.net (142.250.189.142): icmp_seq=1 ttl=117 time=18.2 ms
+64 bytes from mia09s26-in-f14.1e100.net (142.250.189.142): icmp_seq=2 ttl=117 time=17.1 ms
+64 bytes from mia09s26-in-f14.1e100.net (142.250.189.142): icmp_seq=3 ttl=117 time=18.7 ms
+64 bytes from mia09s26-in-f14.1e100.net (142.250.189.142): icmp_seq=4 ttl=117 time=18.1 ms
+64 bytes from mia09s26-in-f14.1e100.net (142.250.189.142): icmp_seq=5 ttl=117 time=19.1 ms
+^C
+--- google.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 12ms
+rtt min/avg/max/mdev = 17.071/18.239/19.145/0.700 ms
+mendel@bored-horse:~$ 
