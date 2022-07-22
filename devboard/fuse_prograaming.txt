@@ -1,0 +1,16 @@
+flash target is MMC:0
+Net:   
+Warning: ethernet@30be0000 using MAC address from ROM
+eth0: ethernet@30be0000
+Fastboot: Normal
+Normal Boot
+Hit any key to stop autoboot:  0 
+u-boot=> fuse prog 1 3 10002800
+Programming bank 1 word 0x00000003 to 0x10002800...
+Warning: Programming fuses is an irreversible operation!
+         This may brick your system.
+         Use this command only if you are sure of what you are doing!
+
+Really perform this fuse programming? <y/N>
+y
+u-boot=> 
