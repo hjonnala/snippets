@@ -1,0 +1,197 @@
+hemanth:~$ cd usb
+
+
+hemanth:~/usb$ docker build -t "coral-usb" .
+Sending build context to Docker daemon  3.072kB
+Step 1/17 : FROM debian:sid-slim
+ ---> 05df3cab931e
+Step 2/17 : WORKDIR /home
+ ---> Using cache
+ ---> 207c31cbeee2
+Step 3/17 : ENV HOME /home
+ ---> Using cache
+ ---> 8bd627cbffac
+Step 4/17 : RUN cd ~
+ ---> Using cache
+ ---> 1833aa3e1756
+Step 5/17 : RUN apt-get -y update
+ ---> Using cache
+ ---> 7950763778ae
+Step 6/17 : RUN apt-get -y dist-upgrade
+ ---> Using cache
+ ---> 4e22c1bc53b5
+Step 7/17 : RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
+ ---> Using cache
+ ---> 105d42031acc
+Step 8/17 : RUN apt-get install -y git nano python3.9 python3.9-venv python3-pip wget usbutils curl unzip sudo python3.9-dev pkg-config udev
+ ---> Using cache
+ ---> 1d1e3834e49d
+Step 9/17 : RUN echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | tee /etc/apt/sources.list.d/coral-edgetpu.list
+ ---> Running in f0522d0fbe79
+deb https://packages.cloud.google.com/apt coral-edgetpu-stable main
+Removing intermediate container f0522d0fbe79
+ ---> 285fe4e7d6b9
+Step 10/17 : RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+ ---> Running in 17d60c9b8d44
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
+100  2537  100  2537    0     0  11507      0 --:--:-- --:--:-- --:--:-- 11531
+OK
+Removing intermediate container 17d60c9b8d44
+ ---> b76301987e6c
+Step 11/17 : RUN apt-get update
+ ---> Running in 4c791dfdddbf
+Get:1 http://deb.debian.org/debian sid InRelease [192 kB]
+Get:2 https://packages.cloud.google.com/apt coral-edgetpu-stable InRelease [6722 B]
+Get:3 http://deb.debian.org/debian sid/main amd64 Packages.diff/Index [63.6 kB]
+Ign:4 https://packages.cloud.google.com/apt coral-edgetpu-stable/main amd64 Packages
+Get:5 http://deb.debian.org/debian sid/main amd64 Packages T-2022-08-18-1403.47-F-2022-08-06-2011.01.pdiff [777 kB]
+Get:4 https://packages.cloud.google.com/apt coral-edgetpu-stable/main amd64 Packages [2317 B]
+Get:5 http://deb.debian.org/debian sid/main amd64 Packages T-2022-08-18-1403.47-F-2022-08-06-2011.01.pdiff [777 kB]
+Fetched 1042 kB in 2s (455 kB/s)
+Reading package lists...
+W: https://packages.cloud.google.com/apt/dists/coral-edgetpu-stable/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+Removing intermediate container 4c791dfdddbf
+ ---> 91e80d874397
+Step 12/17 : RUN sudo apt-get install libedgetpu1-std
+ ---> Running in 701c3f40e603
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  libedgetpu1-std
+0 upgraded, 1 newly installed, 0 to remove and 67 not upgraded.
+Need to get 387 kB of archives.
+After this operation, 1206 kB of additional disk space will be used.
+Get:1 https://packages.cloud.google.com/apt coral-edgetpu-stable/main amd64 libedgetpu1-std amd64 16.0 [387 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 387 kB in 0s (1036 kB/s)
+Selecting previously unselected package libedgetpu1-std:amd64.
+(Reading database ... 22796 files and directories currently installed.)
+Preparing to unpack .../libedgetpu1-std_16.0_amd64.deb ...
+Unpacking libedgetpu1-std:amd64 (16.0) ...
+Setting up libedgetpu1-std:amd64 (16.0) ...
+Processing triggers for libc-bin (2.33-8) ...
+Removing intermediate container 701c3f40e603
+ ---> 6a70577e022e
+Step 13/17 : RUN mkdir coral
+ ---> Running in 042702729b86
+Removing intermediate container 042702729b86
+ ---> c3e3f8f14052
+Step 14/17 : RUN git clone https://github.com/google-coral/pycoral.git coral/pycoral
+ ---> Running in de06bc59512a
+Cloning into 'coral/pycoral'...
+Removing intermediate container de06bc59512a
+ ---> 192652290526
+Step 15/17 : RUN bash coral/pycoral/examples/install_requirements.sh classify_image.py
+ ---> Running in a92f0c8fe6b0
+DOWNLOAD: mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 4197k  100 4197k    0     0  5244k      0 --:--:-- --:--:-- --:--:-- 10.2M
+DOWNLOAD: mobilenet_v2_1.0_224_inat_bird_quant.tflite
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 3495k  100 3495k    0     0  4670k      0 --:--:-- --:--:-- --:--:-- 4670k
+DOWNLOAD: inat_bird_labels.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 37146  100 37146    0     0   102k      0 --:--:-- --:--:-- --:--:--  102k
+DOWNLOAD: parrot.jpg
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  582k  100  582k    0     0  1005k      0 --:--:-- --:--:-- --:--:-- 1005k
+Removing intermediate container a92f0c8fe6b0
+ ---> 54d236e23564
+Step 16/17 : RUN python3.9 -m pip install --extra-index-url https://google-coral.github.io/py-repo/ pycoral~=2.0
+ ---> Running in 9eee4018a232
+Looking in indexes: https://pypi.org/simple, https://google-coral.github.io/py-repo/
+Collecting pycoral~=2.0
+  Downloading https://github.com/google-coral/pycoral/releases/download/v2.0.0/pycoral-2.0.0-cp39-cp39-linux_x86_64.whl (393 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 393.8/393.8 kB 5.1 MB/s eta 0:00:00
+Collecting Pillow>=4.0.0
+  Downloading Pillow-9.2.0-cp39-cp39-manylinux_2_28_x86_64.whl (3.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 9.0 MB/s eta 0:00:00
+Collecting numpy>=1.16.0
+  Downloading numpy-1.23.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.1/17.1 MB 10.0 MB/s eta 0:00:00
+Collecting tflite-runtime==2.5.0.post1
+  Downloading https://github.com/google-coral/pycoral/releases/download/v2.0.0/tflite_runtime-2.5.0.post1-cp39-cp39-linux_x86_64.whl (1.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 9.7 MB/s eta 0:00:00
+Installing collected packages: Pillow, numpy, tflite-runtime, pycoral
+Successfully installed Pillow-9.2.0 numpy-1.23.2 pycoral-2.0.0 tflite-runtime-2.5.0.post1
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+Removing intermediate container 9eee4018a232
+ ---> f5dfd94598e3
+Step 17/17 : RUN python3.9 -m pip install pyftdi pyserial mendel-development-tool
+ ---> Running in 288543bc1246
+Collecting pyftdi
+  Downloading pyftdi-0.54.0-py3-none-any.whl (144 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.8/144.8 kB 2.7 MB/s eta 0:00:00
+Collecting pyserial
+  Downloading pyserial-3.5-py2.py3-none-any.whl (90 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.6/90.6 kB 5.9 MB/s eta 0:00:00
+Collecting mendel-development-tool
+  Downloading mendel_development_tool-1.5.2-py3-none-any.whl (26 kB)
+Collecting pyusb!=1.2.0,>=1.0.0
+  Downloading pyusb-1.2.1-py3-none-any.whl (58 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.4/58.4 kB 4.8 MB/s eta 0:00:00
+Collecting zeroconf>=0.27.0
+  Downloading zeroconf-0.39.0-py3-none-any.whl (106 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.4/106.4 kB 8.7 MB/s eta 0:00:00
+Collecting paramiko>=2.0.0
+  Downloading paramiko-2.11.0-py2.py3-none-any.whl (212 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 212.9/212.9 kB 6.9 MB/s eta 0:00:00
+Collecting six
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting bcrypt>=3.1.3
+  Downloading bcrypt-3.2.2-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.3/62.3 kB 5.9 MB/s eta 0:00:00
+Collecting pynacl>=1.0.1
+  Downloading PyNaCl-1.5.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (856 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 856.7/856.7 kB 6.9 MB/s eta 0:00:00
+Collecting cryptography>=2.5
+  Downloading cryptography-37.0.4-cp36-abi3-manylinux_2_24_x86_64.whl (4.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.1/4.1 MB 9.5 MB/s eta 0:00:00
+Collecting ifaddr>=0.1.7
+  Downloading ifaddr-0.2.0-py3-none-any.whl (12 kB)
+Collecting async-timeout>=4.0.1
+  Downloading async_timeout-4.0.2-py3-none-any.whl (5.8 kB)
+Collecting cffi>=1.1
+  Downloading cffi-1.15.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (441 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 441.2/441.2 kB 8.4 MB/s eta 0:00:00
+Collecting pycparser
+  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.7/118.7 kB 7.5 MB/s eta 0:00:00
+Installing collected packages: pyserial, ifaddr, six, pyusb, pycparser, async-timeout, zeroconf, pyftdi, cffi, pynacl, cryptography, bcrypt, paramiko, mendel-development-tool
+Successfully installed async-timeout-4.0.2 bcrypt-3.2.2 cffi-1.15.1 cryptography-37.0.4 ifaddr-0.2.0 mendel-development-tool-1.5.2 paramiko-2.11.0 pycparser-2.21 pyftdi-0.54.0 pynacl-1.5.0 pyserial-3.5 pyusb-1.2.1 six-1.16.0 zeroconf-0.39.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+Removing intermediate container 288543bc1246
+ ---> ef5d2e87d201
+Successfully built ef5d2e87d201
+Successfully tagged coral-usb:latest
+
+
+hemanth:~/usb$ docker run -it --device=/dev/bus/usb:/dev/bus/usb coral-usb
+
+root@3dd68dad040b:~# cd coral/pycoral
+
+
+root@3dd68dad040b:~/coral/pycoral# python3.9 examples/classify_image.py   --model test_data/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite    --labels test_data/inat_bird_labels.txt   --input test_data/parrot.jpg
+/home/coral/pycoral/examples/classify_image.py:79: DeprecationWarning: ANTIALIAS is deprecated and will be removed in Pillow 10 (2023-07-01). Use Resampling.LANCZOS instead.
+  image = Image.open(args.input).convert('RGB').resize(size, Image.ANTIALIAS)
+----INFERENCE TIME----
+Note: The first inference on Edge TPU is slow because it includes loading the model into Edge TPU memory.
+13.3ms
+4.7ms
+4.7ms
+4.7ms
+4.6ms
+-------RESULTS--------
+Ara macao (Scarlet Macaw): 0.75781
+root@3dd68dad040b:~/coral/pycoral#  
