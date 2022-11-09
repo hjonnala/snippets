@@ -1,0 +1,2848 @@
+
+U-Boot SPL 2019.04.1 (Sep 30 2021 - 17:13:18 +0000)
+power_bd71837_init
+Board id: 6
+DDRINFO: start DRAM init
+DDRINFO:ddrphy calibration done
+DDRINFO: ddrmix config done
+Normal Boot
+Trying to boot from MMC1
+hdr read sector 300, count=1
+
+
+U-Boot 2019.04.1 (Sep 30 2021 - 17:13:18 +0000), Build: jenkins-enterprise.uboot-imx-2
+
+CPU:   Freescale i.MX8MQ rev2.0 1500 MHz (running at 1000 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 41C
+Reset cause: POR
+Model: Freescale i.MX8MQ Phanbell
+DRAM:  1 GiB
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+Loading Environment from MMC... *** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+
+ BuildInfo:
+  - ATF 
+  - U-Boot 2019.04.1
+
+flash target is MMC:0
+Net:   
+Warning: ethernet@30be0000 using MAC address from ROM
+eth0: ethernet@30be0000
+Fastboot: Normal
+Normal Boot
+Hit any key to stop autoboot:  0 
+2065 bytes read in 6 ms (335.9 KiB/s)
+## Executing script at 40480000
+23110144 bytes read in 499 ms (44.2 MiB/s)
+56820 bytes read in 13 ms (4.2 MiB/s)
+104 bytes read in 3 ms (33.2 KiB/s)
+## Error: "m4enabled" not defined
+## Flattened Device Tree blob at 43000000
+   Booting using the fdt blob at 0x43000000
+   Using Device Tree in place at 0000000043000000, end 0000000043010fff
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.14.98-imx (pbuilder@linux-imx-7c598330-766d-4b03-a12e-333509ed9db6-d1dc9-rtjkh) (gcc version 8.3.0 (Debian 8.3.0-2)) #1 SMP PREEMPT Tue Nov 2 02:55:21 UTC 2021
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] Machine model: Freescale i.MX8MQ Phanbell
+[    0.000000] earlycon: ec_imx6q0 at MMIO 0x0000000030860000 (options '115200')
+[    0.000000] bootconsole [ec_imx6q0] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] Reserved memory: created CMA memory pool at 0x000000006c000000, size 320 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x000000007fffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0x6bfb2400-0x6bfb41ff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] percpu: Embedded 24 pages/cpu @ffff80002bf4d000 s57624 r8192 d32488 u98304
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Speculative Store Bypass Disable mitigation not required
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 258048
+[    0.000000] Policy zone: DMA
+[    0.000000] Kernel command line: console=ttymxc0,115200 console=tty0 earlycon=ec_imx6q,0x30860000,115200 root=PARTUUID=70672ec3-5eee-49ff-b3b1-eb1fbd406bf5 rootfstype=ext4 rw rootwait init=/sbin/init net.ifnames=0 pci=pcie_bus_perf
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Memory: 680676K/1048576K available (13244K kernel code, 1768K rwdata, 6220K rodata, 1280K init, 432K bss, 40220K reserved, 327680K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffff000000000000 - 0xffff000008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffff000008000000 - 0xffff7dffbfff0000   (129022 GB)
+[    0.000000]       .text : 0xffff000008080000 - 0xffff000008d70000   ( 13248 KB)
+[    0.000000]     .rodata : 0xffff000008d70000 - 0xffff000009390000   (  6272 KB)
+[    0.000000]       .init : 0xffff000009390000 - 0xffff0000094d0000   (  1280 KB)
+[    0.000000]       .data : 0xffff0000094d0000 - 0xffff00000968a200   (  1769 KB)
+[    0.000000]        .bss : 0xffff00000968a200 - 0xffff0000096f64a0   (   433 KB)
+[    0.000000]     fixed   : 0xffff7dfffe7f9000 - 0xffff7dfffec00000   (  4124 KB)
+[    0.000000]     PCI I/O : 0xffff7dfffee00000 - 0xffff7dffffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffff7e0000000000 - 0xffff800000000000   (  2048 GB maximum)
+[    0.000000]               0xffff7e0000000000 - 0xffff7e0001000000   (    16 MB actual)
+[    0.000000]     memory  : 0xffff800000000000 - 0xffff800040000000   (  1024 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: no VLPI support, no direct LPI support
+[    0.000000] ITS: No ITS available, not enabling LPIs
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x0000000038880000
+[    0.000000] i.MX8MQ clock driver init done
+[    0.000000] arch_timer: cp15 timer(s) running at 8.33MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.000003] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.008755] system counter timer init
+[    0.011729] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.019710] clocksource: imx sysctr: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.031061] Console: colour dummy device 80x25
+[    0.034446] console [tty0] enabled
+[    0.037857] bootconsole [ec_imx6q0] disabled
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.14.98-imx (pbuilder@linux-imx-7c598330-766d-4b03-a12e-333509ed9db6-d1dc9-rtjkh) (gcc version 8.3.0 (Debian 8.3.0-2)) #1 SMP PREEMPT Tue Nov 2 02:55:21 UTC 2021
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] Machine model: Freescale i.MX8MQ Phanbell
+[    0.000000] earlycon: ec_imx6q0 at MMIO 0x0000000030860000 (options '115200')
+[    0.000000] bootconsole [ec_imx6q0] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] Reserved memory: created CMA memory pool at 0x000000006c000000, size 320 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x000000007fffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0x6bfb2400-0x6bfb41ff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] percpu: Embedded 24 pages/cpu @ffff80002bf4d000 s57624 r8192 d32488 u98304
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Speculative Store Bypass Disable mitigation not required
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 258048
+[    0.000000] Policy zone: DMA
+[    0.000000] Kernel command line: console=ttymxc0,115200 console=tty0 earlycon=ec_imx6q,0x30860000,115200 root=PARTUUID=70672ec3-5eee-49ff-b3b1-eb1fbd406bf5 rootfstype=ext4 rw rootwait init=/sbin/init net.ifnames=0 pci=pcie_bus_perf
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Memory: 680676K/1048576K available (13244K kernel code, 1768K rwdata, 6220K rodata, 1280K init, 432K bss, 40220K reserved, 327680K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffff000000000000 - 0xffff000008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffff000008000000 - 0xffff7dffbfff0000   (129022 GB)
+[    0.000000]       .text : 0xffff000008080000 - 0xffff000008d70000   ( 13248 KB)
+[    0.000000]     .rodata : 0xffff000008d70000 - 0xffff000009390000   (  6272 KB)
+[    0.000000]       .init : 0xffff000009390000 - 0xffff0000094d0000   (  1280 KB)
+[    0.000000]       .data : 0xffff0000094d0000 - 0xffff00000968a200   (  1769 KB)
+[    0.000000]        .bss : 0xffff00000968a200 - 0xffff0000096f64a0   (   433 KB)
+[    0.000000]     fixed   : 0xffff7dfffe7f9000 - 0xffff7dfffec00000   (  4124 KB)
+[    0.000000]     PCI I/O : 0xffff7dfffee00000 - 0xffff7dffffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffff7e0000000000 - 0xffff800000000000   (  2048 GB maximum)
+[    0.000000]               0xffff7e0000000000 - 0xffff7e0001000000   (    16 MB actual)
+[    0.000000]     memory  : 0xffff800000000000 - 0xffff800040000000   (  1024 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: no VLPI support, no direct LPI support
+[    0.000000] ITS: No ITS available, not enabling LPIs
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x0000000038880000
+[    0.000000] i.MX8MQ clock driver init done
+[    0.000000] arch_timer: cp15 timer(s) running at 8.33MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.000003] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.008755] system counter timer init
+[    0.011729] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.019710] clocksource: imx sysctr: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.031061] Console: colour dummy device 80x25
+[    0.034446] console [tty0] enabled
+[    0.037857] bootconsole [ec_imx6q0] disabled
+[    0.042172] Calibrating delay loop (skipped), value calculated using timer frequency.. 16.66 BogoMIPS (lpj=33333)
+[    0.042194] pid_max: default: 32768 minimum: 301
+[    0.042272] Security Framework initialized
+[    0.042599] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.042768] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.042798] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.042818] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.058197] ASID allocator initialised with 32768 entries
+[    0.066198] Hierarchical SRCU implementation.
+[    0.074717] Cannot find MU entry in device tree
+[    0.074866] CPU identified as i.MX8MQ, silicon rev 2.0
+[    0.075756] EFI services will not be available.
+[    0.082238] smp: Bringing up secondary CPUs ...
+[    0.110379] Detected VIPT I-cache on CPU1
+[    0.110404] GICv3: CPU1: found redistributor 1 region 0:0x00000000388a0000
+[    0.110425] CPU1: Booted secondary processor [410fd034]
+[    0.138435] Detected VIPT I-cache on CPU2
+[    0.138450] GICv3: CPU2: found redistributor 2 region 0:0x00000000388c0000
+[    0.138465] CPU2: Booted secondary processor [410fd034]
+[    0.166505] Detected VIPT I-cache on CPU3
+[    0.166522] GICv3: CPU3: found redistributor 3 region 0:0x00000000388e0000
+[    0.166536] CPU3: Booted secondary processor [410fd034]
+[    0.166746] smp: Brought up 1 node, 4 CPUs
+[    0.166829] SMP: Total of 4 processors activated.
+[    0.166842] CPU features: detected feature: GIC system register CPU interface
+[    0.166857] CPU features: detected feature: 32-bit EL0 Support
+[    0.166871] CPU features: detected feature: Kernel page table isolation (KPTI)
+[    0.195972] CPU: All CPU(s) started at EL2
+[    0.196149] alternatives: patching kernel code
+[    0.197236] devtmpfs: initialized
+[    0.204075] random: get_random_u32 called from bucket_table_alloc+0x104/0x268 with crng_init=0
+[    0.205156] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.205211] futex hash table entries: 1024 (order: 5, 131072 bytes)
+[    0.213763] pinctrl core: initialized pinctrl subsystem
+[    0.216328] DMI not present or invalid.
+[    0.216787] NET: Registered protocol family 16
+[    0.220566] cpuidle: using governor menu
+[    0.221551] vdso: 2 pages (1 code @ ffff000008d76000, 1 data @ ffff0000094d4000)
+[    0.221576] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.232278] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.233792] Serial: AMBA PL011 UART driver
+[    0.234234] imx rpmsg driver is registered.
+[    0.241947] imx8mq-pinctrl 30330000.iomuxc: initialized IMX pinctrl driver
+[    0.251483] MU is ready for cross core communication!
+[    0.253055] virtio_rpmsg_bus virtio0: rpmsg host is online
+[    0.288729] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.298254] ACPI: Interpreter disabled.
+[    0.836692] vgaarb: loaded
+[    0.837210] SCSI subsystem initialized
+[    0.838457] usbcore: registered new interface driver usbfs
+[    0.838587] usbcore: registered new interface driver hub
+[    0.838962] usbcore: registered new device driver usb
+[    0.847782] bd71837 0-004b: Device ID=0xA2
+[    0.847798] bd71837 0-004b: gpio_intr = 3 
+[    0.847813] bd71837 0-004b: chip_irq=71 
+[    0.883967] bd71837-pmic bd71837-pmic: regulator register name 'buck1'
+[    0.912192] bd71837-pmic bd71837-pmic: regulator register name 'buck2'
+[    0.932242] bd71837-pmic bd71837-pmic: regulator register name 'buck3'
+[    0.952364] bd71837-pmic bd71837-pmic: regulator register name 'buck4'
+[    0.972338] bd71837-pmic bd71837-pmic: regulator register name 'buck5'
+[    0.988379] bd71837-pmic bd71837-pmic: regulator register name 'buck6'
+[    1.004425] bd71837-pmic bd71837-pmic: regulator register name 'buck7'
+[    1.020466] bd71837-pmic bd71837-pmic: regulator register name 'buck8'
+[    1.036504] bd71837-pmic bd71837-pmic: regulator register name 'ldo1'
+[    1.052545] bd71837-pmic bd71837-pmic: regulator register name 'ldo2'
+[    1.056646] bd71837-pmic bd71837-pmic: regulator register name 'ldo3'
+[    1.072653] bd71837-pmic bd71837-pmic: regulator register name 'ldo4'
+[    1.088693] bd71837-pmic bd71837-pmic: regulator register name 'ldo5'
+[    1.104742] bd71837-pmic bd71837-pmic: regulator register name 'ldo6'
+[    1.120781] bd71837-pmic bd71837-pmic: regulator register name 'ldo7'
+[    1.124541] random: fast init done
+[    1.136826] bd71837-pmic bd71837-pmic: Buck1: DVS Run-Idle-Susp[900000 - 900000 - 800000].
+[    1.148645] bd71837-pmic bd71837-pmic: Buck2: DVS Run-Idle-Susp[1000000 - 900000 - 0].
+[    1.156665] bd71837-pmic bd71837-pmic: Buck3: DVS Run-Idle-Susp[900000 - 0 - 0].
+[    1.160729] bd71837-pmic bd71837-pmic: Buck4: DVS Run-Idle-Susp[900000 - 0 - 0].
+[    1.176919] i2c i2c-0: IMX I2C adapter registered
+[    1.176938] i2c i2c-0: can't use DMA, using PIO instead.
+[    1.177827] i2c i2c-1: IMX I2C adapter registered
+[    1.177844] i2c i2c-1: can't use DMA, using PIO instead.
+[    1.178521] i2c i2c-2: IMX I2C adapter registered
+[    1.178538] i2c i2c-2: can't use DMA, using PIO instead.
+[    1.180042] media: Linux media interface: v0.10
+[    1.180143] Linux video capture interface: v2.00
+[    1.180470] pps_core: LinuxPPS API ver. 1 registered
+[    1.180483] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.180568] PTP clock support registered
+[    1.180968] EDAC MC: Ver: 3.0.0
+[    1.181780] dmi: Firmware registration failed.
+[    1.182654] Advanced Linux Sound Architecture Driver Initialized.
+[    1.183425] Bluetooth: Core ver 2.22
+[    1.183527] NET: Registered protocol family 31
+[    1.183540] Bluetooth: HCI device and connection manager initialized
+[    1.183558] Bluetooth: HCI socket layer initialized
+[    1.183572] Bluetooth: L2CAP socket layer initialized
+[    1.183599] Bluetooth: SCO socket layer initialized
+[    1.185367] clocksource: Switched to clocksource arch_sys_counter
+[    1.185647] VFS: Disk quotas dquot_6.6.0
+[    1.185706] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.185878] pnp: PnP ACPI: disabled
+[    1.202125] NET: Registered protocol family 2
+[    1.202618] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[    1.202719] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
+[    1.202855] TCP: Hash tables configured (established 8192 bind 8192)
+[    1.202934] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    1.202977] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    1.203097] NET: Registered protocol family 1
+[    1.204151] RPC: Registered named UNIX socket transport module.
+[    1.204166] RPC: Registered udp transport module.
+[    1.204178] RPC: Registered tcp transport module.
+[    1.204189] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.205841] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    1.206438] kvm [1]: 8-bit VMID
+[    1.207360] kvm [1]: GICv3: no GICV resource entry
+[    1.207373] kvm [1]: disabling GICv2 emulation
+[    1.207500] kvm [1]: GIC system register CPU interface enabled
+[    1.207868] kvm [1]: vgic interrupt IRQ1
+[    1.208300] kvm [1]: Hyp mode initialized successfully
+[    1.217591] audit: initializing netlink subsys (disabled)
+[    1.217935] audit: type=2000 audit(1.183:1): state=initialized audit_enabled=0 res=1
+[    1.218643] workingset: timestamp_bits=44 max_order=18 bucket_order=0
+[    1.228606] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    1.229855] NFS: Registering the id_resolver key type
+[    1.229885] Key type id_resolver registered
+[    1.229896] Key type id_legacy registered
+[    1.229914] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    1.229942] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    1.230522] 9p: Installing v9fs 9p2000 file system support
+[    1.250687] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+[    1.251187] io scheduler noop registered
+[    1.251351] io scheduler cfq registered (default)
+[    1.251365] io scheduler mq-deadline registered
+[    1.251377] io scheduler kyber registered
+[    1.275515] mxs-dma 33000000.dma-apbh: initialized
+[    1.277260] Bus freq driver module loaded
+[    1.279245] Config NOC for VPU and CPU
+[    1.291346] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    1.294978] SuperH (H)SCI(F) driver initialized
+[    1.295829] 30860000.serial: ttymxc0 at MMIO 0x30860000 (irq = 41, base_baud = 1562500) is a IMX
+[    2.484715] console [ttymxc0] enabled
+[    2.489312] 30880000.serial: ttymxc2 at MMIO 0x30880000 (irq = 42, base_baud = 1562500) is a IMX
+[    2.498995] clk: failed to reparent uart2 to sys1_pll_160m: -22
+[    2.505119] 30890000.serial: ttymxc1 at MMIO 0x30890000 (irq = 43, base_baud = 1562500) is a IMX
+[    2.515135] msm_serial: driver initialized
+[    2.533940] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    2.540594] [drm] No driver support for vblank timestamp query.
+[    2.546717] imx-drm display-subsystem: bound imx-dcss-crtc.0 (ops dcss_crtc_ops)
+[    2.554320] [drm] CDN_API_General_Test_Echo_Ext_blocking - APB(ret = 0 echo_resp = echo test)
+[    2.562929] [drm] CDN_API_General_getCurVersion - ver 13196 verlib 13062
+[    2.569691] [drm] Pixel clock frequency: 594000 KHz, character clock frequency: 594000, color depth is 8-bit.
+[    2.579690] [drm] Pixel clock frequency (594000 KHz) is supported in this color depth (8-bit). Settings found in row 27
+[    2.590496] [drm] VCO frequency is 5940000
+[    2.594668] [drm] VCO frequency (5940000 KHz) is supported. Settings found in row 14
+[    2.626119] [drm] CDN_API_General_Write_Register_blocking LANES_CONFIG ret = 0
+[    2.633388] [drm] Failed to get HDCP config - using HDCP 2.2 only
+[    2.639587] [drm] Failed to initialize HDCP
+[    2.645552] [drm] hdmi-audio-codec driver bound to HDMI
+[    2.650809] imx-drm display-subsystem: bound 32c00000.hdmi (ops imx_hdp_imx_ops)
+[    2.658332] [drm] Cannot find any crtc or sizes
+[    2.663398] [drm] Initialized imx-drm 1.0.0 20120507 for display-subsystem on minor 0
+[    2.679201] loop: module loaded
+[    2.687647] slram: not enough parameters.
+[    2.693693] spi_imx 30820000.ecspi: dma setup error -19, use pio
+[    2.701210] spi_imx 30820000.ecspi: probed
+[    2.708243] libphy: Fixed MDIO Bus: probed
+[    2.713464] NXP PHY: loading NXP PHY driver: [autonomous mode]
+[    2.719767] tun: Universal TUN/TAP device driver, 1.6
+[    2.725175] CAN device driver interface
+[    2.731294] fec 30be0000.ethernet: 30be0000.ethernet supply phy not found, using dummy regulator
+[    2.740668] pps pps0: new PPS source ptp0
+[    2.749280] libphy: fec_enet_mii_bus: probed
+[    2.754988] fec 30be0000.ethernet eth0: registered PHC device 0
+[    2.761981] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    2.767836] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    2.773929] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    2.780912] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    2.786647] igbvf: Intel(R) Gigabit Virtual Function Network Driver - version 2.4.0-k
+[    2.794500] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+[    2.801127] sky2: driver version 1.30
+[    2.813862] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.820426] ehci-pci: EHCI PCI platform driver
+[    2.825032] ehci-platform: EHCI generic platform driver
+[    2.830502] ehci-orion: EHCI orion driver
+[    2.834769] ehci-exynos: EHCI EXYNOS driver
+[    2.839151] ehci-msm: Qualcomm On-Chip EHCI Host Controller
+[    2.844955] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.851167] ohci-pci: OHCI PCI platform driver
+[    2.855772] ohci-platform: OHCI generic platform driver
+[    2.861220] ohci-exynos: OHCI EXYNOS driver
+[    2.866115] Can't support > 32 bit dma.
+[    2.870009] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    2.875531] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[    2.888723] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe6c hci version 0x110 quirks 0x0000000001010810
+[    2.898189] xhci-hcd xhci-hcd.0.auto: irq 230, io mem 0x38200000
+[    2.905031] hub 1-0:1.0: USB hub found
+[    2.908829] hub 1-0:1.0: 1 port detected
+[    2.913188] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    2.918704] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[    2.926448] xhci-hcd xhci-hcd.0.auto: Host supports USB 3.0  SuperSpeed
+[    2.933809] hub 2-0:1.0: USB hub found
+[    2.937601] hub 2-0:1.0: 1 port detected
+[    2.942528] usbcore: registered new interface driver usb-storage
+[    2.948743] usbcore: registered new interface driver usbserial
+[    2.954738] usbcore: registered new interface driver cp210x
+[    2.960405] usbserial: USB Serial support registered for cp210x
+[    2.966495] usbcore: registered new interface driver ftdi_sio
+[    2.972338] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    2.979775] ftdi_elan: driver ftdi-elan
+[    2.983714] usbcore: registered new interface driver ftdi-elan
+[    2.989653] usbcore: registered new interface driver usb_ehset_test
+[    2.999460] input: 30370000.snvs:snvs-powerkey as /devices/platform/30370000.snvs/30370000.snvs:snvs-powerkey/input/input0
+[    3.013763] snvs_rtc 30370000.snvs:snvs-rtc-lp: rtc core: registered 30370000.snvs:snvs-rtc-lp as rtc0
+[    3.023836] i2c /dev entries driver
+[    3.030668] IR NEC protocol handler initialized
+[    3.035276] IR RC5(x/sz) protocol handler initialized
+[    3.040347] IR RC6 protocol handler initialized
+[    3.044949] IR JVC protocol handler initialized
+[    3.049553] IR Sony protocol handler initialized
+[    3.054242] IR SANYO protocol handler initialized
+[    3.058962] IR Sharp protocol handler initialized
+[    3.063737] IR MCE Keyboard/mouse protocol handler initialized
+[    3.069588] IR XMP protocol handler initialized
+[    3.075715] ov5645_mipi 1-003c: 1-003c supply DOVDD not found, using dummy regulator
+[    3.083533] ov5645_mipi 1-003c: 1-003c supply DVDD not found, using dummy regulator
+[    3.091301] ov5645_mipi 1-003c: 1-003c supply AVDD not found, using dummy regulator
+[    3.169724] ov5645_read_reg:write reg error:reg=300a
+[    3.174709] camera ov5645_mipi is not found
+[    3.180378] mxc-mipi-csi2_yav 30a70000.mipi_csi1: mipi_csi2_probe
+[    3.186601] CSI: Registered sensor subdevice: mxc-mipi-csi2.0
+[    3.192440] mxc-mipi-csi2_yav 30a70000.mipi_csi: Remote device at /mipi_csi1@30a70000/port/endpoint1 XXX found
+[    3.202476] mxc-mipi-csi2_yav 30a70000.mipi_csi1: lanes: 2, name: mxc-mipi-csi2.0
+[    3.212940] gpio-fan gpio_fan: GPIO fan initialized
+[    3.221084] imx2-wdt 30280000.wdog: timeout 60 sec (nowayout=0)
+[    3.228119] Bluetooth: HCI UART driver ver 2.3
+[    3.232589] Bluetooth: HCI UART protocol H4 registered
+[    3.237801] Bluetooth: HCI UART protocol BCSP registered
+[    3.243131] Bluetooth: HCI UART protocol ATH3K registered
+[    3.248602] Bluetooth: HCI UART protocol Three-wire (H5) registered
+[    3.255145] Bluetooth: HCI UART protocol Broadcom registered
+[    3.260880] Bluetooth: HCI UART protocol QCA registered
+[    3.267869] sdhci: Secure Digital Host Controller Interface driver
+[    3.274074] sdhci: Copyright(c) Pierre Ossman
+[    3.278722] Synopsys Designware Multimedia Card Interface Driver
+[    3.286074] sdhci-pltfm: SDHCI platform and OF driver helper
+[    3.337946] mmc0: SDHCI controller on 30b40000.usdhc [30b40000.usdhc] using ADMA
+[    3.348168] sdhci-esdhc-imx 30b50000.usdhc: Got CD GPIO
+[    3.406626] mmc1: SDHCI controller on 30b50000.usdhc [30b50000.usdhc] using ADMA
+[    3.423720] update hantro voltage from 900 mV to 1000 mV
+[    3.429323] hantrodec: module inserted. Major = 237
+[    3.437544] ledtrig-cpu: registered to indicate activity on CPUs
+[    3.444609] caam 30900000.caam: ERA source: CCBVID.
+[    3.452679] caam 30900000.caam: device ID = 0x0a16040100000000 (Era 9)
+[    3.459242] caam 30900000.caam: job rings = 3, qi = 0, dpaa2 = no
+[    3.468544] caam_jr 30901000.jr0: Entropy delay = 3200
+[    3.469079] mmc0: new HS400 MMC card at address 0001
+[    3.473972] caam_jr 30901000.jr0: Entropy delay = 3600
+[    3.479333] mmcblk0: mmc0:0001 8GTF4R 7.28 GiB 
+[    3.488922] mmcblk0boot0: mmc0:0001 8GTF4R partition 1 4.00 MiB
+[    3.495221] mmcblk0boot1: mmc0:0001 8GTF4R partition 2 4.00 MiB
+[    3.501584] mmcblk0rpmb: mmc0:0001 8GTF4R partition 3 512 KiB
+[    3.514911]  mmcblk0: p1 p2 p3 p4
+[    3.551696] caam_jr 30901000.jr0: Instantiated RNG4 SH0.
+[    3.619870] caam_jr 30901000.jr0: Instantiated RNG4 SH1.
+[    3.637023] mmc1: host does not support reading read-only switch, assuming write-enable
+[    3.651878] caam algorithms registered in /proc/crypto
+[    3.662388] caam_jr 30901000.jr0: registering rng-caam
+[    3.667968] caam 30900000.caam: caam pkc algorithms registered in /proc/crypto
+[    3.676895] platform caam_sm: blkkey_ex: 2 keystore units available
+[    3.681547] [drm] Cannot find any crtc or sizes
+[    3.687840] caam-snvs 30370000.caam-snvs: can't get snvs clock
+[    3.693740] caam-snvs 30370000.caam-snvs: violation handlers armed - non-secure state
+[    3.702330] usbcore: registered new interface driver usbhid
+[    3.707924] usbhid: USB HID core driver
+[    3.728424] rt5645: Raising HP charge pump threshold to prevent jack event mis-detects.
+[    3.736572] rt5645 2-001a: 2-001a supply avdd not found, using dummy regulator
+[    3.743883] rt5645 2-001a: 2-001a supply cpvdd not found, using dummy regulator
+[    3.761410] mmc1: new ultra high speed DDR50 SDHC card at address aaaa
+[    3.768535] mmcblk1: mmc1:aaaa SS08G 7.40 GiB 
+[    3.778926]  mmcblk1: p1
+[    3.781632] edgetpu-audio-card sound-rt5645: clock set to 24576000
+[    3.797903] edgetpu-audio-card sound-rt5645: rt5645-aif1 <-> 308b0000.sai mapping ok
+[    3.805786] edgetpu-audio-card sound-rt5645: ASoC: no DMI vendor name!
+[    3.887803] input: edgetpu-audio-card Headphone Jack as /devices/platform/sound-rt5645/sound/card0/input1
+[    3.898957] NET: Registered protocol family 26
+[    3.904082] NET: Registered protocol family 10
+[    3.910076] Segment Routing with IPv6
+[    3.913798] NET: Registered protocol family 17
+[    3.918266] can: controller area network core (rev 20170425 abi 9)
+[    3.924502] NET: Registered protocol family 29
+[    3.928965] can: raw protocol (rev 20170425)
+[    3.933253] can: broadcast manager protocol (rev 20170425 t)
+[    3.938989] can: netlink gateway (rev 20170425) max_hops=1
+[    3.945725] Bluetooth: RFCOMM TTY layer initialized
+[    3.950631] Bluetooth: RFCOMM socket layer initialized
+[    3.955855] Bluetooth: RFCOMM ver 1.11
+[    3.959627] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    3.965012] Bluetooth: BNEP filters: protocol multicast
+[    3.970258] Bluetooth: BNEP socket layer initialized
+[    3.975295] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    3.981236] Bluetooth: HIDP socket layer initialized
+[    3.986313] lib80211: common routines for IEEE802.11 drivers
+[    3.992031] 9pnet: Installing 9P2000 support
+[    3.996416] Key type dns_resolver registered
+[    4.005492] registered taskstats version 1
+[    4.016624] failed to disable 800MHz OPP!
+[    4.020671] failed to disable 1.3GHz OPP!
+[    4.027770] cpu cpu0: registered imx8mq-cpufreq
+[    4.033627] imx6q-pcie 33800000.pcie: 33800000.pcie supply epdev_on not found, using dummy regulator
+[    4.044855] OF: PCI: host bridge /pcie@0x33800000 ranges:
+[    4.050273] OF: PCI:   No bus range found for /pcie@0x33800000, using [bus 00-ff]
+[    4.057832] OF: PCI:    IO 0x1ff80000..0x1ff8ffff -> 0x00000000
+[    4.063835] OF: PCI:   MEM 0x18000000..0x1fefffff -> 0x18000000
+[    4.072575] imx6q-pcie 33800000.pcie: pcie phy pll is locked.
+[    4.131752] imx6q-pcie 33800000.pcie: Link: Gen2 disabled
+[    4.137164] imx6q-pcie 33800000.pcie: Link up, Gen1
+[    4.144420] imx6q-pcie 33800000.pcie: PCI host bridge to bus 0000:00
+[    4.150840] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    4.156432] pci_bus 0000:00: root bus resource [io  0x0000-0xffff]
+[    4.162660] pci_bus 0000:00: root bus resource [mem 0x18000000-0x1fefffff]
+[    4.181490] pci 0000:00:00.0: BAR 14: assigned [mem 0x18000000-0x181fffff]
+[    4.188504] pci 0000:00:00.0: BAR 0: assigned [mem 0x18200000-0x182fffff 64bit]
+[    4.195846] pci 0000:00:00.0: BAR 6: assigned [mem 0x18300000-0x1830ffff pref]
+[    4.203154] pci 0000:01:00.0: BAR 0: assigned [mem 0x18000000-0x181fffff 64bit]
+[    4.210526] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[    4.215829] pci 0000:00:00.0:   bridge window [mem 0x18000000-0x181fffff]
+[    4.222649] pci 0000:00:00.0: Max Payload Size set to  128/ 128 (was  128), Max Read Rq  128
+[    4.231222] pci 0000:01:00.0: Max Payload Size set to  128/ 256 (was  128), Max Read Rq  128
+[    4.240176] pcieport 0000:00:00.0: Signaling PME with IRQ 234
+[    4.246159] pcieport 0000:00:00.0: AER enabled with IRQ 234
+[    4.252691] imx6q-pcie 33c00000.pcie: 33c00000.pcie supply epdev_on not found, using dummy regulator
+[    4.264641] OF: PCI: host bridge /pcie@0x33c00000 ranges:
+[    4.270135] OF: PCI:   No bus range found for /pcie@0x33c00000, using [bus 00-ff]
+[    4.277763] OF: PCI:    IO 0x27f80000..0x27f8ffff -> 0x00000000
+[    4.283718] OF: PCI:   MEM 0x20000000..0x27efffff -> 0x20000000
+[    4.294417] imx6q-pcie 33c00000.pcie: pcie phy pll is locked.
+[    4.355602] imx6q-pcie 33c00000.pcie: Link up, Gen2
+[    4.362556] imx6q-pcie 33c00000.pcie: PCI host bridge to bus 0001:00
+[    4.368943] pci_bus 0001:00: root bus resource [bus 00-ff]
+[    4.374509] pci_bus 0001:00: root bus resource [io  0x10000-0x1ffff] (bus address [0x0000-0xffff])
+[    4.383542] pci_bus 0001:00: root bus resource [mem 0x20000000-0x27efffff]
+[    4.401520] pci 0001:00:00.0: BAR 0: assigned [mem 0x20000000-0x200fffff 64bit]
+[    4.409015] pci 0001:00:00.0: BAR 15: assigned [mem 0x20100000-0x202fffff pref]
+[    4.416384] pci 0001:00:00.0: BAR 6: assigned [mem 0x20300000-0x2030ffff pref]
+[    4.423722] pci 0001:00:00.0: PCI bridge to [bus 01-ff]
+[    4.429002] pci 0001:00:00.0:   bridge window [mem 0x20100000-0x202fffff pref]
+[    4.436349] pci 0001:00:00.0: Max Payload Size set to  128/ 128 (was  128), Max Read Rq  128
+[    4.444898] pci 0001:01:00.0: Max Payload Size set to  128/ 256 (was  128), Max Read Rq  128
+[    4.454181] pcieport 0001:00:00.0: Signaling PME with IRQ 363
+[    4.460251] pcieport 0001:00:00.0: AER enabled with IRQ 363
+[    4.472830] asoc-simple-card sound-header: snd-soc-dummy-dai <-> 30010000.sai mapping ok
+[    4.481073] asoc-simple-card sound-header: ASoC: no DMI vendor name!
+[    4.499207] snvs_rtc 30370000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:01 UTC (1)
+[    4.509531] buck3: disabling
+[    4.513860] ALSA device list:
+[    4.516837]   #0: edgetpu-audio-card
+[    4.520483]   #1: 40-pin Header
+[    4.562577] EXT4-fs (mmcblk0p4): recovery complete
+[    4.567930] EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: (null)
+[    4.576127] VFS: Mounted root (ext4 filesystem) on device 179:4.
+[    4.582561] devtmpfs: mounted
+[    4.586376] Freeing unused kernel memory: 1280K
+[    4.720478] systemd[1]: System time before build time, advancing clock.
+[    4.741249] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    4.756655] systemd[1]: systemd 241 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+[    4.778490] systemd[1]: Detected architecture arm64.
+[    4.797481] systemd[1]: Set hostname to <lime-ibis>.
+[    4.927951] systemd[1]: File /lib/systemd/system/systemd-journald.service:12 configures an IP firewall (IPAddressDeny=any), but the local system does not support BPF/cgroup based firewalling.
+[    4.945139] systemd[1]: Proceeding WITHOUT firewalling in effect! (This warning is only shown for the first loaded unit using IP firewalling.)
+[    5.015122] systemd[1]: /lib/systemd/system/vitalsd.service:3: Failed to add dependency on usb-gadget, ignoring: Unknown error -22
+[    5.026935] systemd[1]: /lib/systemd/system/vitalsd.service:5: Unknown lvalue 'Exec' in section 'Service', ignoring
+[    5.037652] systemd[1]: vitalsd.service: Service has no ExecStart=, ExecStop=, or SuccessAction=. Refusing.
+[    5.105680] systemd[1]: /lib/systemd/system/usb-gadget-getty-ttyGS0.service:21: Unknown lvalue 'TTYDisallocate' in section 'Service', ignoring
+[    5.146251] random: systemd: uninitialized urandom read (16 bytes read)
+[    5.155748] systemd[1]: vitalsd.service: Cannot add dependency job, ignoring: Unit vitalsd.service has a bad unit file setting.
+[    5.169260] random: systemd: uninitialized urandom read (16 bytes read)
+[    5.176559] random: systemd: uninitialized urandom read (16 bytes read)
+[    5.244107] EXT4-fs (mmcblk0p4): re-mounted. Opts: (null)
+[    5.395509] systemd-journald[2039]: Received request to flush runtime journal from PID 1
+[    5.664870] imx-sdma 30bd0000.sdma: no iram assigned, using external mem
+[    5.688163] imx-sdma 30bd0000.sdma: loaded firmware 4.2
+[    5.700612] imx-sdma 302c0000.sdma: no iram assigned, using external mem
+[    5.724327] ina2xx 1-0040: error configuring the device: -6
+[    5.731699] ina2xx 1-0041: error configuring the device: -6
+[    5.739396] imx-sdma 302c0000.sdma: loaded firmware 4.2
+[    5.846996] galcore: loading out-of-tree module taints kernel.
+[    5.855644] gasket: module is from the staging directory, the quality is unknown, you have been warned.
+[    5.899972] Galcore version 6.4.2.256507
+[    5.903259] apex: module is from the staging directory, the quality is unknown, you have been warned.
+[    5.905341] wlan: loading driver v4.5.23.1
+[    5.918360] hif_pci_probe:, con_mode= 0x0
+[    5.922195] apex 0001:01:00.0: can't enable device: BAR 0 [mem 0x00000000-0x00003fff 64bit pref] not claimed
+[    5.922636] PCI device id is 003e :003e
+[    5.933523] apex 0001:01:00.0: BAR 2: assigned [mem 0x20100000-0x201fffff 64bit pref]
+[    5.938147] hif_pci 0000:01:00.0: BAR 0: assigned [mem 0x18000000-0x181fffff 64bit]
+[    5.946567] apex 0001:01:00.0: BAR 0: assigned [mem 0x20200000-0x20203fff 64bit pref]
+[    5.954630] hif_pci 0000:01:00.0: enabling device (0000 -> 0002)
+[    5.969644] 
+[    5.969644]  hif_pci_configure : num_desired MSI set to 1
+[    5.973217] apex 0001:01:00.0: enabling device (0000 -> 0002)
+[    5.990270] Can't support > 32 bit dma.
+[    5.994244] Can't support > 32 bit dma.
+[    6.146491] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null)
+[    6.173048] hif_pci_probe: ramdump base 0xffff800024200000 size 2095136
+[    6.213257] NUM_DEV=1 FWMODE=0x2 FWSUBMODE=0x0 FWBR_BUF 0
+[    6.846425] +HWT
+[    6.859022] -HWT
+[    6.926614] HTT: full reorder offload enabled
+[    6.951153] Pkt log is disabled
+[    6.957076] Host SW:4.5.23.1, FW:2.0.1.1048, HW:QCA6174_REV3_2
+[    6.960207] target uses HTT version 3.50; host uses 3.28
+[    6.963418] ol_pktlog_init: pktlogmod_init successfull
+[    6.973806] wlan: driver loaded in 1072000
+[    8.038462] random: crng init done
+[    8.041886] random: 7 urandom warning(s) missed due to ratelimiting
+[   98.301953] watchdog: watchdog0: watchdog did not stop!
+[   98.317771] systemd-shutdow: 53 output lines suppressed due to ratelimiting
+[   98.356568] systemd-shutdown[1]: Syncing filesystems and block devices.
+[   98.368801] systemd-shutdown[1]: Sending SIGTERM to remaining processes...
+[   98.384352] systemd-journald[2039]: Received SIGTERM from PID 1 (systemd-shutdow).
+[   98.421736] systemd-shutdown[1]: Sending SIGKILL to remaining processes...
+[   98.435163] systemd-shutdown[1]: Hardware watchdog 'imx2+ watchdog', version 0
+[   98.446108] systemd-shutdown[1]: Unmounting file systems.
+[   98.453653] [4144]: Remounting '/' read-only in with options 'data=ordered'.
+[   98.477659] EXT4-fs (mmcblk0p4): re-mounted. Opts: data=ordered
+[   98.494509] systemd-shutdown[1]: All filesystems unmounted.
+[   98.500293] systemd-shutdown[1]: Deactivating swaps.
+[   98.505929] systemd-shutdown[1]: All swaps deactivated.
+[   98.511251] systemd-shutdown[1]: Detaching loop devices.
+[   98.520920] systemd-shutdown[1]: All loop devices detached.
+[   98.532129] kvm: exiting hardware virtualization
+[   98.580634] imx2-wdt 30280000.wdog: Device shutdown: Expect reboot!
+[   98.603556] reboot: Restarting system
+
+U-Boot SPL 2019.04.1 (Sep 30 2021 - 17:13:18 +0000)
+power_bd71837_init
+Board id: 6
+DDRINFO: start DRAM init
+DDRINFO:ddrphy calibration done
+DDRINFO: ddrmix config done
+Normal Boot
+Trying to boot from MMC1
+hdr read sector 300, count=1
+
+
+U-Boot 2019.04.1 (Sep 30 2021 - 17:13:18 +0000), Build: jenkins-enterprise.uboot-imx-2
+
+CPU:   Freescale i.MX8MQ rev2.0 1500 MHz (running at 1000 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 43C
+Reset cause: POR
+Model: Freescale i.MX8MQ Phanbell
+DRAM:  1 GiB
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+Loading Environment from MMC... *** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+
+ BuildInfo:
+  - ATF 
+  - U-Boot 2019.04.1
+
+flash target is MMC:0
+Net:   
+Warning: ethernet@30be0000 using MAC address from ROM
+eth0: ethernet@30be0000
+Fastboot: Normal
+Normal Boot
+Hit any key to stop autoboot:  0 
+2065 bytes read in 6 ms (335.9 KiB/s)
+## Executing script at 40480000
+23110144 bytes read in 500 ms (44.1 MiB/s)
+56820 bytes read in 13 ms (4.2 MiB/s)
+104 bytes read in 3 ms (33.2 KiB/s)
+## Error: "m4enabled" not defined
+## Flattened Device Tree blob at 43000000
+   Booting using the fdt blob at 0x43000000
+   Using Device Tree in place at 0000000043000000, end 0000000043010fff
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.14.98-imx (pbuilder@linux-imx-7c598330-766d-4b03-a12e-333509ed9db6-d1dc9-rtjkh) (gcc version 8.3.0 (Debian 8.3.0-2)) #1 SMP PREEMPT Tue Nov 2 02:55:21 UTC 2021
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] Machine model: Freescale i.MX8MQ Phanbell
+[    0.000000] earlycon: ec_imx6q0 at MMIO 0x0000000030860000 (options '115200')
+[    0.000000] bootconsole [ec_imx6q0] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] Reserved memory: created CMA memory pool at 0x000000006c000000, size 320 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x000000007fffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0x6bfb2400-0x6bfb41ff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] percpu: Embedded 24 pages/cpu @ffff80002bf4d000 s57624 r8192 d32488 u98304
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Speculative Store Bypass Disable mitigation not required
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 258048
+[    0.000000] Policy zone: DMA
+[    0.000000] Kernel command line: console=ttymxc0,115200 console=tty0 earlycon=ec_imx6q,0x30860000,115200 root=PARTUUID=70672ec3-5eee-49ff-b3b1-eb1fbd406bf5 rootfstype=ext4 rw rootwait init=/sbin/init net.ifnames=0 pci=pcie_bus_perf
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Memory: 680676K/1048576K available (13244K kernel code, 1768K rwdata, 6220K rodata, 1280K init, 432K bss, 40220K reserved, 327680K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffff000000000000 - 0xffff000008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffff000008000000 - 0xffff7dffbfff0000   (129022 GB)
+[    0.000000]       .text : 0xffff000008080000 - 0xffff000008d70000   ( 13248 KB)
+[    0.000000]     .rodata : 0xffff000008d70000 - 0xffff000009390000   (  6272 KB)
+[    0.000000]       .init : 0xffff000009390000 - 0xffff0000094d0000   (  1280 KB)
+[    0.000000]       .data : 0xffff0000094d0000 - 0xffff00000968a200   (  1769 KB)
+[    0.000000]        .bss : 0xffff00000968a200 - 0xffff0000096f64a0   (   433 KB)
+[    0.000000]     fixed   : 0xffff7dfffe7f9000 - 0xffff7dfffec00000   (  4124 KB)
+[    0.000000]     PCI I/O : 0xffff7dfffee00000 - 0xffff7dffffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffff7e0000000000 - 0xffff800000000000   (  2048 GB maximum)
+[    0.000000]               0xffff7e0000000000 - 0xffff7e0001000000   (    16 MB actual)
+[    0.000000]     memory  : 0xffff800000000000 - 0xffff800040000000   (  1024 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: no VLPI support, no direct LPI support
+[    0.000000] ITS: No ITS available, not enabling LPIs
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x0000000038880000
+[    0.000000] i.MX8MQ clock driver init done
+[    0.000000] arch_timer: cp15 timer(s) running at 8.33MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.000004] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.008755] system counter timer init
+[    0.011728] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.019709] clocksource: imx sysctr: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.031062] Console: colour dummy device 80x25
+[    0.034446] console [tty0] enabled
+[    0.037856] bootconsole [ec_imx6q0] disabled
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.14.98-imx (pbuilder@linux-imx-7c598330-766d-4b03-a12e-333509ed9db6-d1dc9-rtjkh) (gcc version 8.3.0 (Debian 8.3.0-2)) #1 SMP PREEMPT Tue Nov 2 02:55:21 UTC 2021
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] Machine model: Freescale i.MX8MQ Phanbell
+[    0.000000] earlycon: ec_imx6q0 at MMIO 0x0000000030860000 (options '115200')
+[    0.000000] bootconsole [ec_imx6q0] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] Reserved memory: created CMA memory pool at 0x000000006c000000, size 320 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x000000007fffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0x6bfb2400-0x6bfb41ff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] percpu: Embedded 24 pages/cpu @ffff80002bf4d000 s57624 r8192 d32488 u98304
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Speculative Store Bypass Disable mitigation not required
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 258048
+[    0.000000] Policy zone: DMA
+[    0.000000] Kernel command line: console=ttymxc0,115200 console=tty0 earlycon=ec_imx6q,0x30860000,115200 root=PARTUUID=70672ec3-5eee-49ff-b3b1-eb1fbd406bf5 rootfstype=ext4 rw rootwait init=/sbin/init net.ifnames=0 pci=pcie_bus_perf
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Memory: 680676K/1048576K available (13244K kernel code, 1768K rwdata, 6220K rodata, 1280K init, 432K bss, 40220K reserved, 327680K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffff000000000000 - 0xffff000008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffff000008000000 - 0xffff7dffbfff0000   (129022 GB)
+[    0.000000]       .text : 0xffff000008080000 - 0xffff000008d70000   ( 13248 KB)
+[    0.000000]     .rodata : 0xffff000008d70000 - 0xffff000009390000   (  6272 KB)
+[    0.000000]       .init : 0xffff000009390000 - 0xffff0000094d0000   (  1280 KB)
+[    0.000000]       .data : 0xffff0000094d0000 - 0xffff00000968a200   (  1769 KB)
+[    0.000000]        .bss : 0xffff00000968a200 - 0xffff0000096f64a0   (   433 KB)
+[    0.000000]     fixed   : 0xffff7dfffe7f9000 - 0xffff7dfffec00000   (  4124 KB)
+[    0.000000]     PCI I/O : 0xffff7dfffee00000 - 0xffff7dffffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffff7e0000000000 - 0xffff800000000000   (  2048 GB maximum)
+[    0.000000]               0xffff7e0000000000 - 0xffff7e0001000000   (    16 MB actual)
+[    0.000000]     memory  : 0xffff800000000000 - 0xffff800040000000   (  1024 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: no VLPI support, no direct LPI support
+[    0.000000] ITS: No ITS available, not enabling LPIs
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x0000000038880000
+[    0.000000] i.MX8MQ clock driver init done
+[    0.000000] arch_timer: cp15 timer(s) running at 8.33MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.000004] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.008755] system counter timer init
+[    0.011728] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.019709] clocksource: imx sysctr: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.031062] Console: colour dummy device 80x25
+[    0.034446] console [tty0] enabled
+[    0.037856] bootconsole [ec_imx6q0] disabled
+[    0.042171] Calibrating delay loop (skipped), value calculated using timer frequency.. 16.66 BogoMIPS (lpj=33333)
+[    0.042193] pid_max: default: 32768 minimum: 301
+[    0.042271] Security Framework initialized
+[    0.042596] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.042765] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.042796] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.042815] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.058198] ASID allocator initialised with 32768 entries
+[    0.066198] Hierarchical SRCU implementation.
+[    0.074717] Cannot find MU entry in device tree
+[    0.074867] CPU identified as i.MX8MQ, silicon rev 2.0
+[    0.075761] EFI services will not be available.
+[    0.082239] smp: Bringing up secondary CPUs ...
+[    0.110379] Detected VIPT I-cache on CPU1
+[    0.110404] GICv3: CPU1: found redistributor 1 region 0:0x00000000388a0000
+[    0.110425] CPU1: Booted secondary processor [410fd034]
+[    0.138435] Detected VIPT I-cache on CPU2
+[    0.138452] GICv3: CPU2: found redistributor 2 region 0:0x00000000388c0000
+[    0.138466] CPU2: Booted secondary processor [410fd034]
+[    0.166505] Detected VIPT I-cache on CPU3
+[    0.166521] GICv3: CPU3: found redistributor 3 region 0:0x00000000388e0000
+[    0.166536] CPU3: Booted secondary processor [410fd034]
+[    0.166746] smp: Brought up 1 node, 4 CPUs
+[    0.166830] SMP: Total of 4 processors activated.
+[    0.166843] CPU features: detected feature: GIC system register CPU interface
+[    0.166858] CPU features: detected feature: 32-bit EL0 Support
+[    0.166872] CPU features: detected feature: Kernel page table isolation (KPTI)
+[    0.195985] CPU: All CPU(s) started at EL2
+[    0.196162] alternatives: patching kernel code
+[    0.197249] devtmpfs: initialized
+[    0.204089] random: get_random_u32 called from bucket_table_alloc+0x104/0x268 with crng_init=0
+[    0.205172] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.205226] futex hash table entries: 1024 (order: 5, 131072 bytes)
+[    0.213754] pinctrl core: initialized pinctrl subsystem
+[    0.216122] DMI not present or invalid.
+[    0.216531] NET: Registered protocol family 16
+[    0.219555] cpuidle: using governor menu
+[    0.220552] vdso: 2 pages (1 code @ ffff000008d76000, 1 data @ ffff0000094d4000)
+[    0.220577] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.226810] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.228321] Serial: AMBA PL011 UART driver
+[    0.228708] imx rpmsg driver is registered.
+[    0.236310] imx8mq-pinctrl 30330000.iomuxc: initialized IMX pinctrl driver
+[    0.245798] MU is ready for cross core communication!
+[    0.247537] virtio_rpmsg_bus virtio0: rpmsg host is online
+[    0.282150] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.292271] ACPI: Interpreter disabled.
+[    0.804728] vgaarb: loaded
+[    0.805249] SCSI subsystem initialized
+[    0.806441] usbcore: registered new interface driver usbfs
+[    0.806549] usbcore: registered new interface driver hub
+[    0.806977] usbcore: registered new device driver usb
+[    0.815724] bd71837 0-004b: Device ID=0xA2
+[    0.815741] bd71837 0-004b: gpio_intr = 3 
+[    0.815755] bd71837 0-004b: chip_irq=71 
+[    0.847946] bd71837-pmic bd71837-pmic: regulator register name 'buck1'
+[    0.876118] bd71837-pmic bd71837-pmic: regulator register name 'buck2'
+[    0.896167] bd71837-pmic bd71837-pmic: regulator register name 'buck3'
+[    0.916286] bd71837-pmic bd71837-pmic: regulator register name 'buck4'
+[    0.936261] bd71837-pmic bd71837-pmic: regulator register name 'buck5'
+[    0.952305] bd71837-pmic bd71837-pmic: regulator register name 'buck6'
+[    0.968349] bd71837-pmic bd71837-pmic: regulator register name 'buck7'
+[    0.984389] bd71837-pmic bd71837-pmic: regulator register name 'buck8'
+[    1.000426] bd71837-pmic bd71837-pmic: regulator register name 'ldo1'
+[    1.016468] bd71837-pmic bd71837-pmic: regulator register name 'ldo2'
+[    1.020571] bd71837-pmic bd71837-pmic: regulator register name 'ldo3'
+[    1.036577] bd71837-pmic bd71837-pmic: regulator register name 'ldo4'
+[    1.052617] bd71837-pmic bd71837-pmic: regulator register name 'ldo5'
+[    1.068661] bd71837-pmic bd71837-pmic: regulator register name 'ldo6'
+[    1.084703] bd71837-pmic bd71837-pmic: regulator register name 'ldo7'
+[    1.092493] random: fast init done
+[    1.100754] bd71837-pmic bd71837-pmic: Buck1: DVS Run-Idle-Susp[900000 - 900000 - 800000].
+[    1.112568] bd71837-pmic bd71837-pmic: Buck2: DVS Run-Idle-Susp[1000000 - 900000 - 0].
+[    1.120588] bd71837-pmic bd71837-pmic: Buck3: DVS Run-Idle-Susp[900000 - 0 - 0].
+[    1.124652] bd71837-pmic bd71837-pmic: Buck4: DVS Run-Idle-Susp[900000 - 0 - 0].
+[    1.140846] i2c i2c-0: IMX I2C adapter registered
+[    1.140865] i2c i2c-0: can't use DMA, using PIO instead.
+[    1.141755] i2c i2c-1: IMX I2C adapter registered
+[    1.141773] i2c i2c-1: can't use DMA, using PIO instead.
+[    1.142453] i2c i2c-2: IMX I2C adapter registered
+[    1.142470] i2c i2c-2: can't use DMA, using PIO instead.
+[    1.143992] media: Linux media interface: v0.10
+[    1.144094] Linux video capture interface: v2.00
+[    1.144465] pps_core: LinuxPPS API ver. 1 registered
+[    1.144478] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.144584] PTP clock support registered
+[    1.144960] EDAC MC: Ver: 3.0.0
+[    1.145670] dmi: Firmware registration failed.
+[    1.146486] Advanced Linux Sound Architecture Driver Initialized.
+[    1.147162] Bluetooth: Core ver 2.22
+[    1.147194] NET: Registered protocol family 31
+[    1.147206] Bluetooth: HCI device and connection manager initialized
+[    1.147224] Bluetooth: HCI socket layer initialized
+[    1.147238] Bluetooth: L2CAP socket layer initialized
+[    1.147264] Bluetooth: SCO socket layer initialized
+[    1.148969] clocksource: Switched to clocksource arch_sys_counter
+[    1.149255] VFS: Disk quotas dquot_6.6.0
+[    1.149316] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.149488] pnp: PnP ACPI: disabled
+[    1.165348] NET: Registered protocol family 2
+[    1.165857] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[    1.165959] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
+[    1.166096] TCP: Hash tables configured (established 8192 bind 8192)
+[    1.166176] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    1.166217] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    1.166337] NET: Registered protocol family 1
+[    1.167338] RPC: Registered named UNIX socket transport module.
+[    1.167353] RPC: Registered udp transport module.
+[    1.167365] RPC: Registered tcp transport module.
+[    1.167376] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.168922] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    1.169670] kvm [1]: 8-bit VMID
+[    1.170594] kvm [1]: GICv3: no GICV resource entry
+[    1.170608] kvm [1]: disabling GICv2 emulation
+[    1.170735] kvm [1]: GIC system register CPU interface enabled
+[    1.171105] kvm [1]: vgic interrupt IRQ1
+[    1.171538] kvm [1]: Hyp mode initialized successfully
+[    1.180719] audit: initializing netlink subsys (disabled)
+[    1.181146] audit: type=2000 audit(1.147:1): state=initialized audit_enabled=0 res=1
+[    1.181808] workingset: timestamp_bits=44 max_order=18 bucket_order=0
+[    1.191846] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    1.193240] NFS: Registering the id_resolver key type
+[    1.193271] Key type id_resolver registered
+[    1.193283] Key type id_legacy registered
+[    1.193300] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    1.193328] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    1.193912] 9p: Installing v9fs 9p2000 file system support
+[    1.213304] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+[    1.213757] io scheduler noop registered
+[    1.213919] io scheduler cfq registered (default)
+[    1.213933] io scheduler mq-deadline registered
+[    1.213946] io scheduler kyber registered
+[    1.237956] mxs-dma 33000000.dma-apbh: initialized
+[    1.239697] Bus freq driver module loaded
+[    1.241700] Config NOC for VPU and CPU
+[    1.253503] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    1.257094] SuperH (H)SCI(F) driver initialized
+[    1.257962] 30860000.serial: ttymxc0 at MMIO 0x30860000 (irq = 41, base_baud = 1562500) is a IMX
+[    2.446977] console [ttymxc0] enabled
+[    2.451479] 30880000.serial: ttymxc2 at MMIO 0x30880000 (irq = 42, base_baud = 1562500) is a IMX
+[    2.461297] clk: failed to reparent uart2 to sys1_pll_160m: -22
+[    2.467359] 30890000.serial: ttymxc1 at MMIO 0x30890000 (irq = 43, base_baud = 1562500) is a IMX
+[    2.477411] msm_serial: driver initialized
+[    2.496179] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    2.502833] [drm] No driver support for vblank timestamp query.
+[    2.508897] imx-drm display-subsystem: bound imx-dcss-crtc.0 (ops dcss_crtc_ops)
+[    2.516505] [drm] CDN_API_General_Test_Echo_Ext_blocking - APB(ret = 0 echo_resp = echo test)
+[    2.525113] [drm] CDN_API_General_getCurVersion - ver 13196 verlib 13062
+[    2.531876] [drm] Pixel clock frequency: 594000 KHz, character clock frequency: 594000, color depth is 8-bit.
+[    2.541875] [drm] Pixel clock frequency (594000 KHz) is supported in this color depth (8-bit). Settings found in row 27
+[    2.552683] [drm] VCO frequency is 5940000
+[    2.556854] [drm] VCO frequency (5940000 KHz) is supported. Settings found in row 14
+[    2.588358] [drm] CDN_API_General_Write_Register_blocking LANES_CONFIG ret = 0
+[    2.595626] [drm] Failed to get HDCP config - using HDCP 2.2 only
+[    2.601828] [drm] Failed to initialize HDCP
+[    2.607756] [drm] hdmi-audio-codec driver bound to HDMI
+[    2.613016] imx-drm display-subsystem: bound 32c00000.hdmi (ops imx_hdp_imx_ops)
+[    2.620537] [drm] Cannot find any crtc or sizes
+[    2.625604] [drm] Initialized imx-drm 1.0.0 20120507 for display-subsystem on minor 0
+[    2.641314] loop: module loaded
+[    2.649789] slram: not enough parameters.
+[    2.655869] spi_imx 30820000.ecspi: dma setup error -19, use pio
+[    2.663384] spi_imx 30820000.ecspi: probed
+[    2.670305] libphy: Fixed MDIO Bus: probed
+[    2.675503] NXP PHY: loading NXP PHY driver: [autonomous mode]
+[    2.681803] tun: Universal TUN/TAP device driver, 1.6
+[    2.687212] CAN device driver interface
+[    2.693350] fec 30be0000.ethernet: 30be0000.ethernet supply phy not found, using dummy regulator
+[    2.702712] pps pps0: new PPS source ptp0
+[    2.711399] libphy: fec_enet_mii_bus: probed
+[    2.717315] fec 30be0000.ethernet eth0: registered PHC device 0
+[    2.724228] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    2.730138] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    2.736185] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    2.743223] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    2.748900] igbvf: Intel(R) Gigabit Virtual Function Network Driver - version 2.4.0-k
+[    2.756807] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+[    2.763382] sky2: driver version 1.30
+[    2.776081] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.782650] ehci-pci: EHCI PCI platform driver
+[    2.787257] ehci-platform: EHCI generic platform driver
+[    2.792727] ehci-orion: EHCI orion driver
+[    2.796939] ehci-exynos: EHCI EXYNOS driver
+[    2.801320] ehci-msm: Qualcomm On-Chip EHCI Host Controller
+[    2.807072] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.813284] ohci-pci: OHCI PCI platform driver
+[    2.817887] ohci-platform: OHCI generic platform driver
+[    2.823334] ohci-exynos: OHCI EXYNOS driver
+[    2.828221] Can't support > 32 bit dma.
+[    2.832113] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    2.837688] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[    2.850884] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe6c hci version 0x110 quirks 0x0000000001010810
+[    2.860355] xhci-hcd xhci-hcd.0.auto: irq 230, io mem 0x38200000
+[    2.867176] hub 1-0:1.0: USB hub found
+[    2.870973] hub 1-0:1.0: 1 port detected
+[    2.875318] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    2.880833] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[    2.888574] xhci-hcd xhci-hcd.0.auto: Host supports USB 3.0  SuperSpeed
+[    2.895879] hub 2-0:1.0: USB hub found
+[    2.899725] hub 2-0:1.0: 1 port detected
+[    2.904627] usbcore: registered new interface driver usb-storage
+[    2.910909] usbcore: registered new interface driver usbserial
+[    2.916851] usbcore: registered new interface driver cp210x
+[    2.922573] usbserial: USB Serial support registered for cp210x
+[    2.928607] usbcore: registered new interface driver ftdi_sio
+[    2.934500] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    2.941884] ftdi_elan: driver ftdi-elan
+[    2.945877] usbcore: registered new interface driver ftdi-elan
+[    2.951819] usbcore: registered new interface driver usb_ehset_test
+[    2.961669] input: 30370000.snvs:snvs-powerkey as /devices/platform/30370000.snvs/30370000.snvs:snvs-powerkey/input/input0
+[    2.975917] snvs_rtc 30370000.snvs:snvs-rtc-lp: rtc core: registered 30370000.snvs:snvs-rtc-lp as rtc0
+[    2.985989] i2c /dev entries driver
+[    2.992918] IR NEC protocol handler initialized
+[    2.997474] IR RC5(x/sz) protocol handler initialized
+[    3.002600] IR RC6 protocol handler initialized
+[    3.007203] IR JVC protocol handler initialized
+[    3.011805] IR Sony protocol handler initialized
+[    3.016440] IR SANYO protocol handler initialized
+[    3.021215] IR Sharp protocol handler initialized
+[    3.025936] IR MCE Keyboard/mouse protocol handler initialized
+[    3.031841] IR XMP protocol handler initialized
+[    3.037965] ov5645_mipi 1-003c: 1-003c supply DOVDD not found, using dummy regulator
+[    3.045798] ov5645_mipi 1-003c: 1-003c supply DVDD not found, using dummy regulator
+[    3.053564] ov5645_mipi 1-003c: 1-003c supply AVDD not found, using dummy regulator
+[    3.133326] ov5645_read_reg:write reg error:reg=300a
+[    3.138312] camera ov5645_mipi is not found
+[    3.143970] mxc-mipi-csi2_yav 30a70000.mipi_csi1: mipi_csi2_probe
+[    3.150191] CSI: Registered sensor subdevice: mxc-mipi-csi2.0
+[    3.156030] mxc-mipi-csi2_yav 30a70000.mipi_csi: Remote device at /mipi_csi1@30a70000/port/endpoint1 XXX found
+[    3.166065] mxc-mipi-csi2_yav 30a70000.mipi_csi1: lanes: 2, name: mxc-mipi-csi2.0
+[    3.176693] gpio-fan gpio_fan: GPIO fan initialized
+[    3.184750] imx2-wdt 30280000.wdog: timeout 60 sec (nowayout=0)
+[    3.191830] Bluetooth: HCI UART driver ver 2.3
+[    3.196299] Bluetooth: HCI UART protocol H4 registered
+[    3.201512] Bluetooth: HCI UART protocol BCSP registered
+[    3.206843] Bluetooth: HCI UART protocol ATH3K registered
+[    3.212314] Bluetooth: HCI UART protocol Three-wire (H5) registered
+[    3.218856] Bluetooth: HCI UART protocol Broadcom registered
+[    3.224591] Bluetooth: HCI UART protocol QCA registered
+[    3.231629] sdhci: Secure Digital Host Controller Interface driver
+[    3.237834] sdhci: Copyright(c) Pierre Ossman
+[    3.242486] Synopsys Designware Multimedia Card Interface Driver
+[    3.249819] sdhci-pltfm: SDHCI platform and OF driver helper
+[    3.301547] mmc0: SDHCI controller on 30b40000.usdhc [30b40000.usdhc] using ADMA
+[    3.311953] sdhci-esdhc-imx 30b50000.usdhc: Got CD GPIO
+[    3.369699] mmc1: SDHCI controller on 30b50000.usdhc [30b50000.usdhc] using ADMA
+[    3.384164] update hantro voltage from 900 mV to 1000 mV
+[    3.389971] hantrodec: module inserted. Major = 237
+[    3.398188] ledtrig-cpu: registered to indicate activity on CPUs
+[    3.405290] caam 30900000.caam: ERA source: CCBVID.
+[    3.413487] caam 30900000.caam: device ID = 0x0a16040100000000 (Era 9)
+[    3.420104] caam 30900000.caam: job rings = 3, qi = 0, dpaa2 = no
+[    3.429759] caam_jr 30901000.jr0: Entropy delay = 3200
+[    3.435745] caam_jr 30901000.jr0: Entropy delay = 3600
+[    3.479220] mmc0: new HS400 MMC card at address 0001
+[    3.484857] mmcblk0: mmc0:0001 8GTF4R 7.28 GiB 
+[    3.489771] mmcblk0boot0: mmc0:0001 8GTF4R partition 1 4.00 MiB
+[    3.496069] mmcblk0boot1: mmc0:0001 8GTF4R partition 2 4.00 MiB
+[    3.502370] mmcblk0rpmb: mmc0:0001 8GTF4R partition 3 512 KiB
+[    3.508672] caam_jr 30901000.jr0: Instantiated RNG4 SH0.
+[    3.516449]  mmcblk0: p1 p2 p3 p4
+[    3.576852] caam_jr 30901000.jr0: Instantiated RNG4 SH1.
+[    3.618953] caam algorithms registered in /proc/crypto
+[    3.624239] mmc1: host does not support reading read-only switch, assuming write-enable
+[    3.633851] caam_jr 30901000.jr0: registering rng-caam
+[    3.639441] caam 30900000.caam: caam pkc algorithms registered in /proc/crypto
+[    3.645106] [drm] Cannot find any crtc or sizes
+[    3.648372] platform caam_sm: blkkey_ex: 2 keystore units available
+[    3.658833] caam-snvs 30370000.caam-snvs: can't get snvs clock
+[    3.664737] caam-snvs 30370000.caam-snvs: violation handlers armed - non-secure state
+[    3.673300] usbcore: registered new interface driver usbhid
+[    3.678895] usbhid: USB HID core driver
+[    3.698910] rt5645: Raising HP charge pump threshold to prevent jack event mis-detects.
+[    3.707124] rt5645 2-001a: 2-001a supply avdd not found, using dummy regulator
+[    3.714428] rt5645 2-001a: 2-001a supply cpvdd not found, using dummy regulator
+[    3.749001] mmc1: new ultra high speed DDR50 SDHC card at address aaaa
+[    3.756263] mmcblk1: mmc1:aaaa SS08G 7.40 GiB 
+[    3.758998] edgetpu-audio-card sound-rt5645: clock set to 24576000
+[    3.770576]  mmcblk1: p1
+[    3.776088] edgetpu-audio-card sound-rt5645: rt5645-aif1 <-> 308b0000.sai mapping ok
+[    3.783975] edgetpu-audio-card sound-rt5645: ASoC: no DMI vendor name!
+[    3.864655] input: edgetpu-audio-card Headphone Jack as /devices/platform/sound-rt5645/sound/card0/input1
+[    3.875738] NET: Registered protocol family 26
+[    3.880874] NET: Registered protocol family 10
+[    3.886419] Segment Routing with IPv6
+[    3.890144] NET: Registered protocol family 17
+[    3.894668] can: controller area network core (rev 20170425 abi 9)
+[    3.900906] NET: Registered protocol family 29
+[    3.905426] can: raw protocol (rev 20170425)
+[    3.909717] can: broadcast manager protocol (rev 20170425 t)
+[    3.915399] can: netlink gateway (rev 20170425) max_hops=1
+[    3.921286] Bluetooth: RFCOMM TTY layer initialized
+[    3.926190] Bluetooth: RFCOMM socket layer initialized
+[    3.931411] Bluetooth: RFCOMM ver 1.11
+[    3.935183] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    3.940568] Bluetooth: BNEP filters: protocol multicast
+[    3.945813] Bluetooth: BNEP socket layer initialized
+[    3.950850] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    3.956790] Bluetooth: HIDP socket layer initialized
+[    3.961865] lib80211: common routines for IEEE802.11 drivers
+[    3.967582] 9pnet: Installing 9P2000 support
+[    3.972020] Key type dns_resolver registered
+[    3.978006] registered taskstats version 1
+[    3.989120] failed to disable 800MHz OPP!
+[    3.993163] failed to disable 1.3GHz OPP!
+[    3.998749] cpu cpu0: registered imx8mq-cpufreq
+[    4.004139] imx6q-pcie 33800000.pcie: 33800000.pcie supply epdev_on not found, using dummy regulator
+[    4.014758] OF: PCI: host bridge /pcie@0x33800000 ranges:
+[    4.020284] OF: PCI:   No bus range found for /pcie@0x33800000, using [bus 00-ff]
+[    4.027788] OF: PCI:    IO 0x1ff80000..0x1ff8ffff -> 0x00000000
+[    4.033779] OF: PCI:   MEM 0x18000000..0x1fefffff -> 0x18000000
+[    4.043652] imx6q-pcie 33800000.pcie: pcie phy pll is locked.
+[    4.102799] imx6q-pcie 33800000.pcie: Link: Gen2 disabled
+[    4.108245] imx6q-pcie 33800000.pcie: Link up, Gen1
+[    4.117247] imx6q-pcie 33800000.pcie: PCI host bridge to bus 0000:00
+[    4.123740] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    4.129383] pci_bus 0000:00: root bus resource [io  0x0000-0xffff]
+[    4.135690] pci_bus 0000:00: root bus resource [mem 0x18000000-0x1fefffff]
+[    4.157072] pci 0000:00:00.0: BAR 14: assigned [mem 0x18000000-0x181fffff]
+[    4.164073] pci 0000:00:00.0: BAR 0: assigned [mem 0x18200000-0x182fffff 64bit]
+[    4.171403] pci 0000:00:00.0: BAR 6: assigned [mem 0x18300000-0x1830ffff pref]
+[    4.178697] pci 0000:01:00.0: BAR 0: assigned [mem 0x18000000-0x181fffff 64bit]
+[    4.186059] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[    4.191352] pci 0000:00:00.0:   bridge window [mem 0x18000000-0x181fffff]
+[    4.198161] pci 0000:00:00.0: Max Payload Size set to  128/ 128 (was  128), Max Read Rq  128
+[    4.206718] pci 0000:01:00.0: Max Payload Size set to  128/ 256 (was  128), Max Read Rq  128
+[    4.215589] pcieport 0000:00:00.0: Signaling PME with IRQ 234
+[    4.221527] pcieport 0000:00:00.0: AER enabled with IRQ 234
+[    4.227891] imx6q-pcie 33c00000.pcie: 33c00000.pcie supply epdev_on not found, using dummy regulator
+[    4.237797] OF: PCI: host bridge /pcie@0x33c00000 ranges:
+[    4.243220] OF: PCI:   No bus range found for /pcie@0x33c00000, using [bus 00-ff]
+[    4.250789] OF: PCI:    IO 0x27f80000..0x27f8ffff -> 0x00000000
+[    4.256730] OF: PCI:   MEM 0x20000000..0x27efffff -> 0x20000000
+[    4.265556] imx6q-pcie 33c00000.pcie: pcie phy pll is locked.
+[    4.326786] imx6q-pcie 33c00000.pcie: Link up, Gen2
+[    4.334062] imx6q-pcie 33c00000.pcie: PCI host bridge to bus 0001:00
+[    4.340478] pci_bus 0001:00: root bus resource [bus 00-ff]
+[    4.346075] pci_bus 0001:00: root bus resource [io  0x10000-0x1ffff] (bus address [0x0000-0xffff])
+[    4.355089] pci_bus 0001:00: root bus resource [mem 0x20000000-0x27efffff]
+[    4.373059] pci 0001:00:00.0: BAR 0: assigned [mem 0x20000000-0x200fffff 64bit]
+[    4.380483] pci 0001:00:00.0: BAR 15: assigned [mem 0x20100000-0x202fffff pref]
+[    4.387828] pci 0001:00:00.0: BAR 6: assigned [mem 0x20300000-0x2030ffff pref]
+[    4.395174] pci 0001:00:00.0: PCI bridge to [bus 01-ff]
+[    4.400414] pci 0001:00:00.0:   bridge window [mem 0x20100000-0x202fffff pref]
+[    4.407712] pci 0001:00:00.0: Max Payload Size set to  128/ 128 (was  128), Max Read Rq  128
+[    4.416207] pci 0001:01:00.0: Max Payload Size set to  128/ 256 (was  128), Max Read Rq  128
+[    4.425143] pcieport 0001:00:00.0: Signaling PME with IRQ 363
+[    4.431042] pcieport 0001:00:00.0: AER enabled with IRQ 363
+[    4.440961] asoc-simple-card sound-header: snd-soc-dummy-dai <-> 30010000.sai mapping ok
+[    4.449121] asoc-simple-card sound-header: ASoC: no DMI vendor name!
+[    4.465962] snvs_rtc 30370000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:01 UTC (1)
+[    4.476228] buck3: disabling
+[    4.481480] ALSA device list:
+[    4.484455]   #0: edgetpu-audio-card
+[    4.488110]   #1: 40-pin Header
+[    4.499154] EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: (null)
+[    4.507285] VFS: Mounted root (ext4 filesystem) on device 179:4.
+[    4.515052] devtmpfs: mounted
+[    4.518359] Freeing unused kernel memory: 1280K
+[    4.680438] systemd[1]: System time before build time, advancing clock.
+[    4.704019] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    4.719926] systemd[1]: systemd 241 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+[    4.741818] systemd[1]: Detected architecture arm64.
+[    4.759084] systemd[1]: Set hostname to <lime-ibis>.
+[    4.880785] systemd[1]: File /lib/systemd/system/systemd-journald.service:12 configures an IP firewall (IPAddressDeny=any), but the local system does not support BPF/cgroup based firewalling.
+[    4.898011] systemd[1]: Proceeding WITHOUT firewalling in effect! (This warning is only shown for the first loaded unit using IP firewalling.)
+[    4.962661] systemd[1]: /lib/systemd/system/vitalsd.service:3: Failed to add dependency on usb-gadget, ignoring: Unknown error -22
+[    4.974472] systemd[1]: /lib/systemd/system/vitalsd.service:5: Unknown lvalue 'Exec' in section 'Service', ignoring
+[    4.985193] systemd[1]: vitalsd.service: Service has no ExecStart=, ExecStop=, or SuccessAction=. Refusing.
+[    5.057754] systemd[1]: /lib/systemd/system/usb-gadget-getty-ttyGS0.service:21: Unknown lvalue 'TTYDisallocate' in section 'Service', ignoring
+[    5.096641] random: systemd: uninitialized urandom read (16 bytes read)
+[    5.105490] systemd[1]: vitalsd.service: Cannot add dependency job, ignoring: Unit vitalsd.service has a bad unit file setting.
+[    5.119047] random: systemd: uninitialized urandom read (16 bytes read)
+[    5.126354] random: systemd: uninitialized urandom read (16 bytes read)
+[    5.197236] EXT4-fs (mmcblk0p4): re-mounted. Opts: (null)
+[    5.351370] systemd-journald[2041]: Received request to flush runtime journal from PID 1
+[    5.617631] imx-sdma 30bd0000.sdma: no iram assigned, using external mem
+[    5.638404] imx-sdma 302c0000.sdma: no iram assigned, using external mem
+[    5.646549] imx-sdma 30bd0000.sdma: loaded firmware 4.2
+[    5.659260] imx-sdma 302c0000.sdma: loaded firmware 4.2
+[    5.699042] ina2xx 1-0040: error configuring the device: -6
+[    5.706835] ina2xx 1-0041: error configuring the device: -6
+[    5.824577] gasket: module is from the staging directory, the quality is unknown, you have been warned.
+[    5.833736] galcore: loading out-of-tree module taints kernel.
+[    5.845858] apex: module is from the staging directory, the quality is unknown, you have been warned.
+[    5.856149] apex 0001:01:00.0: can't enable device: BAR 0 [mem 0x00000000-0x00003fff 64bit pref] not claimed
+[    5.867085] apex 0001:01:00.0: BAR 2: assigned [mem 0x20100000-0x201fffff 64bit pref]
+[    5.875778] apex 0001:01:00.0: BAR 0: assigned [mem 0x20200000-0x20203fff 64bit pref]
+[    5.884538] apex 0001:01:00.0: enabling device (0000 -> 0002)
+[    5.891750] Can't support > 32 bit dma.
+[    5.896114] Can't support > 32 bit dma.
+[    5.907707] wlan: loading driver v4.5.23.1
+[    5.914029] Galcore version 6.4.2.256507
+[    5.915022] hif_pci_probe:, con_mode= 0x0
+[    5.925132] PCI device id is 003e :003e
+[    5.929174] hif_pci 0000:01:00.0: BAR 0: assigned [mem 0x18000000-0x181fffff 64bit]
+[    5.938809] hif_pci 0000:01:00.0: enabling device (0000 -> 0002)
+[    5.946841] 
+[    5.946841]  hif_pci_configure : num_desired MSI set to 1
+[    6.146379] hif_pci_probe: ramdump base 0xffff800024200000 size 2095136
+[    6.164072] NUM_DEV=1 FWMODE=0x2 FWSUBMODE=0x0 FWBR_BUF 0
+[    6.337846] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null)
+[    6.820809] +HWT
+[    6.832620] -HWT
+[    7.004844] HTT: full reorder offload enabled
+[    7.034657] Pkt log is disabled
+[    7.038421] target uses HTT version 3.50; host uses 3.28
+[    7.041807] Host SW:4.5.23.1, FW:2.0.1.1048, HW:QCA6174_REV3_2
+[    7.050042] ol_pktlog_init: pktlogmod_init successfull
+[    7.055732] wlan: driver loaded in 1148000
+[    7.125422] using random self ethernet address
+[    7.130015] using random host ethernet address
+[    7.142059] using random self ethernet address
+[    7.146678] using random host ethernet address
+[    7.397038] random: crng init done
+[    7.400511] random: 7 urandom warning(s) missed due to ratelimiting
+[    7.472419] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    7.481106] Generic PHY 30be0000.ethernet-1:00: attached PHY driver [Generic PHY] (mii_bus:phy_addr=30be0000.ethernet-1:00, irq=POLL)
+[    7.493572] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    7.514467] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[    7.520771] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[    7.643344] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[    8.184010] usb0: HOST MAC 76:74:d0:9b:c5:0f
+[    8.188754] usb0: MAC 02:22:78:0d:f6:df
+[    8.199272] usb1: HOST MAC 02:22:78:0d:f6:dd
+[    8.204917] usb1: MAC 02:22:78:0d:f6:de
+[    8.471591] IPv6: ADDRCONF(NETDEV_UP): usb0: link is not ready
+[    8.477853] IPv6: ADDRCONF(NETDEV_UP): usb0: link is not ready
+[    8.489549] IPv6: ADDRCONF(NETDEV_UP): usb0: link is not ready
+[    8.503459] IPv6: ADDRCONF(NETDEV_UP): usb0: link is not ready
+[    8.747061] configfs-gadget gadget: high-speed config #1: c
+[    8.756569] IPv6: ADDRCONF(NETDEV_CHANGE): usb0: link becomes ready
+[    8.788686] IPv6: ADDRCONF(NETDEV_UP): usb1: link is not ready
+[    8.795397] IPv6: ADDRCONF(NETDEV_UP): usb1: link is not ready
+[    8.807708] IPv6: ADDRCONF(NETDEV_UP): usb1: link is not ready
+[    8.822010] IPv6: ADDRCONF(NETDEV_UP): usb1: link is not ready
+[    8.919971] NOHZ: local_softirq_pending 08
+[    9.395844] NOHZ: local_softirq_pending 08
+
+Mendel GNU/Linux (eagle) lime-ibis ttymxc0
+
+lime-ibis login: [   10.932745] NOHZ: local_softirq_pending 08
+[   11.009900] NOHZ: local_softirq_pending 08
+[   16.858501] NOHZ: local_softirq_pending 08
+[   19.874759] NOHZ: local_softirq_pending 08
+[   19.962249] NOHZ: local_softirq_pending 08
+[   19.974216] NOHZ: local_softirq_pending 08
+[   20.855428] NOHZ: local_softirq_pending 08
+[   21.963791] NOHZ: local_softirq_pending 08
+[   43.669944] watchdog: watchdog0: watchdog did not stop!
+[   43.682671] systemd-shutdow: 52 output lines suppressed due to ratelimiting
+[   43.718613] systemd-shutdown[1]: Syncing filesystems and block devices.
+[   43.730416] systemd-shutdown[1]: Sending SIGTERM to remaining processes...
+[   43.746481] systemd-journald[2041]: Received SIGTERM from PID 1 (systemd-shutdow).
+[   43.797349] systemd-shutdown[1]: Sending SIGKILL to remaining processes...
+[   43.811152] systemd-shutdown[1]: Hardware watchdog 'imx2+ watchdog', version 0
+[   43.820187] systemd-shutdown[1]: Unmounting file systems.
+[   43.827568] [4007]: Remounting '/' read-only in with options 'data=ordered'.
+[   43.857270] EXT4-fs (mmcblk0p4): re-mounted. Opts: data=ordered
+[   43.873309] systemd-shutdown[1]: All filesystems unmounted.
+[   43.878989] systemd-shutdown[1]: Deactivating swaps.
+[   43.884127] systemd-shutdown[1]: All swaps deactivated.
+[   43.889559] systemd-shutdown[1]: Detaching loop devices.
+[   43.898757] systemd-shutdown[1]: All loop devices detached.
+[   43.909667] kvm: exiting hardware virtualization
+[   43.954633] imx2-wdt 30280000.wdog: Device shutdown: Expect reboot!
+[   43.978919] reboot: Restarting system
+
+U-Boot SPL 2019.04.1 (Sep 30 2021 - 17:13:18 +0000)
+power_bd71837_init
+Board id: 6
+DDRINFO: start DRAM init
+DDRINFO:ddrphy calibration done
+DDRINFO: ddrmix config done
+Normal Boot
+Trying to boot from MMC1
+hdr read sector 300, count=1
+
+
+U-Boot 2019.04.1 (Sep 30 2021 - 17:13:18 +0000), Build: jenkins-enterprise.uboot-imx-2
+
+CPU:   Freescale i.MX8MQ rev2.0 1500 MHz (running at 1000 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 43C
+Reset cause: POR
+Model: Freescale i.MX8MQ Phanbell
+DRAM:  1 GiB
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+Loading Environment from MMC... *** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+
+ BuildInfo:
+  - ATF 
+  - U-Boot 2019.04.1
+
+flash target is MMC:0
+Net:   
+Warning: ethernet@30be0000 using MAC address from ROM
+eth0: ethernet@30be0000
+Fastboot: Got bootloader commands!
+Configured USB Switch for UFP
+request 000000007f95c280 was not queued to ep1in-bulk
+request 000000007f95c280 was not queued to ep1in-bulk
+request 000000007f95c280 was not queued to ep1in-bulk
+request 000000007f95c280 was not queued to ep1in-bulk
+WARNING: unknown variable: is-logical:bootloader0
+request 000000007f95c280 was not queued to ep1in-bulk
+Starting download of 1064388 bytes
+request 000000007f95c280 was not queued to ep1in-bulk
+........
+downloading of 1064388 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'bootloader0'
+Flash target is mmc0
+Initializing 'bootloader0'
+switch to partitions #1, OK
+mmc0(part 1) is current device
+Writing 'bootloader0'
+
+MMC write: dev # 0, block # 66, count 2079 ... 2079 blocks written: OK
+Writing 'bootloader0' DONE!
+request 000000007f95c280 was not queued to ep1in-bulk
+request 000000007f95c280 was not queued to ep1in-bulk
+resetting ...
+
+U-Boot SPL 2019.04.1 (Sep 30 2021 - 17:13:18 +0000)
+power_bd71837_init
+Board id: 6
+DDRINFO: start DRAM init
+DDRINFO:ddrphy calibration done
+DDRINFO: ddrmix config done
+Normal Boot
+Trying to boot from MMC1
+hdr read sector 300, count=1
+
+
+U-Boot 2019.04.1 (Sep 30 2021 - 17:13:18 +0000), Build: jenkins-enterprise.uboot-imx-2
+
+CPU:   Freescale i.MX8MQ rev2.0 1500 MHz (running at 1000 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 43C
+Reset cause: POR
+Model: Freescale i.MX8MQ Phanbell
+DRAM:  1 GiB
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+Loading Environment from MMC... *** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+
+ BuildInfo:
+  - ATF 
+  - U-Boot 2019.04.1
+
+flash target is MMC:0
+Net:   
+Warning: ethernet@30be0000 using MAC address from ROM
+eth0: ethernet@30be0000
+Fastboot: Got bootloader commands!
+Configured USB Switch for UFP
+request 000000007f95c280 was not queued to ep1in-bulk
+request 000000007f95c280 was not queued to ep1in-bulk
+WARNING: unknown variable: is-logical:gpt
+request 000000007f95c280 was not queued to ep1in-bulk
+Starting download of 34304 bytes
+request 000000007f95c280 was not queued to ep1in-bulk
+
+downloading of 34304 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'gpt'
+Initializing 'gpt'
+switch to partitions #0, OK
+mmc0(part 0) is current device
+Writing 'gpt'
+
+MMC write: dev # 0, block # 0, count 34 ... 34 blocks written: OK
+Writing 'gpt' DONE!
+flash backup gpt image successfully
+switch to partitions #0, OK
+mmc0(part 0) is current device
+request 000000007f95c280 was not queued to ep1in-bulk
+request 000000007f95c280 was not queued to ep1in-bulk
+resetting ...
+
+U-Boot SPL 2019.04.1 (Sep 30 2021 - 17:13:18 +0000)
+power_bd71837_init
+Board id: 6
+DDRINFO: start DRAM init
+DDRINFO:ddrphy calibration done
+DDRINFO: ddrmix config done
+Normal Boot
+Trying to boot from MMC1
+hdr read sector 300, count=1
+
+
+U-Boot 2019.04.1 (Sep 30 2021 - 17:13:18 +0000), Build: jenkins-enterprise.uboot-imx-2
+
+CPU:   Freescale i.MX8MQ rev2.0 1500 MHz (running at 1000 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 42C
+Reset cause: POR
+Model: Freescale i.MX8MQ Phanbell
+DRAM:  1 GiB
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+Loading Environment from MMC... *** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+
+ BuildInfo:
+  - ATF 
+  - U-Boot 2019.04.1
+
+flash target is MMC:0
+Net:   
+Warning: ethernet@30be0000 using MAC address from ROM
+eth0: ethernet@30be0000
+Fastboot: Got bootloader commands!
+Configured USB Switch for UFP
+request 000000007f95c280 was not queued to ep1in-bulk
+request 000000007f95c280 was not queued to ep1in-bulk
+erase target is MMC:0
+Erasing blocks 278528 to 280576 due to alignment
+........ erased 1048576 bytes from 'misc'
+request 000000007f95c280 was not queued to ep1in-bulk
+request 000000007f95c280 was not queued to ep1in-bulk
+request 000000007f95c280 was not queued to ep1in-bulk
+WARNING: unknown variable: is-logical:boot
+request 000000007f95c280 was not queued to ep1in-bulk
+Starting download of 134217728 bytes
+request 000000007f95c280 was not queued to ep1in-bulk
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..............................................................
+downloading of 134217728 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'boot'
+Initializing 'boot'
+switch to partitions #0, OK
+mmc0(part 0) is current device
+Writing 'boot'
+
+MMC write: dev # 0, block # 16384, count 262144 ... 262144 blocks written: OK
+Writing 'boot' DONE!
+request 000000007f95c280 was not queued to ep1in-bulk
+request 000000007f95c280 was not queued to ep1in-bulk
+request 000000007f95c280 was not queued to ep1in-bulk
+WARNING: unknown variable: is-logical:rootfs
+request 000000007f95c280 was not queued to ep1in-bulk
+Starting download of 419426968 bytes
+request 000000007f95c280 was not queued to ep1in-bulk
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419426968 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419426968
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+........ wrote 833507328 bytes to 'rootfs'
+request 000000007f95c280 was not queued to ep1in-bulk
+Starting download of 414489576 bytes
+request 000000007f95c280 was not queued to ep1in-bulk
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+......................................................
+downloading of 414489576 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 414489576
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+........ wrote 456622080 bytes to 'rootfs'
+request 000000007f95c280 was not queued to ep1in-bulk
+Starting download of 419408580 bytes
+request 000000007f95c280 was not queued to ep1in-bulk
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+.................
+downloading of 419408580 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 419408580
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+........ wrote 748318720 bytes to 'rootfs'
+request 000000007f95c280 was not queued to ep1in-bulk
+Starting download of 324351384 bytes
+request 000000007f95c280 was not queued to ep1in-bulk
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+..........................................................................
+................................
+downloading of 324351384 bytes finished
+request 000000007f95c280 was not queued to ep1in-bulk
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 324351384
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+........ wrote 2256519168 bytes to 'rootfs'
+request 000000007f95c280 was not queued to ep1in-bulk
+request 000000007f95c280 was not queued to ep1in-bulk
+resetting ...
+
+U-Boot SPL 2019.04.1 (Sep 30 2021 - 17:13:18 +0000)
+power_bd71837_init
+Board id: 6
+DDRINFO: start DRAM init
+DDRINFO:ddrphy calibration done
+DDRINFO: ddrmix config done
+Normal Boot
+Trying to boot from MMC1
+hdr read sector 300, count=1
+writing to partition 'rootfs'
+sparse flash target is mmc:0
+writing to partition 'rootfs' for sparse, buffer size 324351384
+Flashing sparse image at offset 4489216
+Flashing Sparse Image
+........ wrote 2256519168 bytes to 'rootfs'
+request 000000007f95c280 was not queued to ep1in-bulk
+request 000000007f95c280 was not queued to ep1in-bulk
+resetting ...
+
+U-Boot SPL 2019.04.1 (Sep 30 2021 - 17:13:18 +0000)
+power_bd71837_init
+Board id: 6
+DDRINFO: start DRAM init
+DDRINFO:ddrphy calibration done
+DDRINFO: ddrmix config done
+Normal Boot
+Trying to boot from MMC1
+hdr read sector 300, count=1
+
+
+U-Boot 2019.04.1 (Sep 30 2021 - 17:13:18 +0000), Build: jenkins-enterprise.uboot-imx-2
+
+CPU:   Freescale i.MX8MQ rev2.0 1500 MHz (running at 1000 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 41C
+Reset cause: POR
+Model: Freescale i.MX8MQ Phanbell
+DRAM:  1 GiB
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+Loading Environment from MMC... *** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+
+ BuildInfo:
+  - ATF 
+  - U-Boot 2019.04.1
+
+flash target is MMC:0
+Net:   
+Warning: ethernet@30be0000 using MAC address from ROM
+eth0: ethernet@30be0000
+Fastboot: Normal
+Normal Boot
+Hit any key to stop autoboot:  0 
+2065 bytes read in 6 ms (335.9 KiB/s)
+## Executing script at 40480000
+23110144 bytes read in 499 ms (44.2 MiB/s)
+56820 bytes read in 13 ms (4.2 MiB/s)
+104 bytes read in 2 ms (50.8 KiB/s)
+## Error: "m4enabled" not defined
+## Flattened Device Tree blob at 43000000
+   Booting using the fdt blob at 0x43000000
+   Using Device Tree in place at 0000000043000000, end 0000000043010fff
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.14.98-imx (pbuilder@linux-imx-7c598330-766d-4b03-a12e-333509ed9db6-d1dc9-rtjkh) (gcc version 8.3.0 (Debian 8.3.0-2)) #1 SMP PREEMPT Tue Nov 2 02:55:21 UTC 2021
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] Machine model: Freescale i.MX8MQ Phanbell
+[    0.000000] earlycon: ec_imx6q0 at MMIO 0x0000000030860000 (options '115200')
+[    0.000000] bootconsole [ec_imx6q0] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] Reserved memory: created CMA memory pool at 0x000000006c000000, size 320 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x000000007fffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0x6bfb2400-0x6bfb41ff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] percpu: Embedded 24 pages/cpu @ffff80002bf4d000 s57624 r8192 d32488 u98304
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Speculative Store Bypass Disable mitigation not required
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 258048
+[    0.000000] Policy zone: DMA
+[    0.000000] Kernel command line: console=ttymxc0,115200 console=tty0 earlycon=ec_imx6q,0x30860000,115200 root=PARTUUID=70672ec3-5eee-49ff-b3b1-eb1fbd406bf5 rootfstype=ext4 rw rootwait init=/sbin/init net.ifnames=0 pci=pcie_bus_perf
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Memory: 680676K/1048576K available (13244K kernel code, 1768K rwdata, 6220K rodata, 1280K init, 432K bss, 40220K reserved, 327680K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffff000000000000 - 0xffff000008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffff000008000000 - 0xffff7dffbfff0000   (129022 GB)
+[    0.000000]       .text : 0xffff000008080000 - 0xffff000008d70000   ( 13248 KB)
+[    0.000000]     .rodata : 0xffff000008d70000 - 0xffff000009390000   (  6272 KB)
+[    0.000000]       .init : 0xffff000009390000 - 0xffff0000094d0000   (  1280 KB)
+[    0.000000]       .data : 0xffff0000094d0000 - 0xffff00000968a200   (  1769 KB)
+[    0.000000]        .bss : 0xffff00000968a200 - 0xffff0000096f64a0   (   433 KB)
+[    0.000000]     fixed   : 0xffff7dfffe7f9000 - 0xffff7dfffec00000   (  4124 KB)
+[    0.000000]     PCI I/O : 0xffff7dfffee00000 - 0xffff7dffffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffff7e0000000000 - 0xffff800000000000   (  2048 GB maximum)
+[    0.000000]               0xffff7e0000000000 - 0xffff7e0001000000   (    16 MB actual)
+[    0.000000]     memory  : 0xffff800000000000 - 0xffff800040000000   (  1024 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: no VLPI support, no direct LPI support
+[    0.000000] ITS: No ITS available, not enabling LPIs
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x0000000038880000
+[    0.000000] i.MX8MQ clock driver init done
+[    0.000000] arch_timer: cp15 timer(s) running at 8.33MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.000003] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.008760] system counter timer init
+[    0.011729] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.019710] clocksource: imx sysctr: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.031063] Console: colour dummy device 80x25
+[    0.034447] console [tty0] enabled
+[    0.037856] bootconsole [ec_imx6q0] disabled
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.14.98-imx (pbuilder@linux-imx-7c598330-766d-4b03-a12e-333509ed9db6-d1dc9-rtjkh) (gcc version 8.3.0 (Debian 8.3.0-2)) #1 SMP PREEMPT Tue Nov 2 02:55:21 UTC 2021
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] Machine model: Freescale i.MX8MQ Phanbell
+[    0.000000] earlycon: ec_imx6q0 at MMIO 0x0000000030860000 (options '115200')
+[    0.000000] bootconsole [ec_imx6q0] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] Reserved memory: created CMA memory pool at 0x000000006c000000, size 320 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x000000007fffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0x6bfb2400-0x6bfb41ff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] percpu: Embedded 24 pages/cpu @ffff80002bf4d000 s57624 r8192 d32488 u98304
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Speculative Store Bypass Disable mitigation not required
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 258048
+[    0.000000] Policy zone: DMA
+[    0.000000] Kernel command line: console=ttymxc0,115200 console=tty0 earlycon=ec_imx6q,0x30860000,115200 root=PARTUUID=70672ec3-5eee-49ff-b3b1-eb1fbd406bf5 rootfstype=ext4 rw rootwait init=/sbin/init net.ifnames=0 pci=pcie_bus_perf
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Memory: 680676K/1048576K available (13244K kernel code, 1768K rwdata, 6220K rodata, 1280K init, 432K bss, 40220K reserved, 327680K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffff000000000000 - 0xffff000008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffff000008000000 - 0xffff7dffbfff0000   (129022 GB)
+[    0.000000]       .text : 0xffff000008080000 - 0xffff000008d70000   ( 13248 KB)
+[    0.000000]     .rodata : 0xffff000008d70000 - 0xffff000009390000   (  6272 KB)
+[    0.000000]       .init : 0xffff000009390000 - 0xffff0000094d0000   (  1280 KB)
+[    0.000000]       .data : 0xffff0000094d0000 - 0xffff00000968a200   (  1769 KB)
+[    0.000000]        .bss : 0xffff00000968a200 - 0xffff0000096f64a0   (   433 KB)
+[    0.000000]     fixed   : 0xffff7dfffe7f9000 - 0xffff7dfffec00000   (  4124 KB)
+[    0.000000]     PCI I/O : 0xffff7dfffee00000 - 0xffff7dffffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffff7e0000000000 - 0xffff800000000000   (  2048 GB maximum)
+[    0.000000]               0xffff7e0000000000 - 0xffff7e0001000000   (    16 MB actual)
+[    0.000000]     memory  : 0xffff800000000000 - 0xffff800040000000   (  1024 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: no VLPI support, no direct LPI support
+[    0.000000] ITS: No ITS available, not enabling LPIs
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x0000000038880000
+[    0.000000] i.MX8MQ clock driver init done
+[    0.000000] arch_timer: cp15 timer(s) running at 8.33MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.000003] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.008760] system counter timer init
+[    0.011729] sched_clock: 56 bits at 8MHz, resolution 120ns, wraps every 2199023255541ns
+[    0.019710] clocksource: imx sysctr: mask: 0xffffffffffffff max_cycles: 0x1ec0311ec, max_idle_ns: 440795202152 ns
+[    0.031063] Console: colour dummy device 80x25
+[    0.034447] console [tty0] enabled
+[    0.037856] bootconsole [ec_imx6q0] disabled
+[    0.042172] Calibrating delay loop (skipped), value calculated using timer frequency.. 16.66 BogoMIPS (lpj=33333)
+[    0.042194] pid_max: default: 32768 minimum: 301
+[    0.042272] Security Framework initialized
+[    0.042600] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.042768] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.042799] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.042819] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.058198] ASID allocator initialised with 32768 entries
+[    0.066199] Hierarchical SRCU implementation.
+[    0.074719] Cannot find MU entry in device tree
+[    0.074870] CPU identified as i.MX8MQ, silicon rev 2.0
+[    0.075764] EFI services will not be available.
+[    0.082239] smp: Bringing up secondary CPUs ...
+[    0.110379] Detected VIPT I-cache on CPU1
+[    0.110404] GICv3: CPU1: found redistributor 1 region 0:0x00000000388a0000
+[    0.110424] CPU1: Booted secondary processor [410fd034]
+[    0.138436] Detected VIPT I-cache on CPU2
+[    0.138453] GICv3: CPU2: found redistributor 2 region 0:0x00000000388c0000
+[    0.138467] CPU2: Booted secondary processor [410fd034]
+[    0.166507] Detected VIPT I-cache on CPU3
+[    0.166523] GICv3: CPU3: found redistributor 3 region 0:0x00000000388e0000
+[    0.166538] CPU3: Booted secondary processor [410fd034]
+[    0.166748] smp: Brought up 1 node, 4 CPUs
+[    0.166831] SMP: Total of 4 processors activated.
+[    0.166844] CPU features: detected feature: GIC system register CPU interface
+[    0.166859] CPU features: detected feature: 32-bit EL0 Support
+[    0.166873] CPU features: detected feature: Kernel page table isolation (KPTI)
+[    0.195974] CPU: All CPU(s) started at EL2
+[    0.196151] alternatives: patching kernel code
+[    0.197239] devtmpfs: initialized
+[    0.204095] random: get_random_u32 called from bucket_table_alloc+0x104/0x268 with crng_init=0
+[    0.205182] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.205236] futex hash table entries: 1024 (order: 5, 131072 bytes)
+[    0.213705] pinctrl core: initialized pinctrl subsystem
+[    0.216154] DMI not present or invalid.
+[    0.216611] NET: Registered protocol family 16
+[    0.222815] cpuidle: using governor menu
+[    0.223809] vdso: 2 pages (1 code @ ffff000008d76000, 1 data @ ffff0000094d4000)
+[    0.223833] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.229954] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.230886] Serial: AMBA PL011 UART driver
+[    0.231244] imx rpmsg driver is registered.
+[    0.238987] imx8mq-pinctrl 30330000.iomuxc: initialized IMX pinctrl driver
+[    0.248415] MU is ready for cross core communication!
+[    0.250121] virtio_rpmsg_bus virtio0: rpmsg host is online
+[    0.285878] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.295527] ACPI: Interpreter disabled.
+[    0.836788] vgaarb: loaded
+[    0.837300] SCSI subsystem initialized
+[    0.838630] usbcore: registered new interface driver usbfs
+[    0.838735] usbcore: registered new interface driver hub
+[    0.839109] usbcore: registered new device driver usb
+[    0.847813] bd71837 0-004b: Device ID=0xA2
+[    0.847828] bd71837 0-004b: gpio_intr = 3 
+[    0.847842] bd71837 0-004b: chip_irq=71 
+[    0.876122] bd71837-pmic bd71837-pmic: regulator register name 'buck1'
+[    0.904345] bd71837-pmic bd71837-pmic: regulator register name 'buck2'
+[    0.924393] bd71837-pmic bd71837-pmic: regulator register name 'buck3'
+[    0.944516] bd71837-pmic bd71837-pmic: regulator register name 'buck4'
+[    0.964490] bd71837-pmic bd71837-pmic: regulator register name 'buck5'
+[    0.980532] bd71837-pmic bd71837-pmic: regulator register name 'buck6'
+[    0.996577] bd71837-pmic bd71837-pmic: regulator register name 'buck7'
+[    1.012618] bd71837-pmic bd71837-pmic: regulator register name 'buck8'
+[    1.028655] bd71837-pmic bd71837-pmic: regulator register name 'ldo1'
+[    1.044699] bd71837-pmic bd71837-pmic: regulator register name 'ldo2'
+[    1.048803] bd71837-pmic bd71837-pmic: regulator register name 'ldo3'
+[    1.064806] bd71837-pmic bd71837-pmic: regulator register name 'ldo4'
+[    1.080848] bd71837-pmic bd71837-pmic: regulator register name 'ldo5'
+[    1.096892] bd71837-pmic bd71837-pmic: regulator register name 'ldo6'
+[    1.112933] bd71837-pmic bd71837-pmic: regulator register name 'ldo7'
+[    1.120723] random: fast init done
+[    1.128979] bd71837-pmic bd71837-pmic: Buck1: DVS Run-Idle-Susp[900000 - 900000 - 800000].
+[    1.140798] bd71837-pmic bd71837-pmic: Buck2: DVS Run-Idle-Susp[1000000 - 900000 - 0].
+[    1.148816] bd71837-pmic bd71837-pmic: Buck3: DVS Run-Idle-Susp[900000 - 0 - 0].
+[    1.152881] bd71837-pmic bd71837-pmic: Buck4: DVS Run-Idle-Susp[900000 - 0 - 0].
+[    1.169072] i2c i2c-0: IMX I2C adapter registered
+[    1.169091] i2c i2c-0: can't use DMA, using PIO instead.
+[    1.169964] i2c i2c-1: IMX I2C adapter registered
+[    1.169982] i2c i2c-1: can't use DMA, using PIO instead.
+[    1.170655] i2c i2c-2: IMX I2C adapter registered
+[    1.170672] i2c i2c-2: can't use DMA, using PIO instead.
+[    1.172167] media: Linux media interface: v0.10
+[    1.172266] Linux video capture interface: v2.00
+[    1.172596] pps_core: LinuxPPS API ver. 1 registered
+[    1.172610] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.172733] PTP clock support registered
+[    1.173136] EDAC MC: Ver: 3.0.0
+[    1.173842] dmi: Firmware registration failed.
+[    1.174663] Advanced Linux Sound Architecture Driver Initialized.
+[    1.175219] Bluetooth: Core ver 2.22
+[    1.175267] NET: Registered protocol family 31
+[    1.175280] Bluetooth: HCI device and connection manager initialized
+[    1.175297] Bluetooth: HCI socket layer initialized
+[    1.175312] Bluetooth: L2CAP socket layer initialized
+[    1.175337] Bluetooth: SCO socket layer initialized
+[    1.177015] clocksource: Switched to clocksource arch_sys_counter
+[    1.177305] VFS: Disk quotas dquot_6.6.0
+[    1.177366] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.177536] pnp: PnP ACPI: disabled
+[    1.195120] NET: Registered protocol family 2
+[    1.195627] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[    1.195723] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
+[    1.195861] TCP: Hash tables configured (established 8192 bind 8192)
+[    1.195943] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    1.195984] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    1.196104] NET: Registered protocol family 1
+[    1.197247] RPC: Registered named UNIX socket transport module.
+[    1.197262] RPC: Registered udp transport module.
+[    1.197273] RPC: Registered tcp transport module.
+[    1.197284] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.198838] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    1.199435] kvm [1]: 8-bit VMID
+[    1.200356] kvm [1]: GICv3: no GICV resource entry
+[    1.200369] kvm [1]: disabling GICv2 emulation
+[    1.200496] kvm [1]: GIC system register CPU interface enabled
+[    1.200864] kvm [1]: vgic interrupt IRQ1
+[    1.201315] kvm [1]: Hyp mode initialized successfully
+[    1.210105] audit: initializing netlink subsys (disabled)
+[    1.210455] audit: type=2000 audit(1.175:1): state=initialized audit_enabled=0 res=1
+[    1.211142] workingset: timestamp_bits=44 max_order=18 bucket_order=0
+[    1.221252] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    1.222378] NFS: Registering the id_resolver key type
+[    1.222411] Key type id_resolver registered
+[    1.222423] Key type id_legacy registered
+[    1.222441] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    1.222470] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    1.223063] 9p: Installing v9fs 9p2000 file system support
+[    1.242449] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+[    1.242957] io scheduler noop registered
+[    1.243120] io scheduler cfq registered (default)
+[    1.243134] io scheduler mq-deadline registered
+[    1.243146] io scheduler kyber registered
+[    1.267002] mxs-dma 33000000.dma-apbh: initialized
+[    1.268735] Bus freq driver module loaded
+[    1.270614] Config NOC for VPU and CPU
+[    1.281417] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    1.284986] SuperH (H)SCI(F) driver initialized
+[    1.286104] 30860000.serial: ttymxc0 at MMIO 0x30860000 (irq = 41, base_baud = 1562500) is a IMX
+[    2.475205] console [ttymxc0] enabled
+[    2.479806] 30880000.serial: ttymxc2 at MMIO 0x30880000 (irq = 42, base_baud = 1562500) is a IMX
+[    2.489609] clk: failed to reparent uart2 to sys1_pll_160m: -22
+[    2.495670] 30890000.serial: ttymxc1 at MMIO 0x30890000 (irq = 43, base_baud = 1562500) is a IMX
+[    2.505835] msm_serial: driver initialized
+[    2.524645] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    2.531351] [drm] No driver support for vblank timestamp query.
+[    2.537417] imx-drm display-subsystem: bound imx-dcss-crtc.0 (ops dcss_crtc_ops)
+[    2.545082] [drm] CDN_API_General_Test_Echo_Ext_blocking - APB(ret = 0 echo_resp = echo test)
+[    2.553688] [drm] CDN_API_General_getCurVersion - ver 13196 verlib 13062
+[    2.560448] [drm] Pixel clock frequency: 594000 KHz, character clock frequency: 594000, color depth is 8-bit.
+[    2.570444] [drm] Pixel clock frequency (594000 KHz) is supported in this color depth (8-bit). Settings found in row 27
+[    2.581252] [drm] VCO frequency is 5940000
+[    2.585423] [drm] VCO frequency (5940000 KHz) is supported. Settings found in row 14
+[    2.616987] [drm] CDN_API_General_Write_Register_blocking LANES_CONFIG ret = 0
+[    2.624250] [drm] Failed to get HDCP config - using HDCP 2.2 only
+[    2.630450] [drm] Failed to initialize HDCP
+[    2.636389] [drm] hdmi-audio-codec driver bound to HDMI
+[    2.641648] imx-drm display-subsystem: bound 32c00000.hdmi (ops imx_hdp_imx_ops)
+[    2.649165] [drm] Cannot find any crtc or sizes
+[    2.654230] [drm] Initialized imx-drm 1.0.0 20120507 for display-subsystem on minor 0
+[    2.670017] loop: module loaded
+[    2.678177] slram: not enough parameters.
+[    2.684195] spi_imx 30820000.ecspi: dma setup error -19, use pio
+[    2.691754] spi_imx 30820000.ecspi: probed
+[    2.698791] libphy: Fixed MDIO Bus: probed
+[    2.704066] NXP PHY: loading NXP PHY driver: [autonomous mode]
+[    2.710417] tun: Universal TUN/TAP device driver, 1.6
+[    2.715827] CAN device driver interface
+[    2.721889] fec 30be0000.ethernet: 30be0000.ethernet supply phy not found, using dummy regulator
+[    2.731257] pps pps0: new PPS source ptp0
+[    2.739996] libphy: fec_enet_mii_bus: probed
+[    2.745678] fec 30be0000.ethernet eth0: registered PHC device 0
+[    2.752585] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    2.758440] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    2.764534] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    2.771516] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    2.777249] igbvf: Intel(R) Gigabit Virtual Function Network Driver - version 2.4.0-k
+[    2.785102] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+[    2.791727] sky2: driver version 1.30
+[    2.804480] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.811053] ehci-pci: EHCI PCI platform driver
+[    2.815610] ehci-platform: EHCI generic platform driver
+[    2.821097] ehci-orion: EHCI orion driver
+[    2.825306] ehci-exynos: EHCI EXYNOS driver
+[    2.829689] ehci-msm: Qualcomm On-Chip EHCI Host Controller
+[    2.835439] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.841652] ohci-pci: OHCI PCI platform driver
+[    2.846202] ohci-platform: OHCI generic platform driver
+[    2.851649] ohci-exynos: OHCI EXYNOS driver
+[    2.856486] Can't support > 32 bit dma.
+[    2.860379] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    2.865900] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[    2.879112] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe6c hci version 0x110 quirks 0x0000000001010810
+[    2.888585] xhci-hcd xhci-hcd.0.auto: irq 230, io mem 0x38200000
+[    2.895349] hub 1-0:1.0: USB hub found
+[    2.899147] hub 1-0:1.0: 1 port detected
+[    2.903437] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    2.908952] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[    2.916694] xhci-hcd xhci-hcd.0.auto: Host supports USB 3.0  SuperSpeed
+[    2.923985] hub 2-0:1.0: USB hub found
+[    2.927832] hub 2-0:1.0: 1 port detected
+[    2.932735] usbcore: registered new interface driver usb-storage
+[    2.939003] usbcore: registered new interface driver usbserial
+[    2.944944] usbcore: registered new interface driver cp210x
+[    2.950614] usbserial: USB Serial support registered for cp210x
+[    2.956648] usbcore: registered new interface driver ftdi_sio
+[    2.962541] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    2.969925] ftdi_elan: driver ftdi-elan
+[    2.973917] usbcore: registered new interface driver ftdi-elan
+[    2.979855] usbcore: registered new interface driver usb_ehset_test
+[    2.989755] input: 30370000.snvs:snvs-powerkey as /devices/platform/30370000.snvs/30370000.snvs:snvs-powerkey/input/input0
+[    3.003983] snvs_rtc 30370000.snvs:snvs-rtc-lp: rtc core: registered 30370000.snvs:snvs-rtc-lp as rtc0
+[    3.014159] i2c /dev entries driver
+[    3.020935] IR NEC protocol handler initialized
+[    3.025545] IR RC5(x/sz) protocol handler initialized
+[    3.030615] IR RC6 protocol handler initialized
+[    3.035272] IR JVC protocol handler initialized
+[    3.039820] IR Sony protocol handler initialized
+[    3.044509] IR SANYO protocol handler initialized
+[    3.049229] IR Sharp protocol handler initialized
+[    3.054004] IR MCE Keyboard/mouse protocol handler initialized
+[    3.059854] IR XMP protocol handler initialized
+[    3.065993] ov5645_mipi 1-003c: 1-003c supply DOVDD not found, using dummy regulator
+[    3.073824] ov5645_mipi 1-003c: 1-003c supply DVDD not found, using dummy regulator
+[    3.081594] ov5645_mipi 1-003c: 1-003c supply AVDD not found, using dummy regulator
+[    3.161370] ov5645_read_reg:write reg error:reg=300a
+[    3.166356] camera ov5645_mipi is not found
+[    3.172046] mxc-mipi-csi2_yav 30a70000.mipi_csi1: mipi_csi2_probe
+[    3.178269] CSI: Registered sensor subdevice: mxc-mipi-csi2.0
+[    3.184107] mxc-mipi-csi2_yav 30a70000.mipi_csi: Remote device at /mipi_csi1@30a70000/port/endpoint1 XXX found
+[    3.194141] mxc-mipi-csi2_yav 30a70000.mipi_csi1: lanes: 2, name: mxc-mipi-csi2.0
+[    3.204732] gpio-fan gpio_fan: GPIO fan initialized
+[    3.212602] imx2-wdt 30280000.wdog: timeout 60 sec (nowayout=0)
+[    3.219536] Bluetooth: HCI UART driver ver 2.3
+[    3.224005] Bluetooth: HCI UART protocol H4 registered
+[    3.229278] Bluetooth: HCI UART protocol BCSP registered
+[    3.234609] Bluetooth: HCI UART protocol ATH3K registered
+[    3.240025] Bluetooth: HCI UART protocol Three-wire (H5) registered
+[    3.246566] Bluetooth: HCI UART protocol Broadcom registered
+[    3.252246] Bluetooth: HCI UART protocol QCA registered
+[    3.259236] sdhci: Secure Digital Host Controller Interface driver
+[    3.265495] sdhci: Copyright(c) Pierre Ossman
+[    3.270145] Synopsys Designware Multimedia Card Interface Driver
+[    3.277610] sdhci-pltfm: SDHCI platform and OF driver helper
+[    3.329579] mmc0: SDHCI controller on 30b40000.usdhc [30b40000.usdhc] using ADMA
+[    3.338298] sdhci-esdhc-imx 30b50000.usdhc: Got CD GPIO
+[    3.390185] mmc1: SDHCI controller on 30b50000.usdhc [30b50000.usdhc] using ADMA
+[    3.405659] update hantro voltage from 900 mV to 1000 mV
+[    3.411267] hantrodec: module inserted. Major = 237
+[    3.419638] ledtrig-cpu: registered to indicate activity on CPUs
+[    3.426762] caam 30900000.caam: ERA source: CCBVID.
+[    3.434840] caam 30900000.caam: device ID = 0x0a16040100000000 (Era 9)
+[    3.441509] caam 30900000.caam: job rings = 3, qi = 0, dpaa2 = no
+[    3.454769] mmc0: new HS400 MMC card at address 0001
+[    3.454774] caam_jr 30901000.jr0: Entropy delay = 3200
+[    3.455435] caam_jr 30901000.jr0: Entropy delay = 3600
+[    3.460561] mmcblk0: mmc0:0001 8GTF4R 7.28 GiB 
+[    3.475052] mmcblk0boot0: mmc0:0001 8GTF4R partition 1 4.00 MiB
+[    3.481363] mmcblk0boot1: mmc0:0001 8GTF4R partition 2 4.00 MiB
+[    3.487655] mmcblk0rpmb: mmc0:0001 8GTF4R partition 3 512 KiB
+[    3.501334]  mmcblk0: p1 p2 p3 p4
+[    3.532662] caam_jr 30901000.jr0: Instantiated RNG4 SH0.
+[    3.600821] caam_jr 30901000.jr0: Instantiated RNG4 SH1.
+[    3.622036] mmc1: host does not support reading read-only switch, assuming write-enable
+[    3.628959] caam algorithms registered in /proc/crypto
+[    3.640792] caam_jr 30901000.jr0: registering rng-caam
+[    3.646386] caam 30900000.caam: caam pkc algorithms registered in /proc/crypto
+[    3.655369] platform caam_sm: blkkey_ex: 2 keystore units available
+[    3.662967] caam-snvs 30370000.caam-snvs: can't get snvs clock
+[    3.668926] caam-snvs 30370000.caam-snvs: violation handlers armed - non-secure state
+[    3.677627] usbcore: registered new interface driver usbhid
+[    3.681149] [drm] Cannot find any crtc or sizes
+[    3.683228] usbhid: USB HID core driver
+[    3.715974] rt5645: Raising HP charge pump threshold to prevent jack event mis-detects.
+[    3.724066] rt5645 2-001a: 2-001a supply avdd not found, using dummy regulator
+[    3.731424] rt5645 2-001a: 2-001a supply cpvdd not found, using dummy regulator
+[    3.749043] mmc1: new ultra high speed DDR50 SDHC card at address aaaa
+[    3.756205] mmcblk1: mmc1:aaaa SS08G 7.40 GiB 
+[    3.768865] edgetpu-audio-card sound-rt5645: clock set to 24576000
+[    3.770604]  mmcblk1: p1
+[    3.783501] edgetpu-audio-card sound-rt5645: rt5645-aif1 <-> 308b0000.sai mapping ok
+[    3.791477] edgetpu-audio-card sound-rt5645: ASoC: no DMI vendor name!
+[    3.872107] input: edgetpu-audio-card Headphone Jack as /devices/platform/sound-rt5645/sound/card0/input1
+[    3.883337] NET: Registered protocol family 26
+[    3.888468] NET: Registered protocol family 10
+[    3.893978] Segment Routing with IPv6
+[    3.897701] NET: Registered protocol family 17
+[    3.902226] can: controller area network core (rev 20170425 abi 9)
+[    3.908465] NET: Registered protocol family 29
+[    3.912986] can: raw protocol (rev 20170425)
+[    3.917277] can: broadcast manager protocol (rev 20170425 t)
+[    3.923014] can: netlink gateway (rev 20170425) max_hops=1
+[    3.929346] Bluetooth: RFCOMM TTY layer initialized
+[    3.934252] Bluetooth: RFCOMM socket layer initialized
+[    3.939436] Bluetooth: RFCOMM ver 1.11
+[    3.943209] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    3.948539] Bluetooth: BNEP filters: protocol multicast
+[    3.953840] Bluetooth: BNEP socket layer initialized
+[    3.958825] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    3.964821] Bluetooth: HIDP socket layer initialized
+[    3.969838] lib80211: common routines for IEEE802.11 drivers
+[    3.975610] 9pnet: Installing 9P2000 support
+[    3.979998] Key type dns_resolver registered
+[    3.989001] registered taskstats version 1
+[    4.000093] failed to disable 800MHz OPP!
+[    4.004140] failed to disable 1.3GHz OPP!
+[    4.010253] cpu cpu0: registered imx8mq-cpufreq
+[    4.016037] imx6q-pcie 33800000.pcie: 33800000.pcie supply epdev_on not found, using dummy regulator
+[    4.027305] OF: PCI: host bridge /pcie@0x33800000 ranges:
+[    4.032723] OF: PCI:   No bus range found for /pcie@0x33800000, using [bus 00-ff]
+[    4.040279] OF: PCI:    IO 0x1ff80000..0x1ff8ffff -> 0x00000000
+[    4.046217] OF: PCI:   MEM 0x18000000..0x1fefffff -> 0x18000000
+[    4.055009] imx6q-pcie 33800000.pcie: pcie phy pll is locked.
+[    4.114157] imx6q-pcie 33800000.pcie: Link: Gen2 disabled
+[    4.119569] imx6q-pcie 33800000.pcie: Link up, Gen1
+[    4.126176] imx6q-pcie 33800000.pcie: PCI host bridge to bus 0000:00
+[    4.132563] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    4.138130] pci_bus 0000:00: root bus resource [io  0x0000-0xffff]
+[    4.144327] pci_bus 0000:00: root bus resource [mem 0x18000000-0x1fefffff]
+[    4.161134] pci 0000:00:00.0: BAR 14: assigned [mem 0x18000000-0x181fffff]
+[    4.168096] pci 0000:00:00.0: BAR 0: assigned [mem 0x18200000-0x182fffff 64bit]
+[    4.175429] pci 0000:00:00.0: BAR 6: assigned [mem 0x18300000-0x1830ffff pref]
+[    4.182725] pci 0000:01:00.0: BAR 0: assigned [mem 0x18000000-0x181fffff 64bit]
+[    4.190084] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[    4.195377] pci 0000:00:00.0:   bridge window [mem 0x18000000-0x181fffff]
+[    4.202186] pci 0000:00:00.0: Max Payload Size set to  128/ 128 (was  128), Max Read Rq  128
+[    4.210742] pci 0000:01:00.0: Max Payload Size set to  128/ 256 (was  128), Max Read Rq  128
+[    4.219609] pcieport 0000:00:00.0: Signaling PME with IRQ 234
+[    4.225488] pcieport 0000:00:00.0: AER enabled with IRQ 234
+[    4.231906] imx6q-pcie 33c00000.pcie: 33c00000.pcie supply epdev_on not found, using dummy regulator
+[    4.242433] OF: PCI: host bridge /pcie@0x33c00000 ranges:
+[    4.247950] OF: PCI:   No bus range found for /pcie@0x33c00000, using [bus 00-ff]
+[    4.255474] OF: PCI:    IO 0x27f80000..0x27f8ffff -> 0x00000000
+[    4.261466] OF: PCI:   MEM 0x20000000..0x27efffff -> 0x20000000
+[    4.270299] imx6q-pcie 33c00000.pcie: pcie phy pll is locked.
+[    4.330523] imx6q-pcie 33c00000.pcie: Link up, Gen2
+[    4.337832] imx6q-pcie 33c00000.pcie: PCI host bridge to bus 0001:00
+[    4.344245] pci_bus 0001:00: root bus resource [bus 00-ff]
+[    4.349842] pci_bus 0001:00: root bus resource [io  0x10000-0x1ffff] (bus address [0x0000-0xffff])
+[    4.358860] pci_bus 0001:00: root bus resource [mem 0x20000000-0x27efffff]
+[    4.377104] pci 0001:00:00.0: BAR 0: assigned [mem 0x20000000-0x200fffff 64bit]
+[    4.384533] pci 0001:00:00.0: BAR 15: assigned [mem 0x20100000-0x202fffff pref]
+[    4.391877] pci 0001:00:00.0: BAR 6: assigned [mem 0x20300000-0x2030ffff pref]
+[    4.399225] pci 0001:00:00.0: PCI bridge to [bus 01-ff]
+[    4.404466] pci 0001:00:00.0:   bridge window [mem 0x20100000-0x202fffff pref]
+[    4.411763] pci 0001:00:00.0: Max Payload Size set to  128/ 128 (was  128), Max Read Rq  128
+[    4.420258] pci 0001:01:00.0: Max Payload Size set to  128/ 256 (was  128), Max Read Rq  128
+[    4.429190] pcieport 0001:00:00.0: Signaling PME with IRQ 363
+[    4.435086] pcieport 0001:00:00.0: AER enabled with IRQ 363
+[    4.444481] asoc-simple-card sound-header: snd-soc-dummy-dai <-> 30010000.sai mapping ok
+[    4.452668] asoc-simple-card sound-header: ASoC: no DMI vendor name!
+[    4.469433] snvs_rtc 30370000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:01 UTC (1)
+[    4.479587] buck3: disabling
+[    4.483945] ALSA device list:
+[    4.486928]   #0: edgetpu-audio-card
+[    4.490638]   #1: 40-pin Header
+[    4.501202] EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: (null)
+[    4.509333] VFS: Mounted root (ext4 filesystem) on device 179:4.
+[    4.517142] devtmpfs: mounted
+[    4.520432] Freeing unused kernel memory: 1280K
+[    4.668752] systemd[1]: System time before build time, advancing clock.
+[    4.691064] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    4.706983] systemd[1]: systemd 241 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+[    4.728837] systemd[1]: Detected architecture arm64.
+[    4.747604] systemd[1]: No hostname configured.
+[    4.752304] systemd[1]: Set hostname to <localhost>.
+[    4.883452] systemd[1]: File /lib/systemd/system/systemd-journald.service:12 configures an IP firewall (IPAddressDeny=any), but the local system does not support BPF/cgroup based firewalling.
+[    4.900716] systemd[1]: Proceeding WITHOUT firewalling in effect! (This warning is only shown for the first loaded unit using IP firewalling.)
+[    4.973264] systemd[1]: /lib/systemd/system/vitalsd.service:3: Failed to add dependency on usb-gadget, ignoring: Unknown error -22
+[    4.985073] systemd[1]: /lib/systemd/system/vitalsd.service:5: Unknown lvalue 'Exec' in section 'Service', ignoring
+[    4.995732] systemd[1]: vitalsd.service: Service has no ExecStart=, ExecStop=, or SuccessAction=. Refusing.
+[    5.067875] systemd[1]: /lib/systemd/system/usb-gadget-getty-ttyGS0.service:21: Unknown lvalue 'TTYDisallocate' in section 'Service', ignoring
+[    5.108506] random: systemd: uninitialized urandom read (16 bytes read)
+[    5.119365] random: systemd: uninitialized urandom read (16 bytes read)
+[    5.133352] random: systemd: uninitialized urandom read (16 bytes read)
+[    5.204781] EXT4-fs (mmcblk0p4): re-mounted. Opts: (null)
+[    5.389466] systemd-journald[2039]: Received request to flush runtime journal from PID 1
+[    5.673627] imx-sdma 30bd0000.sdma: no iram assigned, using external mem
+[    5.707536] imx-sdma 30bd0000.sdma: loaded firmware 4.2
+[    5.709200] imx-sdma 302c0000.sdma: no iram assigned, using external mem
+[    5.728452] ina2xx 1-0040: error configuring the device: -6
+[    5.735486] ina2xx 1-0041: error configuring the device: -6
+[    5.736116] imx-sdma 302c0000.sdma: loaded firmware 4.2
+[    5.867491] galcore: loading out-of-tree module taints kernel.
+[    5.870752] gasket: module is from the staging directory, the quality is unknown, you have been warned.
+[    5.887731] wlan: loading out-of-tree module taints kernel.
+[    5.916896] Galcore version 6.4.2.256507
+[    5.930760] apex: module is from the staging directory, the quality is unknown, you have been warned.
+[    5.971295] wlan: loading driver v4.5.23.1
+[    5.976453] apex 0001:01:00.0: can't enable device: BAR 0 [mem 0x00000000-0x00003fff 64bit pref] not claimed
+[    5.992185] hif_pci_probe:, con_mode= 0x0
+[    5.998433] PCI device id is 003e :003e
+[    6.003842] apex 0001:01:00.0: BAR 2: assigned [mem 0x20100000-0x201fffff 64bit pref]
+[    6.013358] hif_pci 0000:01:00.0: BAR 0: assigned [mem 0x18000000-0x181fffff 64bit]
+[    6.021759] apex 0001:01:00.0: BAR 0: assigned [mem 0x20200000-0x20203fff 64bit pref]
+[    6.029754] apex 0001:01:00.0: enabling device (0000 -> 0002)
+[    6.037161] hif_pci 0000:01:00.0: enabling device (0000 -> 0002)
+[    6.044917] 
+[    6.044917]  hif_pci_configure : num_desired MSI set to 1
+[    6.053881] Can't support > 32 bit dma.
+[    6.058881] Can't support > 32 bit dma.
+[    6.173258] hif_pci_probe: ramdump base 0xffff800024c00000 size 2095136
+[    6.187070] NUM_DEV=1 FWMODE=0x2 FWSUBMODE=0x0 FWBR_BUF 0
+[    6.230946] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null)
+[    6.717194] EXT4-fs (mmcblk0p4): resizing filesystem from 1048576 to 1345536 blocks
+[    6.729128] EXT4-fs (mmcblk0p4): resized filesystem to 1345536
+[    6.821811] +HWT
+[    6.834428] -HWT
+[    6.871680] HTT: full reorder offload enabled
+[    6.898793] Pkt log is disabled
+[    6.904263] Host SW:4.5.23.1, FW:2.0.1.1048, HW:QCA6174_REV3_2
+[    6.905626] target uses HTT version 3.50; host uses 3.28
+[    6.910386] ol_pktlog_init: pktlogmod_init successfull
+[    6.921392] wlan: driver loaded in 952000
+[    9.649879] random: crng init done
+[    9.653354] random: 7 urandom warning(s) missed due to ratelimiting
+
+
