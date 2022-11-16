@@ -30,9 +30,10 @@ engine = PoseEngine(
 poses, inference_time = engine.DetectPosesInImage(pil_image)
 print('Inference time: %.f ms' % (inference_time * 1000))
 
-xys = {}
+
 svg_canvas = svgwrite.Drawing('', size=pil_image.size)
 for pose in poses:
+    xys = {}
     if pose.score < 0.4: continue
     print('\nPose Score: ', pose.score)
     for label, keypoint in pose.keypoints.items():
