@@ -79,6 +79,8 @@ Pose Score:  0.8260717
   RIGHT_ANKLE          x=144  y=298  score=0.8
   
   
+  corla micro output:
+  
   
   test image outputNum Poses: 4
 Pose 0 -- score: 0.930923
