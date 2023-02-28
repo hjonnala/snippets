@@ -1,157 +1,155 @@
-coral usb: (python3 simple_pose.py)
 
-Inference time: 104 ms
+image output 324x324 edgetpu and 324x324 input:
+test image output
+Num Poses: 4
+Pose 0 -- score: 0.946558
+Keypoint NOSE -- x=144.104141,y=158.554916,score=0.996599
+Keypoint LEFT_EYE -- x=150.103973,y=154.917435,score=0.996198
+Keypoint RIGHT_EYE -- x=141.488266,y=156.040970,score=0.983658
+Keypoint LEFT_EAR -- x=160.658295,y=157.299850,score=0.985378
+Keypoint RIGHT_EAR -- x=137.510651,y=158.888885,score=0.697863
+Keypoint LEFT_SHOULDER -- x=172.328293,y=185.454666,score=0.994553
+Keypoint RIGHT_SHOULDER -- x=135.595871,y=185.444519,score=0.987960
+Keypoint LEFT_ELBOW -- x=179.610168,y=219.597412,score=0.976765
+Keypoint RIGHT_ELBOW -- x=133.049271,y=220.532288,score=0.967990
+Keypoint LEFT_WRIST -- x=163.273285,y=238.803207,score=0.952485
+Keypoint RIGHT_WRIST -- x=143.226395,y=233.330948,score=0.945112
+Keypoint LEFT_HIP -- x=168.448441,y=238.147095,score=0.984350
+Keypoint RIGHT_HIP -- x=144.208359,y=238.597336,score=0.973126
+Keypoint LEFT_KNEE -- x=173.152603,y=250.757462,score=0.943009
+Keypoint RIGHT_KNEE -- x=128.927521,y=236.947922,score=0.928033
+Keypoint LEFT_ANKLE -- x=169.529907,y=280.927490,score=0.845171
+Keypoint RIGHT_ANKLE -- x=147.086792,y=275.378937,score=0.933230
 
-Pose Score:  0.90518034
-  NOSE                 x=227  y=181  score=1.0
-  LEFT_EYE             x=231  y=175  score=1.0
-  RIGHT_EYE            x=222  y=176  score=1.0
-  LEFT_EAR             x=241  y=175  score=0.9
-  RIGHT_EAR            x=215  y=179  score=0.6
-  LEFT_SHOULDER        x=259  y=204  score=1.0
-  RIGHT_SHOULDER       x=209  y=207  score=1.0
-  LEFT_ELBOW           x=269  y=244  score=1.0
-  RIGHT_ELBOW          x=205  y=242  score=1.0
-  LEFT_WRIST           x=265  y=267  score=0.9
-  RIGHT_WRIST          x=214  y=259  score=0.8
-  LEFT_HIP             x=247  y=266  score=1.0
-  RIGHT_HIP            x=222  y=263  score=1.0
-  LEFT_KNEE            x=273  y=269  score=0.7
-  RIGHT_KNEE           x=194  y=262  score=0.9
-  LEFT_ANKLE           x=264  y=302  score=0.8
-  RIGHT_ANKLE          x=214  y=302  score=0.9
+Pose 1 -- score: 0.931021
+Keypoint NOSE -- x=38.167896,y=75.986351,score=0.988755
+Keypoint LEFT_EYE -- x=42.312737,y=72.022179,score=0.972651
+Keypoint RIGHT_EYE -- x=34.284542,y=71.898788,score=0.982686
+Keypoint LEFT_EAR -- x=46.752064,y=74.318619,score=0.537296
+Keypoint RIGHT_EAR -- x=26.343676,y=74.868546,score=0.931990
+Keypoint LEFT_SHOULDER -- x=51.265610,y=98.536591,score=0.992835
+Keypoint RIGHT_SHOULDER -- x=18.890156,y=98.167618,score=0.994794
+Keypoint LEFT_ELBOW -- x=54.845730,y=129.886368,score=0.982064
+Keypoint RIGHT_ELBOW -- x=6.818199,y=123.792809,score=0.967791
+Keypoint LEFT_WRIST -- x=54.075794,y=159.381088,score=0.978784
+Keypoint RIGHT_WRIST -- x=10.455998,y=172.908951,score=0.901406
+Keypoint LEFT_HIP -- x=39.982059,y=159.198654,score=0.983148
+Keypoint RIGHT_HIP -- x=21.168179,y=163.589020,score=0.988521
+Keypoint LEFT_KNEE -- x=39.932281,y=227.443527,score=0.979668
+Keypoint RIGHT_KNEE -- x=24.698971,y=226.015213,score=0.969366
+Keypoint LEFT_ANKLE -- x=30.557095,y=280.114655,score=0.819151
+Keypoint RIGHT_ANKLE -- x=32.018349,y=280.824799,score=0.856456
 
-Pose Score:  0.8480155
-  NOSE                 x=370  y=91   score=1.0
-  LEFT_EYE             x=376  y=86   score=1.0
-  RIGHT_EYE            x=367  y=85   score=0.9
-  LEFT_EAR             x=386  y=89   score=1.0
-  RIGHT_EAR            x=363  y=88   score=0.3
-  LEFT_SHOULDER        x=392  y=122  score=1.0
-  RIGHT_SHOULDER       x=354  y=120  score=1.0
-  LEFT_ELBOW           x=391  y=162  score=1.0
-  RIGHT_ELBOW          x=345  y=157  score=1.0
-  LEFT_WRIST           x=376  y=188  score=0.9
-  RIGHT_WRIST          x=346  y=188  score=0.8
-  LEFT_HIP             x=378  y=193  score=1.0
-  RIGHT_HIP            x=350  y=189  score=1.0
-  LEFT_KNEE            x=376  y=256  score=0.7
-  RIGHT_KNEE           x=359  y=255  score=0.7
-  LEFT_ANKLE           x=373  y=308  score=0.5
-  RIGHT_ANKLE          x=357  y=309  score=0.6
+Pose 2 -- score: 0.894964
+Keypoint NOSE -- x=238.833908,y=80.209290,score=0.985269
+Keypoint LEFT_EYE -- x=245.739090,y=77.251648,score=0.982213
+Keypoint RIGHT_EYE -- x=240.157684,y=76.517265,score=0.860994
+Keypoint LEFT_EAR -- x=256.000031,y=80.000008,score=0.950098
+Keypoint RIGHT_EAR -- x=241.722031,y=78.402077,score=0.402585
+Keypoint LEFT_SHOULDER -- x=259.612701,y=105.497147,score=0.994184
+Keypoint RIGHT_SHOULDER -- x=233.510345,y=103.609055,score=0.990261
+Keypoint LEFT_ELBOW -- x=263.989166,y=138.385941,score=0.988861
+Keypoint RIGHT_ELBOW -- x=225.128769,y=132.495087,score=0.985207
+Keypoint LEFT_WRIST -- x=247.650345,y=172.331284,score=0.984686
+Keypoint RIGHT_WRIST -- x=225.541962,y=166.987854,score=0.918146
+Keypoint LEFT_HIP -- x=248.361145,y=170.396500,score=0.979715
+Keypoint RIGHT_HIP -- x=229.614075,y=168.441528,score=0.967190
+Keypoint LEFT_KNEE -- x=252.413696,y=230.015976,score=0.965746
+Keypoint RIGHT_KNEE -- x=233.221695,y=230.667633,score=0.932596
+Keypoint LEFT_ANKLE -- x=240.032104,y=277.092743,score=0.594073
+Keypoint RIGHT_ANKLE -- x=232.898834,y=275.475342,score=0.732570
+Pose 3 -- score: 0.890955
+Keypoint NOSE -- x=102.764038,y=50.764042,score=0.972667
+Keypoint LEFT_EYE -- x=105.469826,y=47.588268,score=0.903006
+Keypoint RIGHT_EYE -- x=99.846809,y=47.831001,score=0.870376
+Keypoint LEFT_EAR -- x=110.386436,y=50.096146,score=0.524170
+Keypoint RIGHT_EAR -- x=95.212296,y=49.436443,score=0.728837
+Keypoint LEFT_SHOULDER -- x=112.000130,y=72.319626,score=0.993429
+Keypoint RIGHT_SHOULDER -- x=85.108086,y=69.697197,score=0.997462
+Keypoint LEFT_ELBOW -- x=121.537888,y=108.360771,score=0.986760
+Keypoint RIGHT_ELBOW -- x=75.323563,y=102.007851,score=0.935341
+Keypoint LEFT_WRIST -- x=115.679237,y=144.245178,score=0.906482
+Keypoint RIGHT_WRIST -- x=66.478638,y=153.969131,score=0.772780
+Keypoint LEFT_HIP -- x=104.895905,y=154.611084,score=0.952942
+Keypoint RIGHT_HIP -- x=86.133881,y=153.120819,score=0.967487
+Keypoint LEFT_KNEE -- x=105.665596,y=223.599319,score=0.878962
+Keypoint RIGHT_KNEE -- x=88.810997,y=217.704361,score=0.962541
+Keypoint LEFT_ANKLE -- x=99.218811,y=270.999023,score=0.909239
+Keypoint RIGHT_ANKLE -- x=61.109844,y=273.445068,score=0.883745
 
-Pose Score:  0.8335919
-  NOSE                 x=64   y=88   score=1.0
-  LEFT_EYE             x=67   y=83   score=1.0
-  RIGHT_EYE            x=58   y=83   score=1.0
-  LEFT_EAR             x=72   y=85   score=0.6
-  RIGHT_EAR            x=49   y=84   score=0.9
-  LEFT_SHOULDER        x=79   y=112  score=1.0
-  RIGHT_SHOULDER       x=38   y=107  score=1.0
-  LEFT_ELBOW           x=87   y=148  score=1.0
-  RIGHT_ELBOW          x=11   y=133  score=1.0
-  LEFT_WRIST           x=85   y=184  score=0.9
-  RIGHT_WRIST          x=0    y=125  score=0.4
-  LEFT_HIP             x=69   y=177  score=1.0
-  RIGHT_HIP            x=45   y=178  score=1.0
-  LEFT_KNEE            x=67   y=240  score=0.7
-  RIGHT_KNEE           x=66   y=251  score=0.7
-  LEFT_ANKLE           x=49   y=305  score=0.6
-  RIGHT_ANKLE          x=56   y=307  score=0.6
 
-Pose Score:  0.8260717
-  NOSE                 x=153  y=59   score=1.0
-  LEFT_EYE             x=158  y=54   score=1.0
-  RIGHT_EYE            x=150  y=54   score=0.9
-  LEFT_EAR             x=167  y=60   score=0.9
-  RIGHT_EAR            x=144  y=58   score=0.5
-  LEFT_SHOULDER        x=176  y=89   score=1.0
-  RIGHT_SHOULDER       x=129  y=78   score=1.0
-  LEFT_ELBOW           x=184  y=133  score=1.0
-  RIGHT_ELBOW          x=111  y=88   score=0.8
-  LEFT_WRIST           x=183  y=171  score=0.6
-  RIGHT_WRIST          x=130  y=68   score=0.3
-  LEFT_HIP             x=163  y=171  score=1.0
-  RIGHT_HIP            x=132  y=171  score=1.0
-  LEFT_KNEE            x=152  y=242  score=0.9
-  RIGHT_KNEE           x=137  y=239  score=0.9
-  LEFT_ANKLE           x=160  y=298  score=0.4
-  RIGHT_ANKLE          x=144  y=298  score=0.8
-  
-  
-  corla micro output:
-  
-  
-  test image outputNum Poses: 4
-Pose 0 -- score: 0.930923
-Keypoint NOSE -- x=0.987847,y=0.585606,score=0.989744
-Keypoint LEFT_EYE -- x=0.985270,y=0.992402,score=0.978766
-Keypoint RIGHT_EYE -- x=0.954691,y=0.968266,score=0.951211
-Keypoint LEFT_EAR -- x=0.985479,y=0.944483,score=0.905713
-Keypoint RIGHT_EAR -- x=0.911519,y=0.982568,score=0.585606
-Keypoint LEFT_SHOULDER -- x=0.927828,y=0.885549,score=0.987847
-Keypoint RIGHT_SHOULDER -- x=0.997615,y=0.888752,score=0.992402
-Keypoint LEFT_ELBOW -- x=0.990242,y=0.996376,score=0.985270
-Keypoint RIGHT_ELBOW -- x=0.642656,y=0.971797,score=0.968266
-Keypoint LEFT_WRIST -- x=0.990401,y=0.997704,score=0.954691
-Keypoint RIGHT_WRIST -- x=0.912724,y=0.990174,score=0.944483
-Keypoint LEFT_HIP -- x=0.667860,y=0.870958,score=0.985479
-Keypoint RIGHT_HIP -- x=0.966226,y=0.978186,score=0.982568
-Keypoint LEFT_KNEE -- x=0.848178,y=0.882918,score=0.911519
-Keypoint RIGHT_KNEE -- x=0.818099,y=0.835669,score=0.885549
-Keypoint LEFT_ANKLE -- x=0.956620,y=0.988687,score=0.927828
-Keypoint RIGHT_ANKLE -- x=0.450892,y=0.989048,score=0.888752
-Pose 1 -- score: 0.903399
-Keypoint NOSE -- x=0.992555,y=0.950659,score=0.997615
-Keypoint LEFT_EYE -- x=0.990358,y=0.996506,score=0.996376
-Keypoint RIGHT_EYE -- x=0.971763,y=0.881273,score=0.990242
-Keypoint LEFT_EAR -- x=0.987680,y=0.524050,score=0.971797
-Keypoint RIGHT_EAR -- x=0.877760,y=0.972454,score=0.642656
-Keypoint LEFT_SHOULDER -- x=0.666399,y=0.817691,score=0.997704
-Keypoint RIGHT_SHOULDER -- x=0.795567,y=0.790506,score=0.990401
-Keypoint LEFT_ELBOW -- x=0.679313,y=0.843356,score=0.990174
-Keypoint RIGHT_ELBOW -- x=0.361667,y=0.738960,score=0.912724
-Keypoint LEFT_WRIST -- x=0.972928,y=0.982104,score=0.870958
-Keypoint RIGHT_WRIST -- x=0.728871,y=0.907504,score=0.667860
-Keypoint LEFT_HIP -- x=0.354826,y=0.638745,score=0.978186
-Keypoint RIGHT_HIP -- x=0.967194,y=0.894700,score=0.966226
-Keypoint LEFT_KNEE -- x=0.958632,y=0.936510,score=0.882918
-Keypoint RIGHT_KNEE -- x=0.880933,y=0.743058,score=0.848178
-Keypoint LEFT_ANKLE -- x=265.031189,y=312.290497,score=0.835669
-Keypoint RIGHT_ANKLE -- x=215.331024,y=295.224152,score=0.818099
-Pose 2 -- score: 0.870877
-Keypoint NOSE -- x=65.573410,y=87.129768,score=0.988687
-Keypoint LEFT_EYE -- x=69.303444,y=81.655777,score=0.956620
-Keypoint RIGHT_EYE -- x=60.707497,y=81.337593,score=0.989048
-Keypoint LEFT_EAR -- x=73.913162,y=84.253349,score=0.450892
-Keypoint RIGHT_EAR -- x=48.783287,y=82.792068,score=0.950659
-Keypoint LEFT_SHOULDER -- x=80.348518,y=113.525879,score=0.992555
-Keypoint RIGHT_SHOULDER -- x=36.683220,y=111.799263,score=0.996506
-Keypoint LEFT_ELBOW -- x=83.450188,y=146.950272,score=0.990358
-Keypoint RIGHT_ELBOW -- x=11.556599,y=133.670380,score=0.881273
-Keypoint LEFT_WRIST -- x=81.743813,y=180.753387,score=0.971763
-Keypoint RIGHT_WRIST -- x=2.567993,y=121.437584,score=0.524050
-Keypoint LEFT_HIP -- x=68.264061,y=174.479080,score=0.987680
-Keypoint RIGHT_HIP -- x=41.638264,y=178.418793,score=0.972454
-Keypoint LEFT_KNEE -- x=64.106888,y=231.946548,score=0.877760
-Keypoint RIGHT_KNEE -- x=65.909393,y=247.701263,score=0.817691
-Keypoint LEFT_ANKLE -- x=54.504017,y=300.391632,score=0.666399
-Keypoint RIGHT_ANKLE -- x=51.673607,y=301.182922,score=0.790506
-Pose 3 -- score: 0.787345
-Keypoint NOSE -- x=155.043915,y=55.751163,score=0.795567
-Keypoint LEFT_EYE -- x=158.595322,y=52.230057,score=0.843356
-Keypoint RIGHT_EYE -- x=153.101196,y=52.553967,score=0.679313
-Keypoint LEFT_EAR -- x=165.462860,y=54.669762,score=0.738960
-Keypoint RIGHT_EAR -- x=145.260056,y=58.084934,score=0.361667
-Keypoint LEFT_SHOULDER -- x=174.621262,y=87.593719,score=0.982104
-Keypoint RIGHT_SHOULDER -- x=134.521957,y=83.376732,score=0.972928
-Keypoint LEFT_ELBOW -- x=184.091949,y=129.829483,score=0.907504
-Keypoint RIGHT_ELBOW -- x=119.539085,y=132.978668,score=0.728871
-Keypoint LEFT_WRIST -- x=179.640671,y=169.801056,score=0.638745
-Keypoint RIGHT_WRIST -- x=106.943100,y=159.277588,score=0.354826
-Keypoint LEFT_HIP -- x=161.662445,y=175.523193,score=0.894700
-Keypoint RIGHT_HIP -- x=141.831223,y=172.926804,score=0.967194
-Keypoint LEFT_KNEE -- x=129.829391,y=237.741287,score=0.936510
-Keypoint RIGHT_KNEE -- x=155.262161,y=241.083527,score=0.958632
-Keypoint LEFT_ANKLE -- x=122.070885,y=298.600342,score=0.743058
-Keypoint RIGHT_ANKLE -- x=155.428818,y=303.105743,score=0.880933
+image output 353x481x3(height, width, channel) edgetpu and 481x353(width, height) input:
+
+Num Poses: 4
+Pose 0 -- score: 0.952891
+Keypoint NOSE -- x=0.991462,y=0.586357,score=0.995705
+Keypoint LEFT_EYE -- x=0.991517,y=0.992721,score=0.993695
+Keypoint RIGHT_EYE -- x=0.990228,y=0.984351,score=0.975584
+Keypoint LEFT_EAR -- x=0.978932,y=0.961948,score=0.949591
+Keypoint RIGHT_EAR -- x=0.982139,y=0.968768,score=0.586357
+Keypoint LEFT_SHOULDER -- x=0.948263,y=0.983302,score=0.991462
+Keypoint RIGHT_SHOULDER -- x=0.993725,y=0.924576,score=0.992721
+Keypoint LEFT_ELBOW -- x=0.993598,y=0.958234,score=0.991517
+Keypoint RIGHT_ELBOW -- x=0.961686,y=0.590230,score=0.984351
+Keypoint LEFT_WRIST -- x=0.996461,y=0.994555,score=0.990228
+Keypoint RIGHT_WRIST -- x=0.924739,y=0.989648,score=0.961948
+Keypoint LEFT_HIP -- x=0.866366,y=0.990610,score=0.978932
+Keypoint RIGHT_HIP -- x=0.988707,y=0.986079,score=0.968768
+Keypoint LEFT_KNEE -- x=0.956231,y=0.981099,score=0.982139
+Keypoint RIGHT_KNEE -- x=0.889939,y=0.902227,score=0.983302
+Keypoint LEFT_ANKLE -- x=0.973732,y=0.994277,score=0.948263
+Keypoint RIGHT_ANKLE -- x=0.908881,y=0.962984,score=0.924576
+Pose 1 -- score: 0.939067
+Keypoint NOSE -- x=0.992025,y=0.747763,score=0.993725
+Keypoint LEFT_EYE -- x=0.994017,y=0.994193,score=0.958234
+Keypoint RIGHT_EYE -- x=0.974299,y=0.833004,score=0.993598
+Keypoint LEFT_EAR -- x=0.969472,y=0.836540,score=0.590230
+Keypoint RIGHT_EAR -- x=0.948116,y=0.980691,score=0.961686
+Keypoint LEFT_SHOULDER -- x=0.915268,y=0.963909,score=0.994555
+Keypoint RIGHT_SHOULDER -- x=0.997969,y=0.890863,score=0.996461
+Keypoint LEFT_ELBOW -- x=0.990391,y=0.996818,score=0.989648
+Keypoint RIGHT_ELBOW -- x=0.492223,y=0.989218,score=0.924739
+Keypoint LEFT_WRIST -- x=0.996243,y=0.996780,score=0.990610
+Keypoint RIGHT_WRIST -- x=0.974333,y=0.990502,score=0.866366
+Keypoint LEFT_HIP -- x=0.967646,y=0.958936,score=0.986079
+Keypoint RIGHT_HIP -- x=0.969813,y=0.973314,score=0.988707
+Keypoint LEFT_KNEE -- x=0.826986,y=0.949662,score=0.981099
+Keypoint RIGHT_KNEE -- x=0.924940,y=0.788259,score=0.956231
+Keypoint LEFT_ANKLE -- x=45.601864,y=305.386993,score=0.902227
+Keypoint RIGHT_ANKLE -- x=56.039303,y=308.286530,score=0.889939
+Pose 2 -- score: 0.934119
+Keypoint NOSE -- x=153.770813,y=52.606140,score=0.994277
+Keypoint LEFT_EYE -- x=158.791138,y=48.674675,score=0.973732
+Keypoint RIGHT_EYE -- x=150.336700,y=46.750862,score=0.962984
+Keypoint LEFT_EAR -- x=167.787384,y=53.761372,score=0.908881
+Keypoint RIGHT_EAR -- x=145.629715,y=52.040321,score=0.747763
+Keypoint LEFT_SHOULDER -- x=174.976639,y=88.272758,score=0.992025
+Keypoint RIGHT_SHOULDER -- x=132.770859,y=78.279510,score=0.994193
+Keypoint LEFT_ELBOW -- x=182.675598,y=127.742622,score=0.994017
+Keypoint RIGHT_ELBOW -- x=120.053444,y=122.220688,score=0.833004
+Keypoint LEFT_WRIST -- x=180.846481,y=161.107162,score=0.974299
+Keypoint RIGHT_WRIST -- x=111.700653,y=157.721329,score=0.836540
+Keypoint LEFT_HIP -- x=163.697830,y=170.190948,score=0.969472
+Keypoint RIGHT_HIP -- x=134.400085,y=170.142761,score=0.980691
+Keypoint LEFT_KNEE -- x=136.318054,y=238.616486,score=0.948116
+Keypoint RIGHT_KNEE -- x=138.656052,y=238.445663,score=0.963909
+Keypoint LEFT_ANKLE -- x=159.335678,y=304.613220,score=0.915268
+Keypoint RIGHT_ANKLE -- x=120.233421,y=294.591827,score=0.890863
+Pose 3 -- score: 0.928472
+Keypoint NOSE -- x=222.546799,y=180.359680,score=0.997969
+Keypoint LEFT_EYE -- x=228.651245,y=174.730743,score=0.996818
+Keypoint RIGHT_EYE -- x=218.280533,y=175.253372,score=0.990391
+Keypoint LEFT_EAR -- x=239.446823,y=176.028564,score=0.989218
+Keypoint RIGHT_EAR -- x=213.251495,y=177.046280,score=0.492223
+Keypoint LEFT_SHOULDER -- x=256.722412,y=202.943100,score=0.996780
+Keypoint RIGHT_SHOULDER -- x=210.898956,y=208.112396,score=0.996243
+Keypoint LEFT_ELBOW -- x=270.129974,y=245.885452,score=0.990502
+Keypoint RIGHT_ELBOW -- x=204.237350,y=248.099060,score=0.974333
+Keypoint LEFT_WRIST -- x=245.581238,y=267.473175,score=0.958936
+Keypoint RIGHT_WRIST -- x=224.758591,y=265.408813,score=0.967646
+Keypoint LEFT_HIP -- x=259.480164,y=268.524536,score=0.973314
+Keypoint RIGHT_HIP -- x=219.521942,y=264.769012,score=0.969813
+Keypoint LEFT_KNEE -- x=270.265533,y=279.342804,score=0.949662
+Keypoint RIGHT_KNEE -- x=199.315948,y=266.028534,score=0.826986
+Keypoint LEFT_ANKLE -- x=264.821869,y=317.382904,score=0.788259
+Keypoint RIGHT_ANKLE -- x=218.618622,y=301.197205,score=0.924940
