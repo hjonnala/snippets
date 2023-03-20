@@ -5,27 +5,32 @@ ModuleNotFoundError: No module named 'progress'
 Failed uploading: uploading error: exit status 1
 
 ## fix1 (ModuleNotFoundError: No module named 'progress'):
-
+```
 cd C:/Users/heman/coralmicro/scripts
 
 pyinstaller -F --paths=C:/heman/python39/Lib/site-packages flashtool.py
 
 cp C:/Users/heman/coralmicro/scripts/dist/flashtool.exe C:\Users\heman\AppData\Local\Arduino15\packages\coral\tools\flashtool\1.0.0
-
+```
 
 
 ## fix2(C:\Users\heman\AppData\Local\Temp\_MEI134082\third_party\nxp\elftosb\win\elftosb.exe does not exist):
+  ```
 To resolve it:
 1. Modified flashtoll script root_dir to get  C:\Users\heman\AppData\Local\Temp instead C:\Users\heman\AppData\Local\Temp\_MEI134082 
 2. copiled third_party directory from coaralmicro to C:\Users\heman\AppData\Local\Temp
-
+```
 
 ## fix3(isuue with libusb as libusb-1.0.dll is not added to flashtoo.exe):
-
+```
 To resolve it:
 generated the flashtool.exe with below command:
 
 pyinstaller flashtool.spec
+  
+  ```
+  
+  ```
 
 flashtool.spec file content:
 
@@ -79,3 +84,4 @@ exe = EXE(
 )
 
 
+```
